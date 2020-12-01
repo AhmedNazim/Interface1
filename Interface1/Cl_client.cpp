@@ -12,19 +12,19 @@ namespace NS_Composants {
 	}
 	String^ Cl_client::SELECT(void)
 	{
-		return "select SELECT * FROM client WHERE nomCL = '" + nomCL + "'and prenonCL ='" + prononCL + "' ; ";
+		return "select SELECT * FROM client WHERE nomCL = '" + this->nomCL + "'and prenonCL ='" + this->prononCL + "' ; ";
 	}
 	String^ Cl_client::INSERT(void)
 	{
-		return "INSERT INTO client(nomCL,prenonCL,adresseCL,adresseFAC,DateAnivCL,DatePremierAchat) VALUES ('" + nomCL + "' , '" + prononCL + "','" + adresseCL + "','"+ adresseFAC +"','" + DateAnivCL + "','" + DatePremierAchat + "') ";
+		return "INSERT INTO client(nomCL,prenonCL,adresseCL,adresseFAC,DateAnivCL,DatePremierAchat) VALUES ('" + this->nomCL + "' , '" + this->prononCL + "','" + this->adresseCL + "','"+ this->adresseFAC +"','" + this->DateAnivCL + "','" + this->DatePremierAchat + "') ";
 	}
 	String^ Cl_client::UPDATE(void)
 	{
-		"UPDATE client SET nomCL ='" + nomCL + "' , prenonCL='" + prononCL + "',adresseCL='" + adresseCL + "',DateAnivCL= '" + DateAnivCL + "','"+ adresseFAC +"',DatePremierAchat='" + DatePremierAchat + "' WHERE ID " + ID + "; ";
+		"UPDATE client SET nomCL ='" + this->nomCL + "' , prenonCL='" + this->prononCL + "',adresseCL='" + this->adresseCL + "',DateAnivCL= '" this->DateAnivCL + "','"+ this->adresseFAC +"',DatePremierAchat='" + this->DatePremierAchat + "' WHERE ID " + this->ID + "; ";
 	}
 	String^ Cl_client::DELETE(void)
 	{
-		return "DELETE FROM client WHERE ID = '" + ID + "' ";
+		return "DELETE FROM client WHERE ID = '" + this->ID + "' ";
 	}
 	void Cl_client::setID(int ID_client) {
 		//this-> ID =  ID_client;

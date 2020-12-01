@@ -11,6 +11,7 @@ namespace NS_Composants {
 	private:
 		int ID;
 		String^ nomAR;
+		String^ refAR;
 		String^ couleurAR;
 		String^ natureAR;
 		float prixHTAR;
@@ -26,6 +27,7 @@ namespace NS_Composants {
 		String^ DELETE(void);
 		void setID(int);
 		void setnomAR(String^);
+		void setrefAR(String^);
 		void setcouleurAR(String^);
 		void setnatureAR(String^);
 		void setqantiterAR(int);
@@ -35,6 +37,7 @@ namespace NS_Composants {
 		void setseul_de_reappro(String^);
 		int getID();
 		String^ getnomAR();
+		String^ getrefAR();
 		String^ getcouleurAR();
 		String^ getnatureAR();
 		float getprixHTAR();

@@ -3,6 +3,7 @@ namespace NS_Composants
 {
 	Cl_personnel::Cl_personnel() {
 		this->ID_personnel = -1;
+		this -> ID = -1;
 		this->nomPER = "RIEN";
 		this->prenomPER = "RIEN";
 		this->supH = "RIEN";
@@ -32,6 +33,11 @@ namespace NS_Composants
 	{
 		// this->ID_client = ID_client;
 	}
+	void Cl_personnel::setID(int)
+	{
+		// this->ID_client = ID_client;
+	}
+	
 	void Cl_personnel::setNomPER(String^)
 	{
 		// this->ID_client = ID_client;
@@ -51,6 +57,10 @@ namespace NS_Composants
 	int Cl_personnel::getId_personnel(void)
 	{
 		//return this->Id_personnel;
+	}
+	int NS_Composants::Cl_personnel::getID(void)
+	{
+		//return this->NomPER;
 	}
 	String^ Cl_personnel::getNomPER(void)
 	{
