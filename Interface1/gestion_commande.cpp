@@ -40,7 +40,7 @@ namespace NS_SVC {
 		this->cad->actionRows(this->commande->UPDATE());
 	}
 
-	void NS_SVC::gestion_commande::supprimer(int idCommande)
+	void gestion_commande::supprimer(int idCommande)
 	{
 		this->commande->setId_commande(idCommande);
 		this->cad->actionRows(this->commande->DELETE());
