@@ -33,7 +33,7 @@ namespace NS_SVC
 	void gestion_client::ajouter(String^ nom, String^ prenom, String^ adresseCL, String^ adresseFAC, String^ DateAnivCL, String^ DatePremierAchat)
 	{
 		int id;
-		int i;
+		
 		this->client->setnomCL(nom);
 		this->client->setprononCL(prenom);
 		this->client->setadresseCL(adresseCL);
