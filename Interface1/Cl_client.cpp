@@ -1,6 +1,6 @@
 #include "Cl_client.h"
 
-namespace NS_Compsants {
+namespace NS_Composants {
 	Cl_client::Cl_client(void) {
 		this->ID=-1;
 		this->nomCL="Rien";
