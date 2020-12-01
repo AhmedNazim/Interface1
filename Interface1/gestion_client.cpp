@@ -19,7 +19,7 @@ namespace NS_SVC
 	{
 		this->ds = gcnew DataSet();
 		this->client->setID(id_client);
-		this->ds = this->cad->getRows(this->client->getadresseCL(), dataTableName);
+		this->ds = this->cad->getRows(this->client->getAdresseCL(), dataTableName);
 		return this->ds;
 		/*
 		this->ds = gcnew DataSet();
@@ -34,11 +34,11 @@ namespace NS_SVC
 	{
 		int id;
 		
-		this->client->setnomCL(nom);
-		this->client->setprononCL(prenom);
-		this->client->setadresseCL(adresseCL);
+		this->client->setNomCL(nom);
+		this->client->setPrononCL(prenom);
+		this->client->setAdresseCL(adresseCL);
 
-		this->client->setadresseFAC(adresseFAC);
+		this->client->setAdresseFAC(adresseFAC);
 		this->client->setDateAnivCL( DateAnivCL);
 		this->client->setDatePremierAchat( DatePremierAchat);
 		id = this->cad->actionRowsID(this->client->INSERT());
@@ -66,11 +66,11 @@ namespace NS_SVC
 	{
 		int i;
 		this->client->setID(id_personne);
-		this->client->setnomCL(nom);
-		this->client->setprononCL(prenom);
-		this->client->setadresseCL(adresseCL);
+		this->client->setNomCL(nom);
+		this->client->setPrononCL(prenom);
+		this->client->setAdresseCL(adresseCL);
 
-		this->client->setadresseFAC(adresseFAC);
+		this->client->setAdresseFAC(adresseFAC);
 		this->client->setDateAnivCL(DateAnivCL);
 		this->client->setDatePremierAchat(DatePremierAchat);
 		this->cad->actionRows(this->client->UPDATE());
