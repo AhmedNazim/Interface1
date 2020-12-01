@@ -12,35 +12,29 @@ namespace NS_Compsants {
 	}
 	String^ Cl_client::SELECT(void)
 	{
-		/*return "SELECT id_adresse, adresse, ville, cp, id_personne " +
-			"FROM TB_ADRESSE " +
-			"WHERE(id_personne = " + this->id_personne + ");"; */
+		return "select SELECT * FROM client WHERE nomCL = '" + nomCL + "'and prenonCL ='" + prononCL + "' ; ";
 	}
 	String^ Cl_client::INSERT(void)
-	{/*
-		return "INSERT INTO TB_ADRESSE(adresse, ville, cp, id_personne) " +
-			"VALUES('" + this->adresse + "', '" + this->ville + "', '" + this->cp + "', " + this->id_personne + ");";*/
+	{
+		return "INSERT INTO client(nomCL,prenonCL,adresseCL,adresseFAC,DateAnivCL,DatePremierAchat) VALUES ('" + nomCL + "' , '" + prononCL + "','" + adresseCL + "','"+ adresseFAC +"','" + DateAnivCL + "','" + DatePremierAchat + "') ";
 	}
 	String^ Cl_client::UPDATE(void)
-	{/*
-		return "UPDATE TB_ADRESSE " +
-			"SET adresse ='" + this->adresse + "', ville ='" + this->ville + "', cp ='" + this->cp + "' " +
-			"WHERE(id_adresse = " + this->id_adresse + "); "; */
+	{
+		"UPDATE client SET nomCL ='" + nomCL + "' , prenonCL='" + prononCL + "',adresseCL='" + adresseCL + "',DateAnivCL= '" + DateAnivCL + "','"+ adresseFAC +"',DatePremierAchat='" + DatePremierAchat + "' WHERE ID " + ID + "; ";
 	}
 	String^ Cl_client::DELETE(void)
-	{/*
-		return "DELETE FROM TB_ADRESSE " +
-			"WHERE(id_adresse = " + this->id_adresse + ");"; */
+	{
+		return "DELETE FROM client WHERE ID = '" + ID + "' ";
 	}
 	void Cl_client::setID(int ID_client) {
-		//this-> ID_client =  ID_client;
+		//this-> ID =  ID_client;
 	};
 	void Cl_client::setnomCL(String^ nomCL) {
 		//this->nomCL = nomCL;
 	};
 
 	void Cl_client::setprononCL(String^ pronon) {
-		//this->pronon = pronon;
+		//this->prononCL = pronon;
 	};
 	void Cl_client::setadresseCL(String^ adresseCL) {
 		//this->id_adresse = IdAdresse;

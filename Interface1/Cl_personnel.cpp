@@ -10,30 +10,23 @@ namespace NS_Composants
 	}
 	String^ Cl_personnel::SELECTByIdPersonne(void)
 	{
-		/*return "SELECT id_adresse, adresse, ville, cp, id_personne " +
-				"FROM TB_ADRESSE " +
-				"WHERE(id_personne = " + this->id_personne + ");"; */
+		return "SELCET * FROM personnel WHERE nomPER= '" + nomPER + "' and prenomPER='" + prenomPER + "'";
 	};
 	String^ Cl_personnel::INSERT(void)
 	{
-		/*
-		return "INSERT INTO TB_ADRESSE(adresse, ville, cp, id_personne) " +
-			"VALUES('" + this->adresse + "', '" + this->ville + "', '" + this->cp + "', " + this->id_personne + ");";*/
-
+		
+		return "INSERT INTO personne(nomPER, prenomPER, supH, DateAmb, ID_personnel) VALUES ('" + nomPER + "'," + prenomPER + "','" + supH + "'," + DateAmb + "ID_personnel=ID WHERE nom ='"+ supH + "')";
 	};
 	String^ Cl_personnel::UPDATE(void)
-	{/*
-		return "UPDATE TB_ADRESSE " +
-			"SET adresse ='" + this->adresse + "', ville ='" + this->ville + "', cp ='" + this->cp + "' " +
-			"WHERE(id_adresse = " + this->id_adresse + "); "; */
+	{
+		return "UPDATE personneel SET nomPER='" + nomPER + "',prenomPER='" + prenomPER + "',supH='" + supH + "',DateAmb='" + DateAmb + "',ID_personnel=ID WHERE nom ='" +supH+"');";
 	
 
 	};
 	String^ Cl_personnel::DELETE(void)
 	{
-		/*
-				return "DELETE FROM TB_ADRESSE " +
-					"WHERE(id_adresse = " + this->id_adresse + ");"; */
+		
+		return "DELETE FROM personnel WHERE ID = '" + ID_personnel + "' ";
 	}
 	void Cl_personnel::setId_personnel(int)
 	{
