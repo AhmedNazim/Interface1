@@ -26,14 +26,14 @@ namespace NS_SVC
 		this->adresse->setID(id_personne);
 		this->ds = this->cad->getRows(this->adresse->SELECTByIdPersonne(), dataTableName);
 		return this->ds;
-	 */
+	     */
 }
 	
 	
 	void gestion_client::ajouter(String^ nom, String^ prenom, String^ adresseCL, String^ adresseFAC, String^ DateAnivCL, String^ DatePremierAchat)
 	{
 		int id;
-		int i;
+		
 		this->client->setnomCL(nom);
 		this->client->setprononCL(prenom);
 		this->client->setadresseCL(adresseCL);

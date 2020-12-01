@@ -130,6 +130,7 @@
     <ClCompile Include="Commande.cpp" />
     <ClCompile Include="Connection.cpp" />
     <ClCompile Include="gestion_client.cpp" />
+    <ClCompile Include="gestion_commande.cpp" />
     <ClCompile Include="MyForm.cpp" />
     <ClCompile Include="Personnel.cpp" />
     <ClCompile Include="Statistique.cpp" />
@@ -148,6 +149,7 @@
     </ClInclude>
     <ClInclude Include="Connection.h" />
     <ClInclude Include="gestion_client.h" />
+    <ClInclude Include="gestion_commande.h" />
     <ClInclude Include="MyForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
