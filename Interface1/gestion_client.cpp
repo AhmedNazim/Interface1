@@ -26,7 +26,7 @@ namespace NS_SVC
 		this->adresse->setID(id_personne);
 		this->ds = this->cad->getRows(this->adresse->SELECTByIdPersonne(), dataTableName);
 		return this->ds;
-	 */
+	     */
 }
 	
 	
