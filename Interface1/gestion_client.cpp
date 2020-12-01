@@ -15,15 +15,37 @@ namespace NS_SVC
 		return this->ds;
 	}
 	
-	/* DataSet^ gestion_client::adressesClient(int id_personne, String^ dataTableName)
+	DataSet^ gestion_client::adressesClient(int id_client, String^ dataTableName)
 	{
 		this->ds = gcnew DataSet();
-		this->adresse->setIdPersonne(id_personne);
+		this->client->setID(id_client);
+		this->ds = this->cad->getRows(this->client->getadresseCL(), dataTableName);
+		return this->ds;
+		/*
+		this->ds = gcnew DataSet();
+		this->adresse->setID(id_personne);
 		this->ds = this->cad->getRows(this->adresse->SELECTByIdPersonne(), dataTableName);
 		return this->ds;
-	}*/ 
+	 */
+}
+	
+	
+	void gestion_client::ajouter(String^ nom, String^ prenom, String^ adresseCL, String^ adresseFAC, String^ DateAnivCL, String^ DatePremierAchat)
+	{
+		int id;
+		int i;
+		this->client->setnomCL(nom);
+		this->client->setprononCL(prenom);
+		this->client->setadresseCL(adresseCL);
 
-	void gestion_client::ajouter(String^ nom, String^ prenom, array<String^>^ lesAdresses)
+		this->client->setadresseFAC(adresseFAC);
+		this->client->setDateAnivCL( DateAnivCL);
+		this->client->setDatePremierAchat( DatePremierAchat);
+		id = this->cad->actionRowsID(this->client->INSERT());
+		
+	}
+	
+	/*void gestion_client::ajouter(String^ nom, String^ prenom, array<String^>^ lesAdresses)
 	{
 		int id;
 		int i;
@@ -31,21 +53,26 @@ namespace NS_SVC
 		this->client->setprononCL(prenom);
 		id = this->cad->actionRowsID(this->client->INSERT());
 		for (i = 0; i < lesAdresses->Length - 1; i++)
-		{/*
+		{
 			this->adresse->setAdresse(lesAdresses[i]); i++;
 			this->adresse->setVille(lesAdresses[i]); i++;
 			this->adresse->setCp(lesAdresses[i]);
 			this->adresse->setIdPersonne(id);
-			this->cad->actionRows(this->adresse->INSERT());*/
+			this->cad->actionRows(this->adresse->INSERT());
 		}
-	}
-	void gestion_client::modifier(int id_personne, String^ nom, String^ prenom, array<String^>^
-		lesAdresses)
+	} 
+	*/
+	void gestion_client::modifier(int id_personne, String^ nom, String^ prenom, String^ adresseCL, String^ adresseFAC, String^ DateAnivCL, String^ DatePremierAchat)
 	{
 		int i;
 		this->client->setID(id_personne);
 		this->client->setnomCL(nom);
 		this->client->setprononCL(prenom);
+		this->client->setadresseCL(adresseCL);
+
+		this->client->setadresseFAC(adresseFAC);
+		this->client->setDateAnivCL(DateAnivCL);
+		this->client->setDatePremierAchat(DatePremierAchat);
 		this->cad->actionRows(this->client->UPDATE());
 		/*for (i = 0; i < lesAdresses->Length - 1; i++)
 			

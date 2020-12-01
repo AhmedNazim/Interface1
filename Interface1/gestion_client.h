@@ -19,8 +19,10 @@ namespace NS_SVC {
 		gestion_client(void);
 		DataSet^ listeClients(String^);
 		DataSet^ adressesClient(int, String^);
-		void ajouter(String^, String^, array<String^>^);
-		void modifier(int, String^, String^, array<String^>^);
+		void ajouter(String^ nom, String^ prenom, String^ adresseCL, String^ adresseFAC, String^ DateAnivCL, String^ DatePremierAchat);
+		//void ajouter(String^, String^, array<String^>^);
+		//void modifier(int, String^, String^, array<String^>^);
+		void modifier(int id_personne, String^ nom, String^ prenom, String^ adresseCL, String^ adresseFAC, String^ DateAnivCL, String^ DatePremierAchat);
 		void supprimer(int);
 	};
 }
