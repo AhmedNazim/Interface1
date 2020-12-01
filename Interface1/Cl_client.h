@@ -25,17 +25,17 @@
 			String^ UPDATE(void) {};
 			String^ DELETE(void) {};
 			void setID(int) {};
-			void setnomCL(String^) {};
-			void setprononCL(String^) {};
-			void setadresseCL(String^) {};
-			void setadresseFAC(String^) {};
+			void setNomCL(String^) {};
+			void setPrononCL(String^) {};
+			void setAdresseCL(String^) {};
+			void setAdresseFAC(String^) {};
 			void setDateAnivCL(String^) {};
 			void setDatePremierAchat(String^) {};
 			int getID(void) {};
-			String^ getnomCL(void) {};
-			String^ getprononCL(void) {};
-			String^ getadresseCL(void) {};
-			String^ getadresseFAC(void) {};
+			String^ getNomCL(void) {};
+			String^ getPrononCL(void) {};
+			String^ getAdresseCL(void) {};
+			String^ getAdresseFAC(void) {};
 			String^ getDateAnivCL(void) {};
 			String^ getDatePremierAchat(void) {};
 

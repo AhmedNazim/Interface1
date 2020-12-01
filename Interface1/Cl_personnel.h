@@ -9,6 +9,7 @@ namespace NS_Composants
 	{
 	private: 
 		int ID_personnel;
+		int ID;
 		String^ nomPER;
 		String^ prenomPER;
 		String^ supH;
@@ -20,11 +21,13 @@ namespace NS_Composants
 		String^ UPDATE(void);
 		String^ DELETE(void);
 		void setId_personnel(int);
+		void setID(int);
 		void setNomPER(String^);
 		void setPrenomPER(String^);
 		void setSupH(String^);
 		void setDateAmb(String^);
 		int getId_personnel(void);
+		int getID(void);
 		String^ getNomPER( void);
 		String^ getPrenomPER(void);
 		String^ getSupH(void);
