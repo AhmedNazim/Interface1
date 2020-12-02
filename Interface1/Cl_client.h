@@ -20,24 +20,26 @@
 			String^ DatePremierAchat;
 		public:
 			Cl_client(void);
-			String^ SELECT(void) {};
-			String^ INSERT(void) {};
-			String^ UPDATE(void) {};
-			String^ DELETE(void) {};
-			void setID(int) {};
-			void setNomCL(String^) {};
-			void setPrononCL(String^) {};
-			void setAdresseCL(String^) {};
-			void setAdresseFAC(String^) {};
-			void setDateAnivCL(String^) {};
-			void setDatePremierAchat(String^) {};
-			int getID(void) {};
-			String^ getNomCL(void) {};
-			String^ getPrononCL(void) {};
-			String^ getAdresseCL(void) {};
-			String^ getAdresseFAC(void) {};
-			String^ getDateAnivCL(void) {};
-			String^ getDatePremierAchat(void) {};
+			String^ SELECT(void);
+			String^ INSERT(void);
+			String^ UPDATE(void);
+			String^ DELETE(void);
+			void setID(int);
+			void setNomCL(String^);
+			void setPrononCL(String^);
+			void setAdresseCL(String^);
+			void setAdresseFAC(String^);
+			void setDateAnivCL(String^);
+			void setDatePremierAchat(String^);
+			int getID(void);
+			String^ getNomCL(void);
+			String^ getPrononCL(void);
+			String^ getAdresseCL(void);
+			String^ getAdresseFAC(void);
+			String^ getDateAnivCL(void);
+			String^ getDatePremierAchat(void);
+
+			
 
 		};
 	}
