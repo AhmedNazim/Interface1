@@ -9,6 +9,7 @@ using namespace System::Data::SqlClient;
 using namespace System::Xml;
 using namespace System;
 
+
 namespace NS_SVC {
 	ref class gestion_client {
 	private:
@@ -18,7 +19,7 @@ namespace NS_SVC {
 	public:
 		gestion_client(void);
 		DataSet^ listeClients(String^);
-		DataSet^ adressesClient(int, String^);
+		//DataSet^ adressesClient(int, String^);
 		void ajouter(String^, String^ , String^ , String^ , String^ , String^);
 		void modifier(int , String^ , String^ , String^ , String^ , String^ , String^ );
 		void supprimer(int);

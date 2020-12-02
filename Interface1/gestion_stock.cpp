@@ -35,7 +35,7 @@ namespace NS_SVC {
 	}
 	void gestion_stock::modifier(int ID, String^ nomAR, String^ refAR, String^ couleurAR, String^ natureAR, double prixHTAR, int qantiterAR, double prixTVA, double prixTTC, String^ seul_de_reappro)
 	{
-		int id;
+		//int id;
 		this->stock->setID(ID);
 		this->stock->setnomAR(nomAR);
 
@@ -49,7 +49,7 @@ namespace NS_SVC {
 		this->stock->setprixTTC(prixTTC);
 		this->stock->setseul_de_reappro(seul_de_reappro);
 
-		id = this->cad->actionRowsID(this->stock->UPDATE());
+		this->cad->actionRowsID(this->stock->UPDATE());
 	}
 	void gestion_stock::supprimer(int ID)
 	{

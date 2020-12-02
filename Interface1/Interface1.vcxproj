@@ -133,6 +133,7 @@
     <ClCompile Include="gestion_commande.cpp" />
     <ClCompile Include="gestion_personnel.cpp" />
     <ClCompile Include="gestion_stock.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="MyForm.cpp" />
     <ClCompile Include="Personnel.cpp" />
     <ClCompile Include="Statistique.cpp" />
