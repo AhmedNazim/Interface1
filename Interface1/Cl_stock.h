@@ -14,10 +14,10 @@ namespace NS_Composants {
 		String^ refAR;
 		String^ couleurAR;
 		String^ natureAR;
-		float prixHTAR;
+		double prixHTAR;
 		int qantiterAR;
-		float prixTVA;
-		float prixTTC;
+		double prixTVA;
+		double prixTTC;
 		String^ seul_de_reappro;
 	public:
 		Cl_stock();
