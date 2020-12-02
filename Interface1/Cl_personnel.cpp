@@ -11,23 +11,23 @@ namespace NS_Composants
 	}
 	String^ Cl_personnel::SELECTByIdPersonne(void)
 	{
-		return "SELCET * FROM personnel WHERE nomPER= '" + nomPER + "' and prenomPER='" + prenomPER + "'";
+		return "SELCET * FROM personnel WHERE nomPER= '" + this->nomPER + "' and prenomPER='" + this->prenomPER + "'";
 	};
 	String^ Cl_personnel::INSERT(void)
 	{
 		
-		return "INSERT INTO personne(nomPER, prenomPER, supH, DateAmb, ID_personnel) VALUES ('" + nomPER + "'," + prenomPER + "','" + supH + "'," + DateAmb + "ID_personnel=ID WHERE nom ='"+ supH + "')";
+		return "INSERT INTO personne(nomPER, prenomPER, supH, DateAmb, ID_personnel) VALUES ('" + this->nomPER + "'," + this->prenomPER + "','" + this->supH + "'," + this->DateAmb + "ID_personnel=ID WHERE nom ='"+ this->supH + "')";
 	};
 	String^ Cl_personnel::UPDATE(void)
 	{
-		return "UPDATE personneel SET nomPER='" + nomPER + "',prenomPER='" + prenomPER + "',supH='" + supH + "',DateAmb='" + DateAmb + "',ID_personnel=ID WHERE nom ='" +supH+"');";
+		return "UPDATE personneel SET nomPER='" + this->nomPER + "',prenomPER='" + this->prenomPER + "',supH='" + this->supH + "',DateAmb='" + this->DateAmb + "',ID_personnel=(SELECT ID FROM personel WHERE nom ='" + this->supH+"') WHERE ID= '"+ this->ID+"' ;";
 	
 
 	};
 	String^ Cl_personnel::DELETE(void)
 	{
 		
-		return "DELETE FROM personnel WHERE ID = '" + ID_personnel + "' ";
+		return "DELETE FROM personnel WHERE ID = '" + this->ID + "' ";
 	}
 	void Cl_personnel::setId_personnel(int ID_personnel)
 	{

@@ -20,7 +20,7 @@ namespace NS_Composants {
 	}
 	String^ Cl_client::UPDATE(void)
 	{
-		return "UPDATE client SET nomCL ='" + this->nomCL + "' , prenonCL='" + this->prononCL + "',adresseCL='" + this->adresseCL + "',DateAnivCL= '"+ this->DateAnivCL + "','"+ this->adresseFAC +"',DatePremierAchat='" + this->DatePremierAchat + "' WHERE ID " + this->ID + "; ";
+		return "UPDATE client SET nomCL ='" + this->nomCL + "' , prenonCL='" + this->prononCL + "',adresseCL='" + this->adresseCL + "',DateAnivCL= '"+ this->DateAnivCL + "','"+ this->adresseFAC +"',DatePremierAchat='" + this->DatePremierAchat + "' WHERE ID= " + this->ID + "; ";
 	}
 	String^ Cl_client::DELETE(void)
 	{

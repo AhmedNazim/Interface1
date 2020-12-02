@@ -15,25 +15,19 @@ namespace NS_Composants
 	}
 	String^ Cl_commande::SELECT(void)
 	{
-		/*return "SELECT id_adresse, adresse, ville, cp, id_personne " +
-			"FROM TB_ADRESSE " +
-			"WHERE(id_personne = " + this->id_personne + ");"; */
+		return "SELECT'" + this->id_commande + "', '" + this->refCOM + "', '" + this->DateLiv + "','" + this->DateEmi + "', '" + this->DatePay + "','" + this->DateReglement + "','" + this->totalArticle + "', '" + this->totalHT + "', '" + this->totalTVA + "' '" + this->totalTTC + "', '" + this->remise + "', '" + this->id_client + "','" + this->id_article + "' FROM commande";
 	}
 	String^ Cl_commande::INSERT(void)
-	{/*
-		return "INSERT INTO TB_ADRESSE(adresse, ville, cp, id_personne) " +
-			"VALUES('" + this->adresse + "', '" + this->ville + "', '" + this->cp + "', " + this->id_personne + ");";*/
+	{
+		return "INSERT INTO commande (refCOM, DateLiv, DateEmi,DatePay,DateReglement,totalArticle,totalHT,totalTVA,totalTTC,remise,ID_client,ID_article) VALUES ('"+ this->refCOM+"', '"+ this->DateLiv+"', '"+ this->DateEmi +"', '" + this->DatePay + "','" + this->DateReglement + "', '"+ this->totalArticle+"', '"+ this->totalHT+"', '"+ this->totalTVA+"', '"+ this->totalTTC+"', '" + this->remise + "', '" + this->id_client + "', '" + this->id_article + "')";
 	}
 	String^ Cl_commande::UPDATE(void)
-	{/*
-		return "UPDATE TB_ADRESSE " +
-			"SET adresse ='" + this->adresse + "', ville ='" + this->ville + "', cp ='" + this->cp + "' " +
-			"WHERE(id_adresse = " + this->id_adresse + "); "; */
+	{
+		return "UPDATE commande SET refCOM='" + this->refCOM + "', DateLiv ='" + this->DateLiv + "', DateEmi ='" + this->DateEmi + "', DatePay='" + this->DatePay + "', DateReglement ='" + this->DateReglement + "', totalArticle ='" + this->totalArticle + "', totalHT ='" + this->totalHT + "', totalTVA ='" + this->totalTVA + "', totalTTC ='" + this->totalTTC + "', remise ='" + this->totalTTC + "', ID_client ='" + this->id_client + "', ID_article = '" + this->id_article + "' WHERE ID='" + this->id_commande + "' ";
 	}
 	String^ Cl_commande::DELETE(void)
-	{/*
-		return "DELETE FROM TB_ADRESSE " +
-			"WHERE(id_adresse = " + this->id_adresse + ");"; */ 
+	{
+		return "WHERE(  ID = '" + this->ID + "' );"; 
 	}
 	void Cl_commande::setId_commande(int Id_commande)
 	{
