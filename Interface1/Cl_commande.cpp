@@ -1,6 +1,6 @@
 #include "Cl_commande.h"
 
-namespace NS_Composants
+namespace NS_Composants 
 {
 	Cl_commande::Cl_commande(void)
 	{
