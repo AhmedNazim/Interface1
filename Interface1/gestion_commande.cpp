@@ -1,5 +1,5 @@
 #include "gestion_commande.h"
-namespace NS_SVC {
+namespace NS_SVC {// ya rayan rak gaertna fl'adresse
 	gestion_commande::gestion_commande()
 	{
 		this->cad = gcnew NS_Composants::Connection();
@@ -17,7 +17,7 @@ namespace NS_SVC {
 	void gestion_commande::ajouter(String^ adresse, String^ DateReglement, String^ DatePay, String^ DateEmi, String^ DateLiv)
 	{
 		int id;
-		this->commande->setAdresse(adresse);
+		//this->commande->setAdresse(adresse);
 		this->commande->setDateReglement(DateReglement);
 
 		this->commande->setDatePay(DatePay);
@@ -32,7 +32,7 @@ namespace NS_SVC {
 	{
 		int id;
 		this->commande->setId_commande(Id_commande);
-		this->commande->setAdresse(adresse);
+		//this->commande->setAdresse(adresse);
 		this->commande->setDateReglement(DateReglement);
 		this->commande->setDatePay(DatePay);
 		this->commande->setDateEmi(DateEmi);

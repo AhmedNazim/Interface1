@@ -5,7 +5,7 @@ namespace NS_Composants
 	Cl_commande::Cl_commande(void)
 	{
 		this->id_commande = -1;
-		this->adresse = "RIEN";
+		//this->adresse = "RIEN";
 		this->DateReglement = "RIEN";
 		this->DatePay= "RIEN";
 		this->DateEmi = "RIEN";
@@ -39,10 +39,12 @@ namespace NS_Composants
 	{
 		//if (IdAdresse > 0)this->id_adresse = IdAdresse;
 	}
-	void Cl_commande::setAdresse(String^ Adresse)
+	//on va changer avec ref 
+	/*void Cl_commande::setAdresse(String^ Adresse)
 	{
 		//if (Adresse != "")this->adresse = Adresse;
-	}
+	}*/
+
 	void Cl_commande::setDateReglement(String^ DateReglement)
 	{
 		//if (Cp != "")this->cp = Cp;
