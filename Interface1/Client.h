@@ -1,5 +1,5 @@
 #pragma once
-
+#include "gestion_client.h"
 namespace Interface1 {
 
 	using namespace System;
@@ -39,7 +39,7 @@ namespace Interface1 {
 	private: System::Windows::Forms::Button^ button2;
 	private: System::Windows::Forms::Button^ button3;
 	private: System::Windows::Forms::Button^ button4;
-	private: System::Windows::Forms::Button^ button5;
+
 	private: System::Windows::Forms::DataGridView^ dataGridView1;
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::Label^ label2;
@@ -59,6 +59,7 @@ namespace Interface1 {
 	private: System::Windows::Forms::Panel^ panel5;
 	private: System::Windows::Forms::Panel^ panel6;
 	private: System::Windows::Forms::Panel^ panel7;
+	private: System::Windows::Forms::Button^ button5;
 
 	private:
 		/// <summary>
@@ -78,7 +79,6 @@ namespace Interface1 {
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->button4 = (gcnew System::Windows::Forms::Button());
-			this->button5 = (gcnew System::Windows::Forms::Button());
 			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
@@ -98,6 +98,7 @@ namespace Interface1 {
 			this->panel5 = (gcnew System::Windows::Forms::Panel());
 			this->panel6 = (gcnew System::Windows::Forms::Panel());
 			this->panel7 = (gcnew System::Windows::Forms::Panel());
+			this->button5 = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -114,6 +115,7 @@ namespace Interface1 {
 			this->button1->TabIndex = 0;
 			this->button1->Text = L" ";
 			this->button1->UseVisualStyleBackColor = false;
+			this->button1->Click += gcnew System::EventHandler(this, &Client::button1_Click);
 			// 
 			// button2
 			// 
@@ -150,19 +152,6 @@ namespace Interface1 {
 			this->button4->Size = System::Drawing::Size(105, 91);
 			this->button4->TabIndex = 3;
 			this->button4->UseVisualStyleBackColor = false;
-			// 
-			// button5
-			// 
-			this->button5->BackColor = System::Drawing::Color::Transparent;
-			this->button5->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button5.BackgroundImage")));
-			this->button5->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
-			this->button5->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button5->Location = System::Drawing::Point(692, 355);
-			this->button5->Name = L"button5";
-			this->button5->Size = System::Drawing::Size(105, 91);
-			this->button5->TabIndex = 4;
-			this->button5->UseVisualStyleBackColor = false;
-			this->button5->Click += gcnew System::EventHandler(this, &Client::button5_Click);
 			// 
 			// dataGridView1
 			// 
@@ -273,6 +262,7 @@ namespace Interface1 {
 			this->textBox2->Name = L"textBox2";
 			this->textBox2->Size = System::Drawing::Size(239, 23);
 			this->textBox2->TabIndex = 13;
+			this->textBox2->TextChanged += gcnew System::EventHandler(this, &Client::textBox2_TextChanged);
 			// 
 			// textBox3
 			// 
@@ -282,6 +272,7 @@ namespace Interface1 {
 			this->textBox3->Name = L"textBox3";
 			this->textBox3->Size = System::Drawing::Size(239, 23);
 			this->textBox3->TabIndex = 14;
+			this->textBox3->TextChanged += gcnew System::EventHandler(this, &Client::textBox3_TextChanged);
 			// 
 			// textBox4
 			// 
@@ -291,6 +282,7 @@ namespace Interface1 {
 			this->textBox4->Name = L"textBox4";
 			this->textBox4->Size = System::Drawing::Size(239, 23);
 			this->textBox4->TabIndex = 15;
+			this->textBox4->TextChanged += gcnew System::EventHandler(this, &Client::textBox4_TextChanged);
 			// 
 			// textBox5
 			// 
@@ -300,6 +292,7 @@ namespace Interface1 {
 			this->textBox5->Name = L"textBox5";
 			this->textBox5->Size = System::Drawing::Size(239, 23);
 			this->textBox5->TabIndex = 16;
+			this->textBox5->TextChanged += gcnew System::EventHandler(this, &Client::textBox5_TextChanged);
 			// 
 			// textBox6
 			// 
@@ -309,6 +302,7 @@ namespace Interface1 {
 			this->textBox6->Name = L"textBox6";
 			this->textBox6->Size = System::Drawing::Size(239, 23);
 			this->textBox6->TabIndex = 17;
+			this->textBox6->TextChanged += gcnew System::EventHandler(this, &Client::textBox6_TextChanged);
 			// 
 			// panel1
 			// 
@@ -358,6 +352,19 @@ namespace Interface1 {
 			this->panel7->Name = L"panel7";
 			this->panel7->Size = System::Drawing::Size(238, 3);
 			this->panel7->TabIndex = 19;
+			// 
+			// button5
+			// 
+			this->button5->BackColor = System::Drawing::Color::Transparent;
+			this->button5->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button5.BackgroundImage")));
+			this->button5->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
+			this->button5->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button5->Location = System::Drawing::Point(692, 355);
+			this->button5->Name = L"button5";
+			this->button5->Size = System::Drawing::Size(105, 91);
+			this->button5->TabIndex = 4;
+			this->button5->UseVisualStyleBackColor = false;
+			this->button5->Click += gcnew System::EventHandler(this, &Client::button5_Click);
 			// 
 			// Client
 			// 
@@ -414,6 +421,29 @@ private: System::Void panel1_Paint(System::Object^ sender, System::Windows::Form
 private: System::Void label6_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+    int ID = Int32::Parse(textBox1->Text);
+
+}
+private: System::Void textBox2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+	String^ nom = textBox2->Text;
+}
+private: System::Void textBox3_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+	String^ prenom = textBox3->Text;
+}
+
+private: System::Void textBox6_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+	String^AddFac= textBox4->Text;
+
+}
+private: System::Void textBox4_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+	String^ AddLiv = textBox4->Text;
+}
+
+private: System::Void textBox5_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+	String^ DateAniv = textBox5->Text;
+}
+private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+	gestion_client();
 }
 };
 }
