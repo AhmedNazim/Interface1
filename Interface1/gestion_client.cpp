@@ -15,7 +15,7 @@ namespace NS_SVC
 		return this->ds;
 	}
 	//rak gaertna hna tan fl'adresse
-	DataSet^ gestion_client::adressesClient(int id_client, String^ dataTableName)
+	/*DataSet^ gestion_client::adressesClient(int id_client, String^ dataTableName)
 	{
 		this->ds = gcnew DataSet();
 		this->client->setID(id_client);
@@ -26,21 +26,21 @@ namespace NS_SVC
 		this->adresse->setID(id_personne);
 		this->ds = this->cad->getRows(this->adresse->SELECTByIdPersonne(), dataTableName);
 		return this->ds;
-	     */
-}
+	     
+}*/
 	
 	
-	void gestion_client::ajouter(String^ nom, String^ prenom, String^ adresseCL, String^ adresseFAC, String^ DateAnivCL, String^ DatePremierAchat)
+	void gestion_client::ajouter(String^ nomCL, String^ pronon, String^ adresseCL, String^ adresseFAC, String^ DateAnivCL, String^ DatePremierAchat)
 	{
 		int id;
 		
-		this->client->setNomCL(nom);
-		this->client->setPrononCL(prenom);
+		this->client->setNomCL(nomCL);
+		this->client->setPrononCL(pronon);
 		this->client->setAdresseCL(adresseCL);
 
 		this->client->setAdresseFAC(adresseFAC);
-		this->client->setNomCL(nom);
-		this->client->setPrononCL(prenom);
+		this->client->setNomCL(nomCL);
+		this->client->setPrononCL(pronon);
 		this->client->setAdresseCL(adresseCL);
 		this->client->setAdresseFAC(adresseFAC);
 		this->client->setDateAnivCL( DateAnivCL);
@@ -49,44 +49,20 @@ namespace NS_SVC
 		
 	}
 	
-	/*void gestion_client::ajouter(String^ nom, String^ prenom, array<String^>^ lesAdresses)
-	{
-		int id;
-		int i;
-		this->client->setnomCL(nom);
-		this->client->setprononCL(prenom);
-		id = this->cad->actionRowsID(this->client->INSERT());
-		for (i = 0; i < lesAdresses->Length - 1; i++)
-		{
-			this->adresse->setAdresse(lesAdresses[i]); i++;
-			this->adresse->setVille(lesAdresses[i]); i++;
-			this->adresse->setCp(lesAdresses[i]);
-			this->adresse->setIdPersonne(id);
-			this->cad->actionRows(this->adresse->INSERT());
-		}
-	} 
-	*/
-	void gestion_client::modifier(int id_personne, String^ nom, String^ prenom, String^ adresseCL, String^ adresseFAC, String^ DateAnivCL, String^ DatePremierAchat)
+	
+	void gestion_client::modifier(int id_personne, String^ nom, String^ pronon, String^ adresseCL, String^ adresseFAC, String^ DateAnivCL, String^ DatePremierAchat)
 	{
 		
 		this->client->setID(id_personne);
 		this->client->setNomCL(nom);
-		this->client->setPrononCL(prenom);
+		this->client->setPrononCL(pronon);
 		this->client->setAdresseCL(adresseCL);
 
 		this->client->setAdresseFAC(adresseFAC);
 		this->client->setDateAnivCL(DateAnivCL);
 		this->client->setDatePremierAchat(DatePremierAchat);
 		this->cad->actionRows(this->client->UPDATE());
-		/*for (i = 0; i < lesAdresses->Length - 1; i++)
-			
-		{
-			this->adresse->setIdAdresse(Convert::ToInt32(lesAdresses[i])); i++;
-			this->adresse->setAdresse(lesAdresses[i]); i++;
-			this->adresse->setVille(lesAdresses[i]); i++;
-			this->adresse->setCp(lesAdresses[i]);
-			this->cad->actionRows(this->adresse->UPDATE());
-		}*/
+		
 	}
 	void gestion_client::supprimer(int idPersonne)
 	{

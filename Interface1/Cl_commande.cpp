@@ -3,13 +3,19 @@
 namespace NS_Composants 
 {
 	Cl_commande::Cl_commande(void)
-	{
+	{   
 		this->id_commande = -1;
 		//this->adresse = "RIEN";
 		this->DateReglement = "RIEN";
 		this->DatePay= "RIEN";
 		this->DateEmi = "RIEN";
 		this->DateLiv = "RIEN";
+		/*this->refCOM = "RIEN";
+		this->remise = "RIEN";
+		this->totalTTC = "RIEN";
+		this->totalHT = "RIEN";
+		this->totalTVA = "RIEN";
+		this->totalArticle = "RIEN";*/
 		this->id_client = -1;
 		this->id_article = -1;
 	}
@@ -64,7 +70,7 @@ namespace NS_Composants
 		this->id_article = Id_article;
 	}
 
-	int Cl_commande::getId_commande(void )
+	int Cl_commande::getId_commande(void)
 	{
 		return this->id_commande;
 	}

@@ -33,7 +33,7 @@ namespace NS_Composants {
 		return "DELETE FROM article WHERE ID = '" + this->ID + "' ";
 
 	}
-	void Cl_stock::setID(int)
+	void Cl_stock::setID(int ID)
 	{
 		this->ID = ID;
 	}
