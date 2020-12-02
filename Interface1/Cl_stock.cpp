@@ -35,87 +35,87 @@ namespace NS_Composants {
 	}
 	void Cl_stock::setID(int)
 	{
-		// this->ID_client = ID_client;
+		this->ID = ID;
 	}
 	
-	void Cl_stock::setnomAR(String^)
+	void Cl_stock::setnomAR(String^ nomAR)
 	{
-		// this->ID_client = ID_client;
+		this->nomAR = nomAR;
 	}
 
-	void Cl_stock::setrefAR(String^)
+	void Cl_stock::setrefAR(String^ refAR)
 	{
-		// this->ID_client = ID_client;
+		this->refAR = refAR;
 	}
 	
-	void Cl_stock::setcouleurAR(String^)
+	void Cl_stock::setcouleurAR(String^ couleurAR)
 	{
-		// this->ID_client = ID_client;
+		this->couleurAR = couleurAR;
 	}
 	
-	void Cl_stock::setnatureAR(String^)
+	void Cl_stock::setnatureAR(String^ natureAR)
 	{
-		// this->ID_client = ID_client;
+	this->natureAR = natureAR;
 	}
-	void Cl_stock::setqantiterAR(int)
+	void Cl_stock::setqantiterAR(int qantiterAR)
 	{
-		// this->ID_client = ID_client;
+		this->qantiterAR = qantiterAR;
 	}
-	void Cl_stock::setprixHTAR(float)
+	void Cl_stock::setprixHTAR(float prixHTAR)
 	{
-		// this->ID_client = ID_client;
+		this->prixHTAR = prixHTAR;
 	}
-	void Cl_stock::setprixTVA(float)
+	void Cl_stock::setprixTVA(float prixTVA)
 	{
-		// this->ID_client = ID_client;
+		this->prixTVA = prixTVA;
 	}
-	void Cl_stock::setprixTTC(float)
+	void Cl_stock::setprixTTC(float prixTTC)
 	{
-		// this->ID_client = ID_client;
+		this->prixTTC = prixTTC;
 	}
-	void Cl_stock::setseul_de_reappro(String^)
+	void Cl_stock::setseul_de_reappro(String^ seul_de_reappro)
 	{
-		// this->ID_client = ID_client;
+		this->seul_de_reappro = seul_de_reappro;
 	}
 	int Cl_stock::getID()
 	{
-		//return this->ID;
+		return this->ID;
 	}
 	String^ Cl_stock::getnomAR()
 	{
-		//return this->nomAR;
+		return this->nomAR;
 	}
 	String^ Cl_stock::getrefAR()
 	{
-		//return this->couleurAR;
+		return this->couleurAR;
 	}
 	String^ Cl_stock::getcouleurAR()
 	{
-		//return this->couleurAR;
+		return this->couleurAR;
 	}
 	String^ Cl_stock::getnatureAR()
 	{
-		//return this->natureAR;
+		return this->natureAR;
 	}
 	float Cl_stock::getprixHTAR()
 	{
-		//return this->prixHTAR;
+		return this->prixHTAR;
 	}
 	float Cl_stock::getprixTVA()
 	{
-		//return this->prixTVA;
+		return this->prixTVA;
 	}
 	float Cl_stock::getprixTTC()
 	{
-		//return this->prixTTC;
+		return this->prixTTC;
 	}
 	int Cl_stock::getqantiterAR()
 	{
-		//return this->qantiterAR;
+		return this->qantiterAR;
 	}
 	String^ Cl_stock::getseul_de_reappro()
 	{
-		//return this->seul_de_reappro;
+		return this->seul_de_reappro;
 	}
 	;
 	

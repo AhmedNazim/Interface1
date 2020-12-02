@@ -5,7 +5,7 @@ namespace NS_Composants {
 	{
 	private:
 		int id_commande;
-		String^ adresse;
+		//String^ adresse; n'oublie pas 
 		String^ totalTTC;//pas de set 
 		String^ totalTVA;// pas de set 
 		String^ totalHT;//pas de set 

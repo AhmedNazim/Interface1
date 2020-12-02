@@ -5,7 +5,7 @@ namespace NS_Composants
 	Cl_commande::Cl_commande(void)
 	{
 		this->id_commande = -1;
-		this->adresse = "RIEN";
+		//this->adresse = "RIEN";
 		this->DateReglement = "RIEN";
 		this->DatePay= "RIEN";
 		this->DateEmi = "RIEN";
@@ -37,7 +37,7 @@ namespace NS_Composants
 	}
 	void Cl_commande::setId_commande(int Id_commande)
 	{
-		//if (IdAdresse > 0)this->id_adresse = IdAdresse;
+		this->id_commande = Id_commande;
 	}
 	void Cl_commande::setAdresse(String^ Adresse)
 	{
@@ -45,57 +45,57 @@ namespace NS_Composants
 	}
 	void Cl_commande::setDateReglement(String^ DateReglement)
 	{
-		//if (Cp != "")this->cp = Cp;
+		this->DateReglement = DateReglement;
 	}
 	void Cl_commande::setDatePay(String^ DatePay)
 	{
-		//if (Ville != "")this->ville = Ville;
+		this->DatePay = DatePay;
 	}
 	void Cl_commande::setDateEmi(String^ DateEmi)
 	{
-		//if (IdPersonne > 0)t//if (IdAdresse > 0)this->id_adresse = IdAdresse;his->id_personne = IdPersonne;
+		this->DateEmi = DateEmi;
 	}
 	void Cl_commande::setId_client(int Id_client)
 	{
-		//if (IdAdresse > 0)this->id_adresse = IdAdresse;
+		this->id_client = id_client;
 	}
 	void Cl_commande::setId_article(int Id_article)
 	{
-		//if (IdAdresse > 0)this->id_adresse = IdAdresse;
+		this->id_article = Id_article;
 	}
 
 	int Cl_commande::getId_commande(void)
 	{
-		//return this->id_adresse;
+		return this->id_commande;
 	}
-	String^ Cl_commande::getAdresse(void)
+	/*String^ Cl_commande::getAdresse(void)
 	{
 		//return this->adresse;
-	}
+	}*/
 	String^ Cl_commande::getDateReglement(void)
 	{
-		//return this->cp;
+		return this->DateReglement;
 	}
 	String^ Cl_commande::getDatePay(void)
 	{
-		//return this->ville;
+		return this->DatePay;
 	}
 	String^ Cl_commande::getDateEmi(void)
 	{
-		//return this->ville;
+		return this->DateEmi;
 	}
 	String^ Cl_commande::getDateLiv(void)
 	{
-		//return this->ville;
+		return this->DateLiv;
 	}
 	
 	int Cl_commande::getId_client(void)
 	{
-		//return this->id_adresse;
+		return this->id_client;
 	}
 
 	int Cl_commande::getId_article(void)
 	{
-		//return this->id_adresse;
+		return this->id_article;
 	}
 }

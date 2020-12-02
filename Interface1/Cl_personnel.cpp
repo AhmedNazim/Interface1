@@ -29,54 +29,54 @@ namespace NS_Composants
 		
 		return "DELETE FROM personnel WHERE ID = '" + ID_personnel + "' ";
 	}
-	void Cl_personnel::setId_personnel(int)
+	void Cl_personnel::setId_personnel(int ID_personnel)
 	{
-		// this->ID_client = ID_client;
+		this->ID_personnel = ID_personnel;
 	}
-	void Cl_personnel::setID(int)
+	void Cl_personnel::setID(int ID)
 	{
-		// this->ID_client = ID_client;
+		 this->ID = ID;
 	}
 	
-	void Cl_personnel::setNomPER(String^)
+	void Cl_personnel::setNomPER(String^ nomPER)
 	{
-		// this->ID_client = ID_client;
+		this->nomPER = nomPER;
 	}
-	void Cl_personnel::setPrenomPER(String^)
+	void Cl_personnel::setPrenomPER(String^ prenomPER)
 	{
-		// this->ID_client = ID_client;
+		this->prenomPER = prenomPER;
 	}
-	void Cl_personnel::setSupH(String^)
+	void Cl_personnel::setSupH(String^ supH)
 	{
-		// this->ID_client = ID_client;
+		this->supH = supH;
 	}
-	void Cl_personnel::setDateAmb(String^)
+	void Cl_personnel::setDateAmb(String^ DateAmb)
 	{
-		// this->ID_client = ID_client;
+		this->DateAmb = DateAmb;
 	}
 	int Cl_personnel::getId_personnel(void)
 	{
-		//return this->Id_personnel;
+		return this->ID_personnel;
 	}
 	int NS_Composants::Cl_personnel::getID(void)
 	{
-		//return this->NomPER;
+		return this->ID;
 	}
 	String^ Cl_personnel::getNomPER(void)
 	{
-		//return this->NomPER;
+		return this->nomPER;
 	}
 	String^ Cl_personnel::getPrenomPER(void)
 	{
-		//return this->PrenomPER;
+		return this->prenomPER;
 	}
 	String^ Cl_personnel::getSupH(void)
 	{
-		//return this->SupH;
+		return this->supH;
 	}
 	String^ Cl_personnel::getDateAmb(void)
 	{
-		//return this->DateAmb;
+		return this->DateAmb;
 	}
 	;
 
