@@ -1,5 +1,8 @@
 #pragma once
 #include "gestion_client.h"
+
+
+
 namespace Interface1 {
 
 	using namespace System;
@@ -441,9 +444,11 @@ private: System::Void textBox4_TextChanged(System::Object^ sender, System::Event
 
 private: System::Void textBox5_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 	String^ DateAniv = textBox5->Text;
+	
 }
 private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-	gestion_client();
+	NS_SVC::gestion_client^ ajt = gcnew NS_SVC::gestion_client();
 }
+	  
 };
 }
