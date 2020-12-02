@@ -39,10 +39,10 @@ namespace NS_SVC
 		this->client->setAdresseCL(adresseCL);
 
 		this->client->setAdresseFAC(adresseFAC);
-		this->client->setnomCL(nom);
-		this->client->setprononCL(prenom);
-		this->client->setadresseCL(adresseCL);
-		this->client->setadresseFAC(adresseFAC);
+		this->client->setNomCL(nom);
+		this->client->setPrononCL(prenom);
+		this->client->setAdresseCL(adresseCL);
+		this->client->setAdresseFAC(adresseFAC);
 		this->client->setDateAnivCL( DateAnivCL);
 		this->client->setDatePremierAchat( DatePremierAchat);
 		id = this->cad->actionRowsID(this->client->INSERT());
