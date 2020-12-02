@@ -40,5 +40,6 @@ namespace NS_Composants {
 		String^ getDateLiv(void);
 		int getId_client(void);
 		int getId_article(void);
+
 	};
 }

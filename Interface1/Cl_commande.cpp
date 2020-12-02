@@ -57,7 +57,7 @@ namespace NS_Composants
 	{
 		this->DateEmi = DateEmi;
 	}
-	void Cl_commande::setId_client(int Id_client)
+	void Cl_commande::setId_client(int id_client)
 	{
 		this->id_client = id_client;
 	}
@@ -66,7 +66,7 @@ namespace NS_Composants
 		this->id_article = Id_article;
 	}
 
-	int Cl_commande::getId_commande(void)
+	int Cl_commande::getId_commande(void )
 	{
 		return this->id_commande;
 	}

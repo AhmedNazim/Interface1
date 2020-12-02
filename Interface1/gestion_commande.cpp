@@ -24,7 +24,7 @@ namespace NS_SVC {// ya rayan rak gaertna fl'adresse
 
 		this->commande->setDateEmi(DateEmi);
 		this->commande->setDateLiv(DateLiv);
-
+		//ref commande voir comme ajouter 
 		id = this->cad->actionRowsID(this->commande->INSERT());
 	}
 
@@ -36,6 +36,7 @@ namespace NS_SVC {// ya rayan rak gaertna fl'adresse
 		this->commande->setDateReglement(DateReglement);
 		this->commande->setDatePay(DatePay);
 		this->commande->setDateEmi(DateEmi);
+		//ref commande voir comment rajouter 
 		this->commande->setDateLiv(DateLiv);
 		this->cad->actionRows(this->commande->UPDATE());
 	}
