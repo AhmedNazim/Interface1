@@ -20,8 +20,6 @@ namespace NS_SVC {
 		DataSet^ listeClients(String^);
 		DataSet^ adressesClient(int, String^);
 		void ajouter(String^, String^ , String^ , String^ , String^ , String^);
-		//void ajouter(String^, String^, array<String^>^);
-		//void modifier(int, String^, String^, array<String^>^);
 		void modifier(int , String^ , String^ , String^ , String^ , String^ , String^ );
 		void supprimer(int);
 	};

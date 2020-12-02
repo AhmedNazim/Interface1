@@ -37,7 +37,6 @@ namespace NS_SVC
 		this->client->setnomCL(nom);
 		this->client->setprononCL(prenom);
 		this->client->setadresseCL(adresseCL);
-
 		this->client->setadresseFAC(adresseFAC);
 		this->client->setDateAnivCL( DateAnivCL);
 		this->client->setDatePremierAchat( DatePremierAchat);
@@ -64,7 +63,7 @@ namespace NS_SVC
 	*/
 	void gestion_client::modifier(int id_personne, String^ nom, String^ prenom, String^ adresseCL, String^ adresseFAC, String^ DateAnivCL, String^ DatePremierAchat)
 	{
-		int i;
+		
 		this->client->setID(id_personne);
 		this->client->setnomCL(nom);
 		this->client->setprononCL(prenom);
