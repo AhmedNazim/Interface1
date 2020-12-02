@@ -28,9 +28,9 @@ namespace NS_SVC {// ya rayan rak gaertna fl'adresse
 		id = this->cad->actionRowsID(this->commande->INSERT());
 	}
 
-	void gestion_commande::modifier(int Id_commande, String^ adresse, String^ DateReglement, String^ DatePay, String^ DateEmi, String^ DateLiv)
+	void gestion_commande::modifier(int Id_commande,  String^ DateReglement, String^ DatePay, String^ DateEmi, String^ DateLiv)
 	{
-		int id;
+		
 		this->commande->setId_commande(Id_commande);
 		//this->commande->setAdresse(adresse);
 		this->commande->setDateReglement(DateReglement);
