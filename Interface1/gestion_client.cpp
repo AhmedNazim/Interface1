@@ -14,7 +14,7 @@ namespace NS_SVC
 		this->ds = this->cad->getRows(this->client->SELECT(), dataTableName);
 		return this->ds;
 	}
-	
+	//rak gaertna hna tan fl'adresse
 	DataSet^ gestion_client::adressesClient(int id_client, String^ dataTableName)
 	{
 		this->ds = gcnew DataSet();

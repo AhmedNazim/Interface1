@@ -39,10 +39,12 @@ namespace NS_Composants
 	{
 		this->id_commande = Id_commande;
 	}
-	void Cl_commande::setAdresse(String^ Adresse)
+	//on va changer avec ref 
+	/*void Cl_commande::setAdresse(String^ Adresse)
 	{
 		//if (Adresse != "")this->adresse = Adresse;
-	}
+	}*/
+
 	void Cl_commande::setDateReglement(String^ DateReglement)
 	{
 		this->DateReglement = DateReglement;
