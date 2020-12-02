@@ -14,7 +14,7 @@ namespace NS_SVC {// ya rayan rak gaertna fl'adresse
 		return this->ds;
 	}
 
-	void gestion_commande::ajouter(String^ adresse, String^ DateReglement, String^ DatePay, String^ DateEmi, String^ DateLiv)
+	void gestion_commande::ajouter( String^ DateReglement, String^ DatePay, String^ DateEmi, String^ DateLiv)
 	{
 		int id;
 		//this->commande->setAdresse(adresse);

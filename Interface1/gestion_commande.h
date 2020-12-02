@@ -20,7 +20,7 @@ private:
 public: 
 	gestion_commande();
 	DataSet^ listeCommande(String^);
-	void ajouter(String^ , String^ , String^ , String^ , String^);
+	void ajouter( String^ , String^ , String^ , String^);
 	void modifier(int , String^, String^, String^, String^, String^);
 	void supprimer(int);
 

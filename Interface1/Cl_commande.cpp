@@ -27,7 +27,7 @@ namespace NS_Composants
 	}
 	String^ Cl_commande::DELETE(void)
 	{
-		return "WHERE(  ID = '" + this->ID + "' );"; 
+		return "WHERE(  ID = '" + this->id_commande + "' );";
 	}
 	void Cl_commande::setId_commande(int Id_commande)
 	{
@@ -50,6 +50,10 @@ namespace NS_Composants
 	void Cl_commande::setDateEmi(String^ DateEmi)
 	{
 		this->DateEmi = DateEmi;
+	}
+	void Cl_commande::setDateLiv(String^ dateLiv)
+	{
+		this->DateLiv = dateLiv;
 	}
 	void Cl_commande::setId_client(int id_client)
 	{

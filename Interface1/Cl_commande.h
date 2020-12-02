@@ -26,7 +26,7 @@ namespace NS_Composants {
 		String^ DELETE(void);
 		void setId_commande(int);
 		void setDateReglement(String^);
-		void setAdresse(String^);
+		//void setAdresse(String^);
 		void setDatePay(String^);
 		void setDateEmi(String^);
 		void setDateLiv(String^);
@@ -34,7 +34,7 @@ namespace NS_Composants {
 		void setId_article(int);
 		int getId_commande(void);
 		String^ getDateReglement(void);
-		String^ getAdresse(void);
+		//String^ getAdresse(void);
 		String^ getDatePay(void);
 		String^ getDateEmi(void);
 		String^ getDateLiv(void);

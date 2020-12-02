@@ -170,6 +170,7 @@ namespace Interface1 {
 			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
 			this->dataGridView1->Location = System::Drawing::Point(516, 12);
 			this->dataGridView1->Name = L"dataGridView1";
+			this->dataGridView1->RowHeadersWidth = 51;
 			this->dataGridView1->Size = System::Drawing::Size(338, 337);
 			this->dataGridView1->TabIndex = 5;
 			this->dataGridView1->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &Client::dataGridView1_CellContentClick);
@@ -184,7 +185,7 @@ namespace Interface1 {
 			this->label1->ForeColor = System::Drawing::SystemColors::ButtonFace;
 			this->label1->Location = System::Drawing::Point(12, 50);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(32, 25);
+			this->label1->Size = System::Drawing::Size(40, 33);
 			this->label1->TabIndex = 6;
 			this->label1->Text = L"ID";
 			// 
@@ -197,7 +198,7 @@ namespace Interface1 {
 			this->label2->ForeColor = System::Drawing::SystemColors::ButtonFace;
 			this->label2->Location = System::Drawing::Point(12, 101);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(56, 25);
+			this->label2->Size = System::Drawing::Size(72, 33);
 			this->label2->TabIndex = 7;
 			this->label2->Text = L"Nom";
 			// 
@@ -210,7 +211,7 @@ namespace Interface1 {
 			this->label3->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
 			this->label3->Location = System::Drawing::Point(12, 154);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(85, 25);
+			this->label3->Size = System::Drawing::Size(110, 33);
 			this->label3->TabIndex = 8;
 			this->label3->Text = L"Prénom";
 			// 
@@ -223,7 +224,7 @@ namespace Interface1 {
 			this->label4->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
 			this->label4->Location = System::Drawing::Point(12, 205);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(167, 25);
+			this->label4->Size = System::Drawing::Size(214, 33);
 			this->label4->TabIndex = 9;
 			this->label4->Text = L"Add Facturation ";
 			// 
@@ -236,7 +237,7 @@ namespace Interface1 {
 			this->label5->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
 			this->label5->Location = System::Drawing::Point(12, 264);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(147, 25);
+			this->label5->Size = System::Drawing::Size(189, 33);
 			this->label5->TabIndex = 10;
 			this->label5->Text = L"Add Livraison ";
 			// 
@@ -249,7 +250,7 @@ namespace Interface1 {
 			this->label6->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
 			this->label6->Location = System::Drawing::Point(12, 330);
 			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(189, 25);
+			this->label6->Size = System::Drawing::Size(240, 33);
 			this->label6->TabIndex = 11;
 			this->label6->Text = L"Date De Naissance";
 			this->label6->Click += gcnew System::EventHandler(this, &Client::label6_Click);
@@ -260,7 +261,7 @@ namespace Interface1 {
 			this->textBox1->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->textBox1->Location = System::Drawing::Point(197, 46);
 			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(239, 19);
+			this->textBox1->Size = System::Drawing::Size(239, 23);
 			this->textBox1->TabIndex = 12;
 			this->textBox1->TextChanged += gcnew System::EventHandler(this, &Client::textBox1_TextChanged);
 			// 
@@ -270,7 +271,7 @@ namespace Interface1 {
 			this->textBox2->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->textBox2->Location = System::Drawing::Point(196, 101);
 			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(239, 19);
+			this->textBox2->Size = System::Drawing::Size(239, 23);
 			this->textBox2->TabIndex = 13;
 			// 
 			// textBox3
@@ -279,7 +280,7 @@ namespace Interface1 {
 			this->textBox3->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->textBox3->Location = System::Drawing::Point(196, 151);
 			this->textBox3->Name = L"textBox3";
-			this->textBox3->Size = System::Drawing::Size(239, 19);
+			this->textBox3->Size = System::Drawing::Size(239, 23);
 			this->textBox3->TabIndex = 14;
 			// 
 			// textBox4
@@ -288,7 +289,7 @@ namespace Interface1 {
 			this->textBox4->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->textBox4->Location = System::Drawing::Point(197, 261);
 			this->textBox4->Name = L"textBox4";
-			this->textBox4->Size = System::Drawing::Size(239, 19);
+			this->textBox4->Size = System::Drawing::Size(239, 23);
 			this->textBox4->TabIndex = 15;
 			// 
 			// textBox5
@@ -297,7 +298,7 @@ namespace Interface1 {
 			this->textBox5->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->textBox5->Location = System::Drawing::Point(200, 321);
 			this->textBox5->Name = L"textBox5";
-			this->textBox5->Size = System::Drawing::Size(239, 19);
+			this->textBox5->Size = System::Drawing::Size(239, 23);
 			this->textBox5->TabIndex = 16;
 			// 
 			// textBox6
@@ -306,7 +307,7 @@ namespace Interface1 {
 			this->textBox6->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->textBox6->Location = System::Drawing::Point(196, 202);
 			this->textBox6->Name = L"textBox6";
-			this->textBox6->Size = System::Drawing::Size(239, 19);
+			this->textBox6->Size = System::Drawing::Size(239, 23);
 			this->textBox6->TabIndex = 17;
 			// 
 			// panel1
@@ -360,11 +361,11 @@ namespace Interface1 {
 			// 
 			// Client
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(9, 20);
+			this->AutoScaleDimensions = System::Drawing::SizeF(12, 25);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::Black;
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->ClientSize = System::Drawing::Size(901, 463);
+			this->ClientSize = System::Drawing::Size(904, 463);
 			this->Controls->Add(this->panel3);
 			this->Controls->Add(this->panel4);
 			this->Controls->Add(this->panel5);

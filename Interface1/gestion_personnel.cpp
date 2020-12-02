@@ -1,5 +1,11 @@
 #include "gestion_personnel.h"
 namespace  NS_SVC {
+	gestion_personnel::gestion_personnel() {
+	
+		this->cad = gcnew NS_Composants::Connection();
+
+		this->personnel = gcnew NS_Composants::Cl_personnel();
+	};
 	DataSet^ gestion_personnel::listePersonnel(String^ dataTableName)
 	{
 
