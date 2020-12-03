@@ -447,7 +447,13 @@ private: System::Void textBox5_TextChanged(System::Object^ sender, System::Event
 	
 }
 private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+	String^ nom = textBox2->Text;
+	String^ prenom = textBox3->Text;
+	String^ AddFac = textBox4->Text;
+	String^ AddLiv = textBox4->Text;
+	String^ DateAniv = textBox5->Text;
 	NS_SVC::gestion_client^ ajt = gcnew NS_SVC::gestion_client();
+	ajt->ajouter(nom, prenom, AddLiv, AddFac, DateAniv, DateAniv);
 }
 	  
 };

@@ -5,14 +5,10 @@ namespace NS_Composants
 	{
 		this->rq_sql = "RIEN";
 		
-		/* ici partie data source 
+	
 		
-		this->cnx = "Data Source=DESKTOP-7SAG648\\MSSQLSERVMANU;" +
-			"Initial Catalog=DB_A2_POO_P6;" +
-			"Persist Security Info=True;" +
-			"User ID=CNX_A2_POO_P6;" +
-			"Password=azerty";
-		*/
+		this->cnx = "Data Source=LAPTOP-PU1057KM\SQLEXPRESS;Initial Catalog=nazimpresident;Integrated Security=True";
+	
 		this->CNX = gcnew SqlConnection(this->cnx);
 		this->CMD = gcnew SqlCommand(this->rq_sql, this->CNX);
 		this->CMD->CommandType = CommandType::Text;
