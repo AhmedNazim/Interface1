@@ -23,5 +23,6 @@ namespace NS_SVC {
 		void ajouter(String^, String^ , String^ , String^ , String^ , String^);
 		void modifier(int , String^ , String^ , String^ , String^ , String^ , String^ );
 		void supprimer(int);
+		void afficher(String^, String^, String^, String^, String^, String^);
 	};
 }
