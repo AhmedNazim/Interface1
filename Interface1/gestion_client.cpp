@@ -69,4 +69,8 @@ namespace NS_SVC
 		this->client->setID(idPersonne);
 		this->cad->actionRows(this->client->DELETE());
 	}
+	void gestion_client::afficher(String^nomCL, String^pronon, String^adresseCL, String^adresseFAC, String^, String^)
+	{
+		
+	}
 }
