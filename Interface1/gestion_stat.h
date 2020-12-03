@@ -24,6 +24,9 @@ namespace NS_SVC {
 		void totalAchatCL();
 		void articleP();
 		void articleM();
+		void Calcul_Affaire(); //manque le temps (ça doit calculer le total pour chaque mois
 		
+		
+
 	};
 }

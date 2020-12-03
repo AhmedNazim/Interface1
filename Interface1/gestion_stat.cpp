@@ -15,4 +15,9 @@ void NS_SVC::gestion_stat::articleM()
 	this->cad->actionRowsID("SELECT article.nomAR, sum(commande.quantite) AS quantite FROM commande, article WHERE commande.ID_article = article.ID ORDER BY quantite DESC LIMIT 10");	
 }
 
+void NS_SVC::gestion_stat::Calcul_Affaire()
+{
+	this->cad->actionRowsID("SELECT SUM(totalHT) AS TOTAL FROM commande"); //manque le temps (ça doit calculer le total pour chaque mois 
+}
+
 
