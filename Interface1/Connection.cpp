@@ -9,6 +9,10 @@ namespace NS_Composants
 		
 		this->cnx = "Data Source=DESKTOP-PBVM5PL;Initial Catalog=Poo_Project;Integrated Security=True";
 		
+			"Persist Security Info=True;" +
+			"User ID=CNX_A2_POO_P6;" +
+			"Password=azerty";
+		*/
 		this->CNX = gcnew SqlConnection(this->cnx);
 		this->CMD = gcnew SqlCommand(this->rq_sql, this->CNX);
 		this->CMD->CommandType = CommandType::Text;
