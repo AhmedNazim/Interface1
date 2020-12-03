@@ -408,6 +408,7 @@ namespace Interface1 {
 			// 
 			this->textBox1->BackColor = System::Drawing::SystemColors::InactiveCaptionText;
 			this->textBox1->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->textBox1->ForeColor = System::Drawing::SystemColors::Info;
 			this->textBox1->Location = System::Drawing::Point(270, 254);
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->Size = System::Drawing::Size(205, 13);
@@ -417,6 +418,7 @@ namespace Interface1 {
 			// 
 			this->textBox2->BackColor = System::Drawing::SystemColors::InactiveCaptionText;
 			this->textBox2->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->textBox2->ForeColor = System::Drawing::SystemColors::Info;
 			this->textBox2->Location = System::Drawing::Point(270, 179);
 			this->textBox2->Name = L"textBox2";
 			this->textBox2->Size = System::Drawing::Size(205, 13);
@@ -426,6 +428,7 @@ namespace Interface1 {
 			// 
 			this->textBox3->BackColor = System::Drawing::SystemColors::InactiveCaptionText;
 			this->textBox3->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->textBox3->ForeColor = System::Drawing::SystemColors::Info;
 			this->textBox3->Location = System::Drawing::Point(270, 114);
 			this->textBox3->Name = L"textBox3";
 			this->textBox3->Size = System::Drawing::Size(205, 13);
@@ -435,6 +438,7 @@ namespace Interface1 {
 			// 
 			this->textBox4->BackColor = System::Drawing::SystemColors::InactiveCaptionText;
 			this->textBox4->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->textBox4->ForeColor = System::Drawing::SystemColors::Info;
 			this->textBox4->Location = System::Drawing::Point(270, 37);
 			this->textBox4->Name = L"textBox4";
 			this->textBox4->Size = System::Drawing::Size(205, 13);
@@ -444,6 +448,7 @@ namespace Interface1 {
 			// 
 			this->textBox5->BackColor = System::Drawing::SystemColors::InactiveCaptionText;
 			this->textBox5->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->textBox5->ForeColor = System::Drawing::SystemColors::Info;
 			this->textBox5->Location = System::Drawing::Point(12, 318);
 			this->textBox5->Name = L"textBox5";
 			this->textBox5->Size = System::Drawing::Size(205, 13);
@@ -453,6 +458,7 @@ namespace Interface1 {
 			// 
 			this->textBox6->BackColor = System::Drawing::SystemColors::InactiveCaptionText;
 			this->textBox6->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->textBox6->ForeColor = System::Drawing::SystemColors::Info;
 			this->textBox6->Location = System::Drawing::Point(15, 253);
 			this->textBox6->Name = L"textBox6";
 			this->textBox6->Size = System::Drawing::Size(205, 13);
@@ -462,6 +468,7 @@ namespace Interface1 {
 			// 
 			this->textBox7->BackColor = System::Drawing::SystemColors::InactiveCaptionText;
 			this->textBox7->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->textBox7->ForeColor = System::Drawing::SystemColors::Info;
 			this->textBox7->Location = System::Drawing::Point(15, 179);
 			this->textBox7->Name = L"textBox7";
 			this->textBox7->Size = System::Drawing::Size(205, 13);
@@ -471,6 +478,7 @@ namespace Interface1 {
 			// 
 			this->textBox8->BackColor = System::Drawing::SystemColors::InactiveCaptionText;
 			this->textBox8->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->textBox8->ForeColor = System::Drawing::SystemColors::Info;
 			this->textBox8->Location = System::Drawing::Point(15, 117);
 			this->textBox8->Name = L"textBox8";
 			this->textBox8->Size = System::Drawing::Size(205, 13);
@@ -480,6 +488,7 @@ namespace Interface1 {
 			// 
 			this->textBox9->BackColor = System::Drawing::SystemColors::InactiveCaptionText;
 			this->textBox9->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->textBox9->ForeColor = System::Drawing::SystemColors::Info;
 			this->textBox9->Location = System::Drawing::Point(12, 37);
 			this->textBox9->Name = L"textBox9";
 			this->textBox9->Size = System::Drawing::Size(205, 13);
