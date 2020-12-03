@@ -22,20 +22,8 @@ namespace NS_SVC {
 		void calcPanierMoy();
 		void SeuilRea();
 		void totalAchatCL();
-		/*SELECT ID_client, SUM(quantite) AS articleTotal
-		FROM commande
-		GROUP BY ID_client*/
 		void articleP();
-		/*SELECT article.nomAR, sum(commande.quantite) AS quantite
-		FROM commande, article
-		WHERE commande.ID_article = article.ID
-		ORDER BY quantite
-		LIMIT 10*/
 		void articleM();
-		/*SELECT article.nomAR, sum(commande.quantite) AS quantite
-		 FROM commande, article
-		 WHERE commande.ID_article = article.ID
-		 ORDER BY quantite DESC
-		 LIMIT 10*/
+		
 	};
 }
