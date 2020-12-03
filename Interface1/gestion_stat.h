@@ -1,5 +1,5 @@
 #pragma once
-#include "Connection.h"
+/*#include "Connection.h"
 #include "Cl_commande.h"
 #include "Cl_stock.h"
 #include "Cl_client.h"
@@ -29,4 +29,4 @@ namespace NS_SVC {
 		
 
 	};
-}
+}*/
