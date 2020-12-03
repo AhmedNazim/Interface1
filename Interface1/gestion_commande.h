@@ -2,6 +2,8 @@
 
 #include "Connection.h"
 #include "Cl_commande.h"
+#include "Cl_client.h"
+
 using namespace System::Data;
 using namespace System::Data::SqlClient;
 using namespace System::Xml;
@@ -23,6 +25,12 @@ public:
 	void ajouter( String^ , String^ , String^ , String^);
 	void modifier(int , String^, String^, String^, String^);
 	void supprimer(int);
+	//void facturer();
+	/*
+	adresses de fact 
+	adresses de liv 
+
+	*/
 
 };
 }
