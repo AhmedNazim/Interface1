@@ -23,7 +23,7 @@ namespace NS_Composants {
 		String^ SELECT(void);
 		String^ INSERT(void);
 		String^ UPDATE(void);
-		String^ DELETE(void);
+		String^ DLT(void);
 		void setId_commande(int);
 		void setDateReglement(String^);
 		//void setAdresse(String^);

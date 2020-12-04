@@ -31,7 +31,7 @@ namespace NS_Composants
 	{
 		return "UPDATE commande SET refCOM='" + this->refCOM + "', DateLiv ='" + this->DateLiv + "', DateEmi ='" + this->DateEmi + "', DatePay='" + this->DatePay + "', DateReglement ='" + this->DateReglement + "', totalArticle ='" + this->totalArticle + "', totalHT ='" + this->totalHT + "', totalTVA ='" + this->totalTVA + "', totalTTC ='" + this->totalTTC + "', remise ='" + this->totalTTC + "', ID_client ='" + this->id_client + "', ID_article = '" + this->id_article + "' WHERE ID='" + this->id_commande + "' ";
 	}
-	String^ Cl_commande::DELETE(void)
+	String^ Cl_commande::DLT(void)
 	{
 		return "WHERE(  ID = '" + this->id_commande + "' );";
 	}
