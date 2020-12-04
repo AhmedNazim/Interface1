@@ -18,8 +18,18 @@ namespace Interface1 {
 	public ref class Client : public System::Windows::Forms::Form
 	{
 	public:
+		Form^ Y;
 		Client(void)
 		{
+			InitializeComponent();
+			//
+			//TODO: ajoutez ici le code du constructeur
+			//
+		}
+		Client(Form^Y1)
+
+		{
+			Y = Y1;
 			InitializeComponent();
 			//
 			//TODO: ajoutez ici le code du constructeur
@@ -62,10 +72,11 @@ namespace Interface1 {
 	private: System::Windows::Forms::Panel^ panel5;
 	private: System::Windows::Forms::Panel^ panel6;
 	private: System::Windows::Forms::Panel^ panel7;
-	private: System::Windows::Forms::Button^ button5;
+
 	private: System::Windows::Forms::Label^ label7;
 	private: System::Windows::Forms::TextBox^ textBox7;
 	private: System::Windows::Forms::Panel^ panel2;
+	private: System::Windows::Forms::Button^ button6;
 
 	private:
 		/// <summary>
@@ -104,10 +115,10 @@ namespace Interface1 {
 			this->panel5 = (gcnew System::Windows::Forms::Panel());
 			this->panel6 = (gcnew System::Windows::Forms::Panel());
 			this->panel7 = (gcnew System::Windows::Forms::Panel());
-			this->button5 = (gcnew System::Windows::Forms::Button());
 			this->label7 = (gcnew System::Windows::Forms::Label());
 			this->textBox7 = (gcnew System::Windows::Forms::TextBox());
 			this->panel2 = (gcnew System::Windows::Forms::Panel());
+			this->button6 = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -118,7 +129,7 @@ namespace Interface1 {
 			this->button1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
 			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button1->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->button1->Location = System::Drawing::Point(77, 363);
+			this->button1->Location = System::Drawing::Point(42, 363);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(102, 88);
 			this->button1->TabIndex = 0;
@@ -132,7 +143,7 @@ namespace Interface1 {
 			this->button2->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button2.BackgroundImage")));
 			this->button2->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
 			this->button2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button2->Location = System::Drawing::Point(241, 359);
+			this->button2->Location = System::Drawing::Point(173, 359);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(100, 88);
 			this->button2->TabIndex = 1;
@@ -144,7 +155,7 @@ namespace Interface1 {
 			this->button3->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button3.BackgroundImage")));
 			this->button3->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
 			this->button3->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button3->Location = System::Drawing::Point(404, 359);
+			this->button3->Location = System::Drawing::Point(323, 363);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(103, 88);
 			this->button3->TabIndex = 2;
@@ -157,7 +168,7 @@ namespace Interface1 {
 			this->button4->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button4.BackgroundImage")));
 			this->button4->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
 			this->button4->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button4->Location = System::Drawing::Point(548, 356);
+			this->button4->Location = System::Drawing::Point(459, 363);
 			this->button4->Name = L"button4";
 			this->button4->Size = System::Drawing::Size(105, 91);
 			this->button4->TabIndex = 3;
@@ -370,19 +381,6 @@ namespace Interface1 {
 			this->panel7->Size = System::Drawing::Size(238, 3);
 			this->panel7->TabIndex = 19;
 			// 
-			// button5
-			// 
-			this->button5->BackColor = System::Drawing::Color::Transparent;
-			this->button5->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button5.BackgroundImage")));
-			this->button5->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
-			this->button5->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button5->Location = System::Drawing::Point(692, 355);
-			this->button5->Name = L"button5";
-			this->button5->Size = System::Drawing::Size(105, 91);
-			this->button5->TabIndex = 4;
-			this->button5->UseVisualStyleBackColor = false;
-			this->button5->Click += gcnew System::EventHandler(this, &Client::button5_Click);
-			// 
 			// label7
 			// 
 			this->label7->AutoSize = true;
@@ -414,13 +412,26 @@ namespace Interface1 {
 			this->panel2->Size = System::Drawing::Size(238, 3);
 			this->panel2->TabIndex = 22;
 			// 
+			// button6
+			// 
+			this->button6->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button6.BackgroundImage")));
+			this->button6->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
+			this->button6->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->button6->Location = System::Drawing::Point(653, 376);
+			this->button6->Name = L"button6";
+			this->button6->Size = System::Drawing::Size(80, 71);
+			this->button6->TabIndex = 23;
+			this->button6->UseVisualStyleBackColor = true;
+			this->button6->Click += gcnew System::EventHandler(this, &Client::button6_Click);
+			// 
 			// Client
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(12, 25);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::Black;
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->ClientSize = System::Drawing::Size(801, 435);
+			this->ClientSize = System::Drawing::Size(895, 470);
+			this->Controls->Add(this->button6);
 			this->Controls->Add(this->panel2);
 			this->Controls->Add(this->textBox7);
 			this->Controls->Add(this->label7);
@@ -443,7 +454,6 @@ namespace Interface1 {
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->dataGridView1);
-			this->Controls->Add(this->button5);
 			this->Controls->Add(this->button4);
 			this->Controls->Add(this->button3);
 			this->Controls->Add(this->button2);
@@ -527,6 +537,10 @@ private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e
 	NS_SVC::gestion_client^ sup = gcnew NS_SVC::gestion_client();
 	sup->supprimer(id);
 	delete(sup);
+}
+private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->Hide();
+	Y->Show(); 
 }
 };
 

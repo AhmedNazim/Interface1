@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 #include "gestion_personnel.h"
 namespace Interface1 {
 
@@ -10,11 +10,12 @@ namespace Interface1 {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// Description résumée de Personnel
+	/// Description rï¿½sumï¿½e de Personnel
 	/// </summary>
 	public ref class Personnel : public System::Windows::Forms::Form
 	{
 	public:
+		Form^ obj; 
 		Personnel(void)
 		{
 			InitializeComponent();
@@ -22,10 +23,17 @@ namespace Interface1 {
 			//TODO: ajoutez ici le code du constructeur
 			//
 		}
-
+		Personnel(Form^obj1)
+		{
+			obj = obj1;
+			InitializeComponent();
+			//
+			//TODO: ajoutez ici le code du constructeur
+			//
+		}
 	protected:
 		/// <summary>
-		/// Nettoyage des ressources utilisées.
+		/// Nettoyage des ressources utilisï¿½es.
 		/// </summary>
 		~Personnel()
 		{
@@ -62,12 +70,12 @@ namespace Interface1 {
 	private: System::Windows::Forms::Label^ label8;
 	private: System::Windows::Forms::Label^ label9;
 	private: System::Windows::Forms::Label^ label3;
-	private: System::Windows::Forms::Label^ label6;
+
 	private: System::Windows::Forms::Button^ button1;
 	private: System::Windows::Forms::Button^ button2;
 	private: System::Windows::Forms::Button^ button4;
 	private: System::Windows::Forms::Button^ button3;
-	private: System::Windows::Forms::Button^ button5;
+
 	private: System::Windows::Forms::TextBox^ textBox1;
 	private: System::Windows::Forms::TextBox^ textBox2;
 	private: System::Windows::Forms::TextBox^ textBox3;
@@ -82,20 +90,22 @@ namespace Interface1 {
 	private: System::Windows::Forms::Panel^ panel5;
 	private: System::Windows::Forms::Panel^ panel6;
 	private: System::Windows::Forms::Panel^ panel7;
-	private: System::Windows::Forms::RadioButton^ radioButton1;
-	private: System::Windows::Forms::RadioButton^ radioButton2;
-	private: System::Windows::Forms::Label^ label2;
+
+
+
+	private: System::Windows::Forms::Button^ button6;
+	private: System::Windows::Forms::Label^ label6;
 
 	private:
 		/// <summary>
-		/// Variable nécessaire au concepteur.
+		/// Variable nï¿½cessaire au concepteur.
 		/// </summary>
 		System::ComponentModel::Container ^components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
-		/// Méthode requise pour la prise en charge du concepteur - ne modifiez pas
-		/// le contenu de cette méthode avec l'éditeur de code.
+		/// Mï¿½thode requise pour la prise en charge du concepteur - ne modifiez pas
+		/// le contenu de cette mï¿½thode avec l'ï¿½diteur de code.
 		/// </summary>
 		void InitializeComponent(void)
 		{
@@ -107,12 +117,10 @@ namespace Interface1 {
 			this->label8 = (gcnew System::Windows::Forms::Label());
 			this->label9 = (gcnew System::Windows::Forms::Label());
 			this->label3 = (gcnew System::Windows::Forms::Label());
-			this->label6 = (gcnew System::Windows::Forms::Label());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->button4 = (gcnew System::Windows::Forms::Button());
 			this->button3 = (gcnew System::Windows::Forms::Button());
-			this->button5 = (gcnew System::Windows::Forms::Button());
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
@@ -127,9 +135,8 @@ namespace Interface1 {
 			this->panel5 = (gcnew System::Windows::Forms::Panel());
 			this->panel6 = (gcnew System::Windows::Forms::Panel());
 			this->panel7 = (gcnew System::Windows::Forms::Panel());
-			this->radioButton1 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioButton2 = (gcnew System::Windows::Forms::RadioButton());
-			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->button6 = (gcnew System::Windows::Forms::Button());
+			this->label6 = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -217,7 +224,7 @@ namespace Interface1 {
 			this->label3->Font = (gcnew System::Drawing::Font(L"Bahnschrift SemiBold", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label3->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->label3->Location = System::Drawing::Point(683, 211);
+			this->label3->Location = System::Drawing::Point(685, 84);
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(300, 33);
 			this->label3->TabIndex = 27;
@@ -255,10 +262,10 @@ namespace Interface1 {
 			// 
 			// button2
 			// 
-			this->button2->BackColor = System::Drawing::Color::Transparent;
+			this->button2->BackColor = System::Drawing::Color::Black;
 			this->button2->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button2.BackgroundImage")));
 			this->button2->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
-			this->button2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button2->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->button2->Location = System::Drawing::Point(197, 387);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(100, 88);
@@ -267,10 +274,11 @@ namespace Interface1 {
 			// 
 			// button4
 			// 
-			this->button4->BackColor = System::Drawing::Color::Transparent;
+			this->button4->BackColor = System::Drawing::Color::Black;
 			this->button4->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button4.BackgroundImage")));
 			this->button4->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
-			this->button4->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button4->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->button4->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->button4->Location = System::Drawing::Point(537, 387);
 			this->button4->Name = L"button4";
 			this->button4->Size = System::Drawing::Size(105, 91);
@@ -280,10 +288,10 @@ namespace Interface1 {
 			// 
 			// button3
 			// 
-			this->button3->BackColor = System::Drawing::Color::Transparent;
+			this->button3->BackColor = System::Drawing::Color::Black;
 			this->button3->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button3.BackgroundImage")));
 			this->button3->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
-			this->button3->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button3->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->button3->Location = System::Drawing::Point(354, 388);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(103, 88);
@@ -291,25 +299,12 @@ namespace Interface1 {
 			this->button3->UseVisualStyleBackColor = false;
 			this->button3->Click += gcnew System::EventHandler(this, &Personnel::button3_Click);
 			// 
-			// button5
-			// 
-			this->button5->BackColor = System::Drawing::Color::Transparent;
-			this->button5->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button5.BackgroundImage")));
-			this->button5->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
-			this->button5->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button5->Location = System::Drawing::Point(687, 387);
-			this->button5->Name = L"button5";
-			this->button5->Size = System::Drawing::Size(105, 91);
-			this->button5->TabIndex = 33;
-			this->button5->UseVisualStyleBackColor = false;
-			this->button5->Click += gcnew System::EventHandler(this, &Personnel::button5_Click);
-			// 
 			// textBox1
 			// 
 			this->textBox1->BackColor = System::Drawing::SystemColors::InactiveCaptionText;
 			this->textBox1->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->textBox1->ForeColor = System::Drawing::SystemColors::Info;
-			this->textBox1->Location = System::Drawing::Point(689, 239);
+			this->textBox1->Location = System::Drawing::Point(690, 122);
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->Size = System::Drawing::Size(239, 23);
 			this->textBox1->TabIndex = 34;
@@ -320,7 +315,7 @@ namespace Interface1 {
 			this->textBox2->BackColor = System::Drawing::SystemColors::InactiveCaptionText;
 			this->textBox2->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->textBox2->ForeColor = System::Drawing::SystemColors::Info;
-			this->textBox2->Location = System::Drawing::Point(689, 175);
+			this->textBox2->Location = System::Drawing::Point(690, 46);
 			this->textBox2->Name = L"textBox2";
 			this->textBox2->Size = System::Drawing::Size(239, 23);
 			this->textBox2->TabIndex = 35;
@@ -392,7 +387,7 @@ namespace Interface1 {
 			// panel2
 			// 
 			this->panel2->BackColor = System::Drawing::Color::White;
-			this->panel2->Location = System::Drawing::Point(689, 200);
+			this->panel2->Location = System::Drawing::Point(690, 71);
 			this->panel2->Name = L"panel2";
 			this->panel2->Size = System::Drawing::Size(240, 3);
 			this->panel2->TabIndex = 42;
@@ -432,7 +427,7 @@ namespace Interface1 {
 			// panel7
 			// 
 			this->panel7->BackColor = System::Drawing::Color::White;
-			this->panel7->Location = System::Drawing::Point(689, 264);
+			this->panel7->Location = System::Drawing::Point(690, 147);
 			this->panel7->Name = L"panel7";
 			this->panel7->Size = System::Drawing::Size(240, 3);
 			this->panel7->TabIndex = 43;
@@ -466,11 +461,11 @@ namespace Interface1 {
 			this->radioButton2->Text = L"NON";
 			this->radioButton2->UseVisualStyleBackColor = true;
 			// 
-			// label2
+			// label6
 			// 
-			this->label2->AutoSize = true;
-			this->label2->BackColor = System::Drawing::Color::Transparent;
-			this->label2->Font = (gcnew System::Drawing::Font(L"Bahnschrift SemiBold", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->label6->AutoSize = true;
+			this->label6->BackColor = System::Drawing::Color::Transparent;
+			this->label6->Font = (gcnew System::Drawing::Font(L"Bahnschrift SemiBold", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label2->ForeColor = System::Drawing::SystemColors::ButtonFace;
 			this->label2->Location = System::Drawing::Point(670, 49);
@@ -484,10 +479,9 @@ namespace Interface1 {
 			this->AutoScaleDimensions = System::Drawing::SizeF(12, 25);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::Black;
+			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
 			this->ClientSize = System::Drawing::Size(964, 480);
-			this->Controls->Add(this->label2);
-			this->Controls->Add(this->radioButton2);
-			this->Controls->Add(this->radioButton1);
+			this->Controls->Add(this->button6);
 			this->Controls->Add(this->panel7);
 			this->Controls->Add(this->panel3);
 			this->Controls->Add(this->panel4);
@@ -502,7 +496,6 @@ namespace Interface1 {
 			this->Controls->Add(this->textBox3);
 			this->Controls->Add(this->textBox2);
 			this->Controls->Add(this->textBox1);
-			this->Controls->Add(this->button5);
 			this->Controls->Add(this->button3);
 			this->Controls->Add(this->button4);
 			this->Controls->Add(this->button2);
@@ -517,6 +510,7 @@ namespace Interface1 {
 			this->Controls->Add(this->label1);
 			this->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
+			this->ForeColor = System::Drawing::SystemColors::ControlLight;
 			this->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->Name = L"Personnel";
 			this->Text = L"Personnel";

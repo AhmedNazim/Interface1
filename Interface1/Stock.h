@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 #include "gestion_stock.h"
 namespace Interface1 {
 
@@ -10,13 +10,23 @@ namespace Interface1 {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// Description résumée de Stock
+	/// Description rï¿½sumï¿½e de Stock
 	/// </summary>
 	public ref class Stock : public System::Windows::Forms::Form
 	{
+		
 	public:
+		Form^ R;
 		Stock(void)
 		{
+			InitializeComponent();
+			//
+			//TODO: ajoutez ici le code du constructeur
+			//
+		}
+		Stock(Form^R1)
+		{
+			R = R1;
 			InitializeComponent();
 			//
 			//TODO: ajoutez ici le code du constructeur
@@ -25,7 +35,7 @@ namespace Interface1 {
 
 	protected:
 		/// <summary>
-		/// Nettoyage des ressources utilisées.
+		/// Nettoyage des ressources utilisï¿½es.
 		/// </summary>
 		~Stock()
 		{
@@ -46,7 +56,7 @@ namespace Interface1 {
 
 
 	private: System::Windows::Forms::DataGridView^ dataGridView2;
-	private: System::Windows::Forms::Button^ button5;
+
 	private: System::Windows::Forms::Button^ button4;
 	private: System::Windows::Forms::Button^ button3;
 	private: System::Windows::Forms::Button^ button2;
@@ -79,23 +89,23 @@ namespace Interface1 {
 	private: System::Windows::Forms::TextBox^ textBox7;
 	private: System::Windows::Forms::TextBox^ textBox8;
 	private: System::Windows::Forms::TextBox^ textBox9;
+	private: System::Windows::Forms::Button^ button6;
 
 	private:
 		/// <summary>
-		/// Variable nécessaire au concepteur.
+		/// Variable nï¿½cessaire au concepteur.
 		/// </summary>
 		System::ComponentModel::Container ^components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
-		/// Méthode requise pour la prise en charge du concepteur - ne modifiez pas
-		/// le contenu de cette méthode avec l'éditeur de code.
+		/// Mï¿½thode requise pour la prise en charge du concepteur - ne modifiez pas
+		/// le contenu de cette mï¿½thode avec l'ï¿½diteur de code.
 		/// </summary>
 		void InitializeComponent(void)
 		{
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(Stock::typeid));
 			this->dataGridView2 = (gcnew System::Windows::Forms::DataGridView());
-			this->button5 = (gcnew System::Windows::Forms::Button());
 			this->button4 = (gcnew System::Windows::Forms::Button());
 			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->button2 = (gcnew System::Windows::Forms::Button());
@@ -128,6 +138,7 @@ namespace Interface1 {
 			this->textBox7 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox8 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox9 = (gcnew System::Windows::Forms::TextBox());
+			this->button6 = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->BeginInit();
 			this->panel7->SuspendLayout();
 			this->SuspendLayout();
@@ -402,7 +413,7 @@ namespace Interface1 {
 			this->label6->Name = L"label6";
 			this->label6->Size = System::Drawing::Size(116, 33);
 			this->label6->TabIndex = 49;
-			this->label6->Text = L"Quantité";
+			this->label6->Text = L"Quantitï¿½";
 			this->label6->Click += gcnew System::EventHandler(this, &Stock::label6_Click);
 			// 
 			// label7
@@ -541,12 +552,24 @@ namespace Interface1 {
 			this->textBox9->TabIndex = 60;
 			this->textBox9->TextChanged += gcnew System::EventHandler(this, &Stock::textBox9_TextChanged);
 			// 
+			// button6
+			// 
+			this->button6->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button6.BackgroundImage")));
+			this->button6->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
+			this->button6->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->button6->Location = System::Drawing::Point(628, 368);
+			this->button6->Name = L"button6";
+			this->button6->Size = System::Drawing::Size(78, 64);
+			this->button6->TabIndex = 61;
+			this->button6->UseVisualStyleBackColor = true;
+			this->button6->Click += gcnew System::EventHandler(this, &Stock::button6_Click);
+			// 
 			// Stock
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->ClientSize = System::Drawing::Size(1239, 542);
+			this->ClientSize = System::Drawing::Size(929, 440);
 			this->Controls->Add(this->textBox9);
 			this->Controls->Add(this->textBox8);
 			this->Controls->Add(this->textBox7);
@@ -578,7 +601,6 @@ namespace Interface1 {
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->button3);
 			this->Controls->Add(this->button4);
-			this->Controls->Add(this->button5);
 			this->Controls->Add(this->dataGridView2);
 			this->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->Name = L"Stock";

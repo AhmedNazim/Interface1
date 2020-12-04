@@ -15,8 +15,17 @@ namespace Interface1 {
 	public ref class Statistique : public System::Windows::Forms::Form
 	{
 	public:
+		Form^ S;
 		Statistique(void)
 		{
+			InitializeComponent();
+			//
+			//TODO: ajoutez ici le code du constructeur
+			//
+		}
+		Statistique(Form^S1)
+		{
+			S = S1; 
 			InitializeComponent();
 			//
 			//TODO: ajoutez ici le code du constructeur
@@ -34,6 +43,9 @@ namespace Interface1 {
 				delete components;
 			}
 		}
+	private: System::Windows::Forms::DataGridView^ dataGridView1;
+	private: System::Windows::Forms::Button^ button1;
+	protected:
 
 	private:
 		/// <summary>
@@ -48,12 +60,49 @@ namespace Interface1 {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->components = gcnew System::ComponentModel::Container();
-			this->Size = System::Drawing::Size(300,300);
-			this->Text = L"Statistique";
-			this->Padding = System::Windows::Forms::Padding(0);
+			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
+			this->button1 = (gcnew System::Windows::Forms::Button());
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
+			this->SuspendLayout();
+			// 
+			// dataGridView1
+			// 
+			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dataGridView1->Location = System::Drawing::Point(179, 12);
+			this->dataGridView1->Name = L"dataGridView1";
+			this->dataGridView1->Size = System::Drawing::Size(259, 280);
+			this->dataGridView1->TabIndex = 0;
+			// 
+			// button1
+			// 
+			this->button1->Location = System::Drawing::Point(471, 365);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(71, 50);
+			this->button1->TabIndex = 1;
+			this->button1->Text = L"button1";
+			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &Statistique::button1_Click);
+			// 
+			// Statistique
+			// 
+			this->AutoScaleDimensions = System::Drawing::SizeF(9, 20);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->ClientSize = System::Drawing::Size(599, 464);
+			this->Controls->Add(this->button1);
+			this->Controls->Add(this->dataGridView1);
+			this->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->Name = L"Statistique";
+			this->Text = L"Statistique";
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
+			this->ResumeLayout(false);
+
 		}
 #pragma endregion
+	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->Hide();
+		S->Show();
+	}
 	};
 }
