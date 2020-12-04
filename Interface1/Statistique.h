@@ -75,7 +75,7 @@ namespace Interface1 {
 			// 
 			// button1
 			// 
-			this->button1->Location = System::Drawing::Point(450, 353);
+			this->button1->Location = System::Drawing::Point(484, 361);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(71, 50);
 			this->button1->TabIndex = 1;
