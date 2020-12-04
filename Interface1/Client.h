@@ -149,6 +149,7 @@ namespace Interface1 {
 			this->button3->Size = System::Drawing::Size(103, 88);
 			this->button3->TabIndex = 2;
 			this->button3->UseVisualStyleBackColor = false;
+			this->button3->Click += gcnew System::EventHandler(this, &Client::button3_Click);
 			// 
 			// button4
 			// 
@@ -161,6 +162,7 @@ namespace Interface1 {
 			this->button4->Size = System::Drawing::Size(105, 91);
 			this->button4->TabIndex = 3;
 			this->button4->UseVisualStyleBackColor = false;
+			this->button4->Click += gcnew System::EventHandler(this, &Client::button4_Click);
 			// 
 			// dataGridView1
 			// 
@@ -418,7 +420,7 @@ namespace Interface1 {
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::Black;
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->ClientSize = System::Drawing::Size(801, 414);
+			this->ClientSize = System::Drawing::Size(801, 435);
 			this->Controls->Add(this->panel2);
 			this->Controls->Add(this->textBox7);
 			this->Controls->Add(this->label7);
@@ -507,5 +509,22 @@ private: System::Void textBox5_TextChanged(System::Object^ sender, System::Event
 private: System::Void textBox7_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 	
 }
+	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
+		String^ nom = textBox2->Text;
+		String^ prenom = textBox3->Text;
+		String^ AddFac = textBox4->Text;
+		String^ AddLiv = textBox4->Text;
+		String^ DateAniv = textBox5->Text;
+		String^ Datepr = textBox7->Text;
+		int id = Int32::Parse(textBox1->Text);
+		NS_SVC::gestion_client^ mod = gcnew NS_SVC::gestion_client();
+		mod->modifier(id, nom, prenom, AddLiv, AddFac, DateAniv, Datepr);
+	}
+private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
+	int id = Int32::Parse(textBox1->Text);
+	NS_SVC::gestion_client^ sup = gcnew NS_SVC::gestion_client();
+	sup->supprimer(id);
+}
 };
+
 }

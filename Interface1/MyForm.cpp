@@ -16,8 +16,4 @@ void main(array<String^>^ args) {
     Interface1::MyForm form;
     Application::Run(% form);
 
-
-
-
-
 };
