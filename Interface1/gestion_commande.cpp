@@ -64,7 +64,7 @@ namespace NS_SVC {// ya rayan rak gaertna fl'adresse
 			if (fichier)  // si l'ouverture a réussi
 			{
 				
-				fichier << this->commande->getDateReglement() << this->commande->getDatePay() << this->commande->getDateEmi() << this->commande->getDateLiv();
+			  fichier << this->commande->getDateReglement() << this->commande->getDatePay() << this->commande->getDateEmi() << this->commande->getDateLiv();
 				//fichier << o1.getID_commande() << o1.getDateReglement << o1.getAdresse << o1.getDatePay << o1.getDateEmi << o1.getDateLiv << o1.getId_client << o1.getId_article;
 				fichier.close();  // on referme le fichier
 				c++;
