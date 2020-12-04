@@ -77,12 +77,14 @@ namespace Interface1 {
 	private: System::Windows::Forms::TextBox^ textBox7;
 	private: System::Windows::Forms::Panel^ panel2;
 	private: System::Windows::Forms::Button^ button6;
+	private: System::Windows::Forms::BindingSource^ bindingSource1;
+	private: System::ComponentModel::IContainer^ components;
 
 	private:
 		/// <summary>
 		/// Variable nécessaire au concepteur.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -91,6 +93,7 @@ namespace Interface1 {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			this->components = (gcnew System::ComponentModel::Container());
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(Client::typeid));
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->button2 = (gcnew System::Windows::Forms::Button());
@@ -119,7 +122,9 @@ namespace Interface1 {
 			this->textBox7 = (gcnew System::Windows::Forms::TextBox());
 			this->panel2 = (gcnew System::Windows::Forms::Panel());
 			this->button6 = (gcnew System::Windows::Forms::Button());
+			this->bindingSource1 = (gcnew System::Windows::Forms::BindingSource(this->components));
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource1))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// button1
@@ -200,7 +205,7 @@ namespace Interface1 {
 			this->label1->ForeColor = System::Drawing::Color::White;
 			this->label1->Location = System::Drawing::Point(12, 9);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(27, 23);
+			this->label1->Size = System::Drawing::Size(36, 29);
 			this->label1->TabIndex = 6;
 			this->label1->Text = L"ID";
 			// 
@@ -213,7 +218,7 @@ namespace Interface1 {
 			this->label2->ForeColor = System::Drawing::Color::White;
 			this->label2->Location = System::Drawing::Point(12, 62);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(49, 23);
+			this->label2->Size = System::Drawing::Size(64, 29);
 			this->label2->TabIndex = 7;
 			this->label2->Text = L"Nom";
 			// 
@@ -226,7 +231,7 @@ namespace Interface1 {
 			this->label3->ForeColor = System::Drawing::Color::White;
 			this->label3->Location = System::Drawing::Point(12, 104);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(77, 23);
+			this->label3->Size = System::Drawing::Size(97, 29);
 			this->label3->TabIndex = 8;
 			this->label3->Text = L"Prénom";
 			// 
@@ -239,7 +244,7 @@ namespace Interface1 {
 			this->label4->ForeColor = System::Drawing::Color::White;
 			this->label4->Location = System::Drawing::Point(12, 148);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(149, 23);
+			this->label4->Size = System::Drawing::Size(189, 29);
 			this->label4->TabIndex = 9;
 			this->label4->Text = L"Add Facturation ";
 			// 
@@ -252,7 +257,7 @@ namespace Interface1 {
 			this->label5->ForeColor = System::Drawing::Color::White;
 			this->label5->Location = System::Drawing::Point(12, 203);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(132, 23);
+			this->label5->Size = System::Drawing::Size(166, 29);
 			this->label5->TabIndex = 10;
 			this->label5->Text = L"Add Livraison ";
 			// 
@@ -265,7 +270,7 @@ namespace Interface1 {
 			this->label6->ForeColor = System::Drawing::Color::White;
 			this->label6->Location = System::Drawing::Point(12, 261);
 			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(168, 23);
+			this->label6->Size = System::Drawing::Size(215, 29);
 			this->label6->TabIndex = 11;
 			this->label6->Text = L"Date De Naissance";
 			this->label6->Click += gcnew System::EventHandler(this, &Client::label6_Click);
@@ -277,7 +282,7 @@ namespace Interface1 {
 			this->textBox1->ForeColor = System::Drawing::SystemColors::Info;
 			this->textBox1->Location = System::Drawing::Point(201, 9);
 			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(239, 19);
+			this->textBox1->Size = System::Drawing::Size(239, 23);
 			this->textBox1->TabIndex = 12;
 			this->textBox1->TextChanged += gcnew System::EventHandler(this, &Client::textBox1_TextChanged);
 			// 
@@ -288,7 +293,7 @@ namespace Interface1 {
 			this->textBox2->ForeColor = System::Drawing::SystemColors::Info;
 			this->textBox2->Location = System::Drawing::Point(204, 62);
 			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(239, 19);
+			this->textBox2->Size = System::Drawing::Size(239, 23);
 			this->textBox2->TabIndex = 13;
 			this->textBox2->TextChanged += gcnew System::EventHandler(this, &Client::textBox2_TextChanged);
 			// 
@@ -299,7 +304,7 @@ namespace Interface1 {
 			this->textBox3->ForeColor = System::Drawing::SystemColors::Info;
 			this->textBox3->Location = System::Drawing::Point(202, 110);
 			this->textBox3->Name = L"textBox3";
-			this->textBox3->Size = System::Drawing::Size(239, 19);
+			this->textBox3->Size = System::Drawing::Size(239, 23);
 			this->textBox3->TabIndex = 14;
 			this->textBox3->TextChanged += gcnew System::EventHandler(this, &Client::textBox3_TextChanged);
 			// 
@@ -310,7 +315,7 @@ namespace Interface1 {
 			this->textBox4->ForeColor = System::Drawing::SystemColors::Info;
 			this->textBox4->Location = System::Drawing::Point(204, 206);
 			this->textBox4->Name = L"textBox4";
-			this->textBox4->Size = System::Drawing::Size(239, 19);
+			this->textBox4->Size = System::Drawing::Size(239, 23);
 			this->textBox4->TabIndex = 15;
 			this->textBox4->TextChanged += gcnew System::EventHandler(this, &Client::textBox4_TextChanged);
 			// 
@@ -321,7 +326,7 @@ namespace Interface1 {
 			this->textBox5->ForeColor = System::Drawing::SystemColors::Info;
 			this->textBox5->Location = System::Drawing::Point(207, 267);
 			this->textBox5->Name = L"textBox5";
-			this->textBox5->Size = System::Drawing::Size(239, 19);
+			this->textBox5->Size = System::Drawing::Size(239, 23);
 			this->textBox5->TabIndex = 16;
 			this->textBox5->TextChanged += gcnew System::EventHandler(this, &Client::textBox5_TextChanged);
 			// 
@@ -332,7 +337,7 @@ namespace Interface1 {
 			this->textBox6->ForeColor = System::Drawing::SystemColors::Info;
 			this->textBox6->Location = System::Drawing::Point(204, 154);
 			this->textBox6->Name = L"textBox6";
-			this->textBox6->Size = System::Drawing::Size(239, 19);
+			this->textBox6->Size = System::Drawing::Size(239, 23);
 			this->textBox6->TabIndex = 17;
 			this->textBox6->TextChanged += gcnew System::EventHandler(this, &Client::textBox6_TextChanged);
 			// 
@@ -394,7 +399,7 @@ namespace Interface1 {
 			this->label7->ForeColor = System::Drawing::Color::White;
 			this->label7->Location = System::Drawing::Point(12, 312);
 			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(180, 23);
+			this->label7->Size = System::Drawing::Size(230, 29);
 			this->label7->TabIndex = 20;
 			this->label7->Text = L"Date Premier Achat ";
 			// 
@@ -405,7 +410,7 @@ namespace Interface1 {
 			this->textBox7->ForeColor = System::Drawing::SystemColors::Info;
 			this->textBox7->Location = System::Drawing::Point(207, 312);
 			this->textBox7->Name = L"textBox7";
-			this->textBox7->Size = System::Drawing::Size(239, 19);
+			this->textBox7->Size = System::Drawing::Size(239, 23);
 			this->textBox7->TabIndex = 21;
 			this->textBox7->TextChanged += gcnew System::EventHandler(this, &Client::textBox7_TextChanged);
 			// 
@@ -429,9 +434,13 @@ namespace Interface1 {
 			this->button6->UseVisualStyleBackColor = true;
 			this->button6->Click += gcnew System::EventHandler(this, &Client::button6_Click);
 			// 
+			// bindingSource1
+			// 
+			this->bindingSource1->CurrentChanged += gcnew System::EventHandler(this, &Client::bindingSource1_CurrentChanged);
+			// 
 			// Client
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(9, 20);
+			this->AutoScaleDimensions = System::Drawing::SizeF(12, 25);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::ButtonShadow;
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
@@ -471,12 +480,23 @@ namespace Interface1 {
 			this->Text = L"Client";
 			this->Load += gcnew System::EventHandler(this, &Client::Client_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource1))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
 		}
 #pragma endregion
 	private: System::Void dataGridView1_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
+		String^ constring = "";
+		String^ nom = textBox2->Text; String^ prenom = textBox3->Text;
+        SqlConnection^ conDataBase = gcnew SqlConnection(constring);
+        conDataBase->Open();
+        SqlDataAdapter^ adapter = gcnew SqlDataAdapter(" select SELECT * FROM client WHERE nomCL = '" + nom + "'and prenonCL ='" + prenom + "' ; " , conDataBase);
+        DataTable^ data = gcnew DataTable();
+        data->Clear();
+        adapter->Fill(data);
+		bindingSource1->DataSource = data;
+        dataGridView1->DataSource = bindingSource1;
 	}
 private: System::Void Client_Load(System::Object^ sender, System::EventArgs^ e) {
 }
@@ -492,7 +512,7 @@ private: System::Void textBox1_TextChanged(System::Object^ sender, System::Event
 
 }
 private: System::Void textBox2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-	String^ nom = textBox2->Text;
+	String^ nom = textBox2->Text; 
 }
 private: System::Void textBox3_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 	String^ prenom = textBox3->Text;
@@ -551,6 +571,8 @@ private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e
 	Y->Show(); 
 }
 private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void bindingSource1_CurrentChanged(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 
