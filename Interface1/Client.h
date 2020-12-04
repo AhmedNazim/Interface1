@@ -536,6 +536,7 @@ private: System::Void textBox7_TextChanged(System::Object^ sender, System::Event
 		int id = Int32::Parse(textBox1->Text);
 		NS_SVC::gestion_client^ mod = gcnew NS_SVC::gestion_client();
 		mod->modifier(id, nom, prenom, AddLiv, AddFac, DateAniv, Datepr);
+		delete(mod);
 		MessageBox::Show("la personne a etait modifier", "modifier", MessageBoxButtons::OK, MessageBoxIcon::Information);
 	}
 private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -543,6 +544,7 @@ private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e
 	NS_SVC::gestion_client^ sup = gcnew NS_SVC::gestion_client();
 	sup->supprimer(id);
 	MessageBox::Show("la personne a etait supprimer", "supprimer", MessageBoxButtons::OK, MessageBoxIcon::Information);
+	delete(sup);
 }
 private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->Hide();

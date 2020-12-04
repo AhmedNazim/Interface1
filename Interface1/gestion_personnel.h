@@ -16,10 +16,10 @@ namespace NS_SVC {
 		NS_Composants::Cl_personnel^ personnel;
 
 		DataSet^ ds;
-	private:
+	public:
 		gestion_personnel();
 		DataSet^ listePersonnel(String^);
-		void ajouter(String^ , String^ , String^ , String^ );
+		int ajouter(String^ , String^ , String^ , String^ );
 		void modifier(int , String^ , String^ , String^, String^ );
 		void supprimer(int);
 	};
