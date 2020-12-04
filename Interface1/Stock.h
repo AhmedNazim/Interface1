@@ -14,9 +14,19 @@ namespace Interface1 {
 	/// </summary>
 	public ref class Stock : public System::Windows::Forms::Form
 	{
+		
 	public:
+		Form^ R;
 		Stock(void)
 		{
+			InitializeComponent();
+			//
+			//TODO: ajoutez ici le code du constructeur
+			//
+		}
+		Stock(Form^R1)
+		{
+			R = R1;
 			InitializeComponent();
 			//
 			//TODO: ajoutez ici le code du constructeur
@@ -46,7 +56,7 @@ namespace Interface1 {
 
 
 	private: System::Windows::Forms::DataGridView^ dataGridView2;
-	private: System::Windows::Forms::Button^ button5;
+
 	private: System::Windows::Forms::Button^ button4;
 	private: System::Windows::Forms::Button^ button3;
 	private: System::Windows::Forms::Button^ button2;
@@ -79,6 +89,7 @@ namespace Interface1 {
 	private: System::Windows::Forms::TextBox^ textBox7;
 	private: System::Windows::Forms::TextBox^ textBox8;
 	private: System::Windows::Forms::TextBox^ textBox9;
+	private: System::Windows::Forms::Button^ button6;
 
 	private:
 		/// <summary>
@@ -95,7 +106,6 @@ namespace Interface1 {
 		{
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(Stock::typeid));
 			this->dataGridView2 = (gcnew System::Windows::Forms::DataGridView());
-			this->button5 = (gcnew System::Windows::Forms::Button());
 			this->button4 = (gcnew System::Windows::Forms::Button());
 			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->button2 = (gcnew System::Windows::Forms::Button());
@@ -128,6 +138,7 @@ namespace Interface1 {
 			this->textBox7 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox8 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox9 = (gcnew System::Windows::Forms::TextBox());
+			this->button6 = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->BeginInit();
 			this->panel7->SuspendLayout();
 			this->SuspendLayout();
@@ -141,18 +152,6 @@ namespace Interface1 {
 			this->dataGridView2->Size = System::Drawing::Size(304, 337);
 			this->dataGridView2->TabIndex = 31;
 			this->dataGridView2->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &Stock::dataGridView2_CellContentClick);
-			// 
-			// button5
-			// 
-			this->button5->BackColor = System::Drawing::Color::Transparent;
-			this->button5->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button5.BackgroundImage")));
-			this->button5->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
-			this->button5->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button5->Location = System::Drawing::Point(577, 355);
-			this->button5->Name = L"button5";
-			this->button5->Size = System::Drawing::Size(105, 91);
-			this->button5->TabIndex = 34;
-			this->button5->UseVisualStyleBackColor = false;
 			// 
 			// button4
 			// 
@@ -494,12 +493,25 @@ namespace Interface1 {
 			this->textBox9->Size = System::Drawing::Size(205, 13);
 			this->textBox9->TabIndex = 60;
 			// 
+			// button6
+			// 
+			this->button6->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button6.BackgroundImage")));
+			this->button6->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
+			this->button6->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->button6->Location = System::Drawing::Point(628, 368);
+			this->button6->Name = L"button6";
+			this->button6->Size = System::Drawing::Size(78, 64);
+			this->button6->TabIndex = 61;
+			this->button6->UseVisualStyleBackColor = true;
+			this->button6->Click += gcnew System::EventHandler(this, &Stock::button6_Click);
+			// 
 			// Stock
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->ClientSize = System::Drawing::Size(929, 440);
+			this->Controls->Add(this->button6);
 			this->Controls->Add(this->textBox9);
 			this->Controls->Add(this->textBox8);
 			this->Controls->Add(this->textBox7);
@@ -531,7 +543,6 @@ namespace Interface1 {
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->button3);
 			this->Controls->Add(this->button4);
-			this->Controls->Add(this->button5);
 			this->Controls->Add(this->dataGridView2);
 			this->Margin = System::Windows::Forms::Padding(2);
 			this->Name = L"Stock";
@@ -553,6 +564,10 @@ private: System::Void panel8_Paint(System::Object^ sender, System::Windows::Form
 private: System::Void textBox2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void label6_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->Hide();
+	R->Show();
 }
 };
 }

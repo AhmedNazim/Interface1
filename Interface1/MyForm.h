@@ -79,7 +79,7 @@ namespace Interface1 {
 			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button1->Font = (gcnew System::Drawing::Font(L"Bahnschrift SemiLight", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button1->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->button1->ForeColor = System::Drawing::Color::MediumVioletRed;
 			this->button1->Location = System::Drawing::Point(54, 65);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(145, 370);
@@ -97,7 +97,7 @@ namespace Interface1 {
 			this->button2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button2->Font = (gcnew System::Drawing::Font(L"Bahnschrift SemiLight", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button2->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->button2->ForeColor = System::Drawing::Color::Orange;
 			this->button2->Location = System::Drawing::Point(205, 258);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(166, 177);
@@ -115,7 +115,7 @@ namespace Interface1 {
 			this->button3->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button3->Font = (gcnew System::Drawing::Font(L"Bahnschrift SemiLight", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button3->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->button3->ForeColor = System::Drawing::Color::Brown;
 			this->button3->Location = System::Drawing::Point(377, 65);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(189, 169);
@@ -133,7 +133,7 @@ namespace Interface1 {
 			this->button4->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button4->Font = (gcnew System::Drawing::Font(L"Bahnschrift SemiLight", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button4->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->button4->ForeColor = System::Drawing::Color::Green;
 			this->button4->Location = System::Drawing::Point(377, 240);
 			this->button4->Name = L"button4";
 			this->button4->Size = System::Drawing::Size(189, 195);
@@ -151,7 +151,7 @@ namespace Interface1 {
 			this->button5->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button5->Font = (gcnew System::Drawing::Font(L"Bahnschrift SemiLight", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button5->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->button5->ForeColor = System::Drawing::Color::Blue;
 			this->button5->Location = System::Drawing::Point(205, 65);
 			this->button5->Name = L"button5";
 			this->button5->Size = System::Drawing::Size(166, 187);
@@ -166,12 +166,13 @@ namespace Interface1 {
 			this->label1->AutoSize = true;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Bahnschrift SemiBold", 24, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->label1->ForeColor = System::Drawing::Color::White;
 			this->label1->Location = System::Drawing::Point(119, 9);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(399, 39);
 			this->label1->TabIndex = 5;
 			this->label1->Text = L"Bienvenu chez Code Lyoko";
+			this->label1->Visible = false;
 			// 
 			// MyForm
 			// 
@@ -199,23 +200,29 @@ namespace Interface1 {
 		}
 #pragma endregion
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-		Personnel^ P = gcnew Personnel;
+		this->Hide();
+		Personnel^ P = gcnew Personnel(this);
+
 		P->Show();
 	}
 private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
-	Client^ C = gcnew Client;
+	this->Hide();
+	Client^ C = gcnew Client(this);
 	C->Show(); 
 }
 private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
-	Commande^ CM = gcnew Commande;
+	this->Hide();
+	Commande^ CM = gcnew Commande(this);
 	CM->Show(); 
 }
 private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
-	Stock^ S = gcnew Stock; 
+	this->Hide();
+	Stock^ S = gcnew Stock(this); 
 	S->Show();
 }
 private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
-	Statistique^ STT = gcnew Statistique; 
+	this->Hide();
+	Statistique^ STT = gcnew Statistique(this); 
 	STT->Show(); 
 }
 private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) {
