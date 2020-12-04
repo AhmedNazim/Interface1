@@ -556,19 +556,16 @@ private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e
 	NS_SVC::gestion_personnel^ mdff = gcnew NS_SVC::gestion_personnel();
 	mdff->modifier(ID, nom, prenom, nomsup, date);
 	delete(mdff);
+	MessageBox::Show("la personne a etait modifier", "Modifier", MessageBoxButtons::OK, MessageBoxIcon::Information);
 }
 private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
 	int ID = Int32::Parse(textBox7->Text);
 	NS_SVC::gestion_personnel^ supp = gcnew NS_SVC::gestion_personnel();
 	supp->supprimer(ID);
 	delete(supp);
-}
-private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
-	MessageBox::Show("la personne a etait modifier", "Modifier", MessageBoxButtons::OK, MessageBoxIcon::Information);
-}
-private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
 	MessageBox::Show("la personne a etait supprimer", "Supprimer ", MessageBoxButtons::OK, MessageBoxIcon::Information);
 }
+
 
 };
 }
