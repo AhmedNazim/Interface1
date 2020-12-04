@@ -31,18 +31,18 @@ namespace NS_Composants {
 		void setcouleurAR(String^);
 		void setnatureAR(String^);
 		void setqantiterAR(int);
-		void setprixHTAR(float);
-		void setprixTVA(float);
-		void setprixTTC(float);
+		void setprixHTAR(double);
+		void setprixTVA(double);
+		void setprixTTC(double);
 		void setseul_de_reappro(String^);
 		int getID();
 		String^ getnomAR();
 		String^ getrefAR();
 		String^ getcouleurAR();
 		String^ getnatureAR();
-		float getprixHTAR();
-		float getprixTVA();
-		float getprixTTC();
+		double getprixHTAR();
+		double getprixTVA();
+		double getprixTTC();
 		int getqantiterAR();
 		String^ getseul_de_reappro();
 

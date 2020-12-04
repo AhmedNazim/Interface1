@@ -61,15 +61,15 @@ namespace NS_Composants {
 	{
 		this->qantiterAR = qantiterAR;
 	}
-	void Cl_stock::setprixHTAR(float prixHTAR)
+	void Cl_stock::setprixHTAR(double prixHTAR)
 	{
 		this->prixHTAR = prixHTAR;
 	}
-	void Cl_stock::setprixTVA(float prixTVA)
+	void Cl_stock::setprixTVA(double prixTVA)
 	{
 		this->prixTVA = prixTVA;
 	}
-	void Cl_stock::setprixTTC(float prixTTC)
+	void Cl_stock::setprixTTC(double prixTTC)
 	{
 		this->prixTTC = prixTTC;
 	}
@@ -97,15 +97,15 @@ namespace NS_Composants {
 	{
 		return this->natureAR;
 	}
-	float Cl_stock::getprixHTAR()
+	double Cl_stock::getprixHTAR()
 	{
 		return this->prixHTAR;
 	}
-	float Cl_stock::getprixTVA()
+	double Cl_stock::getprixTVA()
 	{
 		return this->prixTVA;
 	}
-	float Cl_stock::getprixTTC()
+	double Cl_stock::getprixTTC()
 	{
 		return this->prixTTC;
 	}

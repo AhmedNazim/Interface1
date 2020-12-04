@@ -515,6 +515,7 @@ private: System::Void textBox5_TextChanged(System::Object^ sender, System::Event
 		NS_SVC::gestion_client^ ajt = gcnew NS_SVC::gestion_client();
 		id = ajt->ajouter(nom, prenom, AddLiv, AddFac, DateAniv, Datepr);
 		textBox1->Text = Convert::ToString(id);
+		delete(ajt);
 	}
 private: System::Void textBox7_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 	
@@ -529,11 +530,13 @@ private: System::Void textBox7_TextChanged(System::Object^ sender, System::Event
 		int id = Int32::Parse(textBox1->Text);
 		NS_SVC::gestion_client^ mod = gcnew NS_SVC::gestion_client();
 		mod->modifier(id, nom, prenom, AddLiv, AddFac, DateAniv, Datepr);
+		delete(mod);
 	}
 private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
 	int id = Int32::Parse(textBox1->Text);
 	NS_SVC::gestion_client^ sup = gcnew NS_SVC::gestion_client();
 	sup->supprimer(id);
+	delete(sup);
 }
 private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->Hide();
