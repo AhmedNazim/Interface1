@@ -54,6 +54,10 @@ namespace NS_Composants
 	{
 		this->DateAmb = DateAmb;
 	}
+	void Cl_personnel::setAddresse(String^ adres)
+	{
+		this->addresse = adres;
+	}
 	int Cl_personnel::getId_personnel(void)
 	{
 		return this->ID_personnel;
@@ -77,6 +81,10 @@ namespace NS_Composants
 	String^ Cl_personnel::getDateAmb(void)
 	{
 		return this->DateAmb;
+	}
+	String^ Cl_personnel::getAdresse(void)
+	{
+		return this->addresse;
 	}
 	;
 

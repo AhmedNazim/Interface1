@@ -1,5 +1,5 @@
 #pragma once
-
+#include "gestion_personnel.h"
 namespace Interface1 {
 
 	using namespace System;
@@ -143,7 +143,7 @@ namespace Interface1 {
 			this->label1->ForeColor = System::Drawing::SystemColors::ButtonFace;
 			this->label1->Location = System::Drawing::Point(3, 18);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(32, 25);
+			this->label1->Size = System::Drawing::Size(40, 33);
 			this->label1->TabIndex = 20;
 			this->label1->Text = L"ID";
 			this->label1->Click += gcnew System::EventHandler(this, &Personnel::label1_Click);
@@ -154,6 +154,7 @@ namespace Interface1 {
 			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
 			this->dataGridView1->Location = System::Drawing::Point(309, 12);
 			this->dataGridView1->Name = L"dataGridView1";
+			this->dataGridView1->RowHeadersWidth = 51;
 			this->dataGridView1->Size = System::Drawing::Size(322, 370);
 			this->dataGridView1->TabIndex = 21;
 			// 
@@ -166,7 +167,7 @@ namespace Interface1 {
 			this->label4->ForeColor = System::Drawing::SystemColors::ButtonFace;
 			this->label4->Location = System::Drawing::Point(-1, 274);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(186, 25);
+			this->label4->Size = System::Drawing::Size(237, 33);
 			this->label4->TabIndex = 22;
 			this->label4->Text = L"Date de Naissance";
 			// 
@@ -179,7 +180,7 @@ namespace Interface1 {
 			this->label5->ForeColor = System::Drawing::SystemColors::ButtonFace;
 			this->label5->Location = System::Drawing::Point(-1, 211);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(90, 25);
+			this->label5->Size = System::Drawing::Size(115, 33);
 			this->label5->TabIndex = 23;
 			this->label5->Text = L"Adresse";
 			// 
@@ -192,7 +193,7 @@ namespace Interface1 {
 			this->label8->ForeColor = System::Drawing::SystemColors::ButtonFace;
 			this->label8->Location = System::Drawing::Point(-1, 147);
 			this->label8->Name = L"label8";
-			this->label8->Size = System::Drawing::Size(85, 25);
+			this->label8->Size = System::Drawing::Size(110, 33);
 			this->label8->TabIndex = 24;
 			this->label8->Text = L"Prenom";
 			// 
@@ -205,7 +206,7 @@ namespace Interface1 {
 			this->label9->ForeColor = System::Drawing::SystemColors::ButtonFace;
 			this->label9->Location = System::Drawing::Point(3, 84);
 			this->label9->Name = L"label9";
-			this->label9->Size = System::Drawing::Size(56, 25);
+			this->label9->Size = System::Drawing::Size(72, 33);
 			this->label9->TabIndex = 25;
 			this->label9->Text = L"Nom";
 			// 
@@ -218,7 +219,7 @@ namespace Interface1 {
 			this->label3->ForeColor = System::Drawing::SystemColors::ButtonFace;
 			this->label3->Location = System::Drawing::Point(683, 211);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(233, 25);
+			this->label3->Size = System::Drawing::Size(300, 33);
 			this->label3->TabIndex = 27;
 			this->label3->Text = L"Prenom Du Supperieur ";
 			this->label3->Click += gcnew System::EventHandler(this, &Personnel::label3_Click);
@@ -232,7 +233,7 @@ namespace Interface1 {
 			this->label6->ForeColor = System::Drawing::SystemColors::ButtonFace;
 			this->label6->Location = System::Drawing::Point(684, 137);
 			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(195, 25);
+			this->label6->Size = System::Drawing::Size(252, 33);
 			this->label6->TabIndex = 28;
 			this->label6->Text = L"Nom du Supperieur";
 			this->label6->Click += gcnew System::EventHandler(this, &Personnel::label6_Click);
@@ -250,6 +251,7 @@ namespace Interface1 {
 			this->button1->TabIndex = 29;
 			this->button1->Text = L" ";
 			this->button1->UseVisualStyleBackColor = false;
+			this->button1->Click += gcnew System::EventHandler(this, &Personnel::button1_Click);
 			// 
 			// button2
 			// 
@@ -274,6 +276,7 @@ namespace Interface1 {
 			this->button4->Size = System::Drawing::Size(105, 91);
 			this->button4->TabIndex = 31;
 			this->button4->UseVisualStyleBackColor = false;
+			this->button4->Click += gcnew System::EventHandler(this, &Personnel::button4_Click);
 			// 
 			// button3
 			// 
@@ -286,6 +289,7 @@ namespace Interface1 {
 			this->button3->Size = System::Drawing::Size(103, 88);
 			this->button3->TabIndex = 32;
 			this->button3->UseVisualStyleBackColor = false;
+			this->button3->Click += gcnew System::EventHandler(this, &Personnel::button3_Click);
 			// 
 			// button5
 			// 
@@ -307,8 +311,9 @@ namespace Interface1 {
 			this->textBox1->ForeColor = System::Drawing::SystemColors::Info;
 			this->textBox1->Location = System::Drawing::Point(689, 239);
 			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(239, 19);
+			this->textBox1->Size = System::Drawing::Size(239, 23);
 			this->textBox1->TabIndex = 34;
+			this->textBox1->TextChanged += gcnew System::EventHandler(this, &Personnel::textBox1_TextChanged);
 			// 
 			// textBox2
 			// 
@@ -317,8 +322,9 @@ namespace Interface1 {
 			this->textBox2->ForeColor = System::Drawing::SystemColors::Info;
 			this->textBox2->Location = System::Drawing::Point(689, 175);
 			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(239, 19);
+			this->textBox2->Size = System::Drawing::Size(239, 23);
 			this->textBox2->TabIndex = 35;
+			this->textBox2->TextChanged += gcnew System::EventHandler(this, &Personnel::textBox2_TextChanged);
 			// 
 			// textBox3
 			// 
@@ -327,8 +333,9 @@ namespace Interface1 {
 			this->textBox3->ForeColor = System::Drawing::SystemColors::Info;
 			this->textBox3->Location = System::Drawing::Point(-1, 302);
 			this->textBox3->Name = L"textBox3";
-			this->textBox3->Size = System::Drawing::Size(239, 19);
+			this->textBox3->Size = System::Drawing::Size(239, 23);
 			this->textBox3->TabIndex = 36;
+			this->textBox3->TextChanged += gcnew System::EventHandler(this, &Personnel::textBox3_TextChanged);
 			// 
 			// textBox4
 			// 
@@ -337,8 +344,9 @@ namespace Interface1 {
 			this->textBox4->ForeColor = System::Drawing::SystemColors::Info;
 			this->textBox4->Location = System::Drawing::Point(-1, 239);
 			this->textBox4->Name = L"textBox4";
-			this->textBox4->Size = System::Drawing::Size(239, 19);
+			this->textBox4->Size = System::Drawing::Size(239, 23);
 			this->textBox4->TabIndex = 37;
+			this->textBox4->TextChanged += gcnew System::EventHandler(this, &Personnel::textBox4_TextChanged_1);
 			// 
 			// textBox5
 			// 
@@ -347,8 +355,9 @@ namespace Interface1 {
 			this->textBox5->ForeColor = System::Drawing::SystemColors::Info;
 			this->textBox5->Location = System::Drawing::Point(-1, 175);
 			this->textBox5->Name = L"textBox5";
-			this->textBox5->Size = System::Drawing::Size(239, 19);
+			this->textBox5->Size = System::Drawing::Size(239, 23);
 			this->textBox5->TabIndex = 38;
+			this->textBox5->TextChanged += gcnew System::EventHandler(this, &Personnel::textBox5_TextChanged);
 			// 
 			// textBox6
 			// 
@@ -357,8 +366,9 @@ namespace Interface1 {
 			this->textBox6->ForeColor = System::Drawing::SystemColors::Info;
 			this->textBox6->Location = System::Drawing::Point(-1, 112);
 			this->textBox6->Name = L"textBox6";
-			this->textBox6->Size = System::Drawing::Size(239, 19);
+			this->textBox6->Size = System::Drawing::Size(239, 23);
 			this->textBox6->TabIndex = 39;
+			this->textBox6->TextChanged += gcnew System::EventHandler(this, &Personnel::textBox6_TextChanged);
 			// 
 			// textBox7
 			// 
@@ -367,8 +377,9 @@ namespace Interface1 {
 			this->textBox7->ForeColor = System::Drawing::SystemColors::Info;
 			this->textBox7->Location = System::Drawing::Point(-1, 46);
 			this->textBox7->Name = L"textBox7";
-			this->textBox7->Size = System::Drawing::Size(239, 19);
+			this->textBox7->Size = System::Drawing::Size(239, 23);
 			this->textBox7->TabIndex = 40;
+			this->textBox7->TextChanged += gcnew System::EventHandler(this, &Personnel::textBox7_TextChanged);
 			// 
 			// panel1
 			// 
@@ -434,7 +445,7 @@ namespace Interface1 {
 			this->radioButton1->ForeColor = System::Drawing::Color::White;
 			this->radioButton1->Location = System::Drawing::Point(713, 87);
 			this->radioButton1->Name = L"radioButton1";
-			this->radioButton1->Size = System::Drawing::Size(51, 23);
+			this->radioButton1->Size = System::Drawing::Size(63, 28);
 			this->radioButton1->TabIndex = 44;
 			this->radioButton1->TabStop = true;
 			this->radioButton1->Text = L"OUI";
@@ -449,7 +460,7 @@ namespace Interface1 {
 			this->radioButton2->ForeColor = System::Drawing::Color::White;
 			this->radioButton2->Location = System::Drawing::Point(808, 87);
 			this->radioButton2->Name = L"radioButton2";
-			this->radioButton2->Size = System::Drawing::Size(59, 23);
+			this->radioButton2->Size = System::Drawing::Size(72, 28);
 			this->radioButton2->TabIndex = 45;
 			this->radioButton2->TabStop = true;
 			this->radioButton2->Text = L"NON";
@@ -464,13 +475,13 @@ namespace Interface1 {
 			this->label2->ForeColor = System::Drawing::SystemColors::ButtonFace;
 			this->label2->Location = System::Drawing::Point(670, 49);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(246, 25);
+			this->label2->Size = System::Drawing::Size(318, 33);
 			this->label2->TabIndex = 46;
 			this->label2->Text = L" Supperieur hierarchique";
 			// 
 			// Personnel
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(9, 20);
+			this->AutoScaleDimensions = System::Drawing::SizeF(12, 25);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::Black;
 			this->ClientSize = System::Drawing::Size(964, 480);
@@ -529,6 +540,61 @@ private: System::Void label3_Click(System::Object^ sender, System::EventArgs^ e)
 private: System::Void label6_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void radioButton1_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+	
+	String^ nom = textBox6->Text;
+	String^ prenom = textBox5->Text;
+	String^ adresse = textBox4->Text;
+	String^ date = textBox3->Text;
+	String^ nomsup = textBox2->Text;
+	String^ prenomsup = textBox1->Text;
+	int ID;
+	NS_SVC::gestion_personnel^ ajjt = gcnew NS_SVC::gestion_personnel();
+	ID = ajjt->ajouter(nom,prenom,nomsup,date);
+	textBox7->Text = Convert::ToString(ID);
+	delete(ajjt);
+}
+private: System::Void textBox7_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+ int ID = Int32::Parse(textBox7->Text);
+}
+private: System::Void textBox6_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+	String^ nom = textBox6->Text;
+
+}
+private: System::Void textBox5_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+	String^ prenom = textBox5->Text;
+}
+private: System::Void textBox4_TextChanged_1(System::Object^ sender, System::EventArgs^ e) {
+	String^ adresse = textBox4->Text;
+
+}
+private: System::Void textBox3_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+	String^ date = textBox3->Text;
+}
+private: System::Void textBox2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+	String^ nomsup = textBox2->Text;
+}
+private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+	String^ prenomsup = textBox1->Text;
+}
+private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
+	int ID = Int32::Parse(textBox7->Text);
+	String^ nom = textBox6->Text;
+	String^ prenom = textBox5->Text;
+	String^ adresse = textBox4->Text;
+	String^ date = textBox3->Text;
+	String^ nomsup = textBox2->Text;
+	String^ prenomsup = textBox1->Text;
+	NS_SVC::gestion_personnel^ mdff = gcnew NS_SVC::gestion_personnel();
+	mdff->modifier(ID, nom, prenom, nomsup, date);
+	delete(mdff);
+}
+private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
+	int ID = Int32::Parse(textBox7->Text);
+	NS_SVC::gestion_personnel^ supp = gcnew NS_SVC::gestion_personnel();
+	supp->supprimer(ID);
+	delete(supp);
 }
 };
 }

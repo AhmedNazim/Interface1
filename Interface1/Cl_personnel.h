@@ -14,6 +14,7 @@ namespace NS_Composants
 		String^ prenomPER;
 		String^ supH;
 		String^ DateAmb;
+		String^ addresse;
 	public: 
 		Cl_personnel(void);
 		String^ SELECTByIdPersonne(void);
@@ -26,12 +27,14 @@ namespace NS_Composants
 		void setPrenomPER(String^);
 		void setSupH(String^);
 		void setDateAmb(String^);
+		void setAddresse(String^);
 		int getId_personnel(void);
 		int getID(void);
 		String^ getNomPER( void);
 		String^ getPrenomPER(void);
 		String^ getSupH(void);
 		String^ getDateAmb(void);
+		String^ getAdresse(void);
 
 	};
 

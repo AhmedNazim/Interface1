@@ -1,4 +1,5 @@
 #include "gestion_stock.h"
+
 namespace NS_SVC {
 
 	gestion_stock::gestion_stock()
@@ -57,4 +58,5 @@ namespace NS_SVC {
 		this->cad->actionRows(this->stock->DELETE());
 
 	}
+
 }

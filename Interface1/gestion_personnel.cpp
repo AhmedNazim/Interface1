@@ -5,7 +5,7 @@ namespace  NS_SVC {
 		this->cad = gcnew NS_Composants::Connection();
 
 		this->personnel = gcnew NS_Composants::Cl_personnel();
-	};
+	}
 	DataSet^ gestion_personnel::listePersonnel(String^ dataTableName)
 	{
 
@@ -14,7 +14,7 @@ namespace  NS_SVC {
 		return this->ds;
 	}
 
-	void gestion_personnel::ajouter(String^ nomPER, String^ prenomPER, String^ supH, String^ DateAmb)
+	int gestion_personnel::ajouter(String^ nomPER, String^ prenomPER, String^ supH, String^ DateAmb)
 	{
 		int id;
 
@@ -24,6 +24,7 @@ namespace  NS_SVC {
 
 		this->personnel->setDateAmb(DateAmb);
 		id = this->cad->actionRowsID(this->personnel->INSERT());
+		return id;
 	}
 
 	void gestion_personnel::modifier(int ID, String^ nomPER, String^ prenomPER, String^ supH, String^ DateAmb)
