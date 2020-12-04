@@ -20,7 +20,7 @@ namespace NS_SVC {
 		gestion_client(void);
 		DataSet^ listeClients(String^);
 		//DataSet^ adressesClient(int, String^);
-		void ajouter(String^, String^ , String^ , String^ , String^ , String^);
+		int ajouter(String^, String^ , String^ , String^ , String^ , String^);
 		void modifier(int , String^ , String^ , String^ , String^ , String^ , String^ );
 		void supprimer(int);
 		void afficher(String^, String^, String^, String^, String^, String^);

@@ -25,6 +25,7 @@ public:
 	void ajouter( String^ , String^ , String^ , String^);
 	void modifier(int , String^, String^, String^, String^);
 	void supprimer(int);
+	void facturation();
 	//void facturer();
 	/*
 	adresses de fact 
