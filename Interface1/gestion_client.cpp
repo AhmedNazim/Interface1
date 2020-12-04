@@ -30,7 +30,7 @@ namespace NS_SVC
 }*/
 	
 	
-	void gestion_client::ajouter(String^ nomCL, String^ pronon, String^ adresseCL, String^ adresseFAC, String^ DateAnivCL, String^ DatePremierAchat)
+	int gestion_client::ajouter(String^ nomCL, String^ pronon, String^ adresseCL, String^ adresseFAC, String^ DateAnivCL, String^ DatePremierAchat)
 	{
 		int id;
 		
@@ -46,7 +46,7 @@ namespace NS_SVC
 		this->client->setDateAnivCL( DateAnivCL);
 		this->client->setDatePremierAchat( DatePremierAchat);
 		id = this->cad->actionRowsID(this->client->INSERT());
-		
+		return id;
 	}
 	
 	
