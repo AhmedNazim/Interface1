@@ -128,8 +128,8 @@ namespace Interface1 {
 			this->button1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button1.BackgroundImage")));
 			this->button1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
 			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button1->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->button1->Location = System::Drawing::Point(42, 363);
+			this->button1->ForeColor = System::Drawing::SystemColors::ButtonShadow;
+			this->button1->Location = System::Drawing::Point(16, 378);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(102, 88);
 			this->button1->TabIndex = 0;
@@ -143,11 +143,13 @@ namespace Interface1 {
 			this->button2->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button2.BackgroundImage")));
 			this->button2->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
 			this->button2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button2->Location = System::Drawing::Point(173, 359);
+			this->button2->ForeColor = System::Drawing::SystemColors::ButtonShadow;
+			this->button2->Location = System::Drawing::Point(151, 378);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(100, 88);
 			this->button2->TabIndex = 1;
 			this->button2->UseVisualStyleBackColor = false;
+			this->button2->Click += gcnew System::EventHandler(this, &Client::button2_Click);
 			// 
 			// button3
 			// 
@@ -155,7 +157,8 @@ namespace Interface1 {
 			this->button3->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button3.BackgroundImage")));
 			this->button3->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
 			this->button3->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button3->Location = System::Drawing::Point(323, 363);
+			this->button3->ForeColor = System::Drawing::SystemColors::ButtonShadow;
+			this->button3->Location = System::Drawing::Point(283, 378);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(103, 88);
 			this->button3->TabIndex = 2;
@@ -168,7 +171,8 @@ namespace Interface1 {
 			this->button4->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button4.BackgroundImage")));
 			this->button4->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
 			this->button4->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button4->Location = System::Drawing::Point(459, 363);
+			this->button4->ForeColor = System::Drawing::SystemColors::ButtonShadow;
+			this->button4->Location = System::Drawing::Point(406, 378);
 			this->button4->Name = L"button4";
 			this->button4->Size = System::Drawing::Size(105, 91);
 			this->button4->TabIndex = 3;
@@ -177,12 +181,12 @@ namespace Interface1 {
 			// 
 			// dataGridView1
 			// 
-			this->dataGridView1->BackgroundColor = System::Drawing::Color::Khaki;
+			this->dataGridView1->BackgroundColor = System::Drawing::Color::White;
 			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
 			this->dataGridView1->Location = System::Drawing::Point(459, 9);
 			this->dataGridView1->Name = L"dataGridView1";
 			this->dataGridView1->RowHeadersWidth = 51;
-			this->dataGridView1->Size = System::Drawing::Size(338, 337);
+			this->dataGridView1->Size = System::Drawing::Size(424, 361);
 			this->dataGridView1->TabIndex = 5;
 			this->dataGridView1->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &Client::dataGridView1_CellContentClick);
 			// 
@@ -193,10 +197,10 @@ namespace Interface1 {
 			this->label1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Bahnschrift SemiBold", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->label1->ForeColor = System::Drawing::Color::White;
 			this->label1->Location = System::Drawing::Point(12, 9);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(36, 29);
+			this->label1->Size = System::Drawing::Size(27, 23);
 			this->label1->TabIndex = 6;
 			this->label1->Text = L"ID";
 			// 
@@ -206,10 +210,10 @@ namespace Interface1 {
 			this->label2->BackColor = System::Drawing::Color::Transparent;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Bahnschrift SemiBold", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label2->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->label2->ForeColor = System::Drawing::Color::White;
 			this->label2->Location = System::Drawing::Point(12, 62);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(64, 29);
+			this->label2->Size = System::Drawing::Size(49, 23);
 			this->label2->TabIndex = 7;
 			this->label2->Text = L"Nom";
 			// 
@@ -219,10 +223,10 @@ namespace Interface1 {
 			this->label3->BackColor = System::Drawing::Color::Transparent;
 			this->label3->Font = (gcnew System::Drawing::Font(L"Bahnschrift SemiBold", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label3->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->label3->ForeColor = System::Drawing::Color::White;
 			this->label3->Location = System::Drawing::Point(12, 104);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(97, 29);
+			this->label3->Size = System::Drawing::Size(77, 23);
 			this->label3->TabIndex = 8;
 			this->label3->Text = L"Prénom";
 			// 
@@ -232,10 +236,10 @@ namespace Interface1 {
 			this->label4->BackColor = System::Drawing::Color::Transparent;
 			this->label4->Font = (gcnew System::Drawing::Font(L"Bahnschrift SemiBold", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label4->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->label4->ForeColor = System::Drawing::Color::White;
 			this->label4->Location = System::Drawing::Point(12, 148);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(189, 29);
+			this->label4->Size = System::Drawing::Size(149, 23);
 			this->label4->TabIndex = 9;
 			this->label4->Text = L"Add Facturation ";
 			// 
@@ -245,10 +249,10 @@ namespace Interface1 {
 			this->label5->BackColor = System::Drawing::Color::Transparent;
 			this->label5->Font = (gcnew System::Drawing::Font(L"Bahnschrift SemiBold", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label5->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->label5->ForeColor = System::Drawing::Color::White;
 			this->label5->Location = System::Drawing::Point(12, 203);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(166, 29);
+			this->label5->Size = System::Drawing::Size(132, 23);
 			this->label5->TabIndex = 10;
 			this->label5->Text = L"Add Livraison ";
 			// 
@@ -258,77 +262,77 @@ namespace Interface1 {
 			this->label6->BackColor = System::Drawing::Color::Transparent;
 			this->label6->Font = (gcnew System::Drawing::Font(L"Bahnschrift SemiBold", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label6->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->label6->ForeColor = System::Drawing::Color::White;
 			this->label6->Location = System::Drawing::Point(12, 261);
 			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(215, 29);
+			this->label6->Size = System::Drawing::Size(168, 23);
 			this->label6->TabIndex = 11;
 			this->label6->Text = L"Date De Naissance";
 			this->label6->Click += gcnew System::EventHandler(this, &Client::label6_Click);
 			// 
 			// textBox1
 			// 
-			this->textBox1->BackColor = System::Drawing::SystemColors::InactiveCaptionText;
+			this->textBox1->BackColor = System::Drawing::SystemColors::ButtonShadow;
 			this->textBox1->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->textBox1->ForeColor = System::Drawing::SystemColors::Info;
-			this->textBox1->Location = System::Drawing::Point(197, 9);
+			this->textBox1->Location = System::Drawing::Point(201, 9);
 			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(239, 23);
+			this->textBox1->Size = System::Drawing::Size(239, 19);
 			this->textBox1->TabIndex = 12;
 			this->textBox1->TextChanged += gcnew System::EventHandler(this, &Client::textBox1_TextChanged);
 			// 
 			// textBox2
 			// 
-			this->textBox2->BackColor = System::Drawing::SystemColors::InactiveCaptionText;
+			this->textBox2->BackColor = System::Drawing::SystemColors::ButtonShadow;
 			this->textBox2->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->textBox2->ForeColor = System::Drawing::SystemColors::Info;
-			this->textBox2->Location = System::Drawing::Point(201, 62);
+			this->textBox2->Location = System::Drawing::Point(204, 62);
 			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(239, 23);
+			this->textBox2->Size = System::Drawing::Size(239, 19);
 			this->textBox2->TabIndex = 13;
 			this->textBox2->TextChanged += gcnew System::EventHandler(this, &Client::textBox2_TextChanged);
 			// 
 			// textBox3
 			// 
-			this->textBox3->BackColor = System::Drawing::SystemColors::InactiveCaptionText;
+			this->textBox3->BackColor = System::Drawing::SystemColors::ButtonShadow;
 			this->textBox3->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->textBox3->ForeColor = System::Drawing::SystemColors::Info;
-			this->textBox3->Location = System::Drawing::Point(197, 110);
+			this->textBox3->Location = System::Drawing::Point(202, 110);
 			this->textBox3->Name = L"textBox3";
-			this->textBox3->Size = System::Drawing::Size(239, 23);
+			this->textBox3->Size = System::Drawing::Size(239, 19);
 			this->textBox3->TabIndex = 14;
 			this->textBox3->TextChanged += gcnew System::EventHandler(this, &Client::textBox3_TextChanged);
 			// 
 			// textBox4
 			// 
-			this->textBox4->BackColor = System::Drawing::SystemColors::InactiveCaptionText;
+			this->textBox4->BackColor = System::Drawing::SystemColors::ButtonShadow;
 			this->textBox4->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->textBox4->ForeColor = System::Drawing::SystemColors::Info;
-			this->textBox4->Location = System::Drawing::Point(197, 209);
+			this->textBox4->Location = System::Drawing::Point(204, 206);
 			this->textBox4->Name = L"textBox4";
-			this->textBox4->Size = System::Drawing::Size(239, 23);
+			this->textBox4->Size = System::Drawing::Size(239, 19);
 			this->textBox4->TabIndex = 15;
 			this->textBox4->TextChanged += gcnew System::EventHandler(this, &Client::textBox4_TextChanged);
 			// 
 			// textBox5
 			// 
-			this->textBox5->BackColor = System::Drawing::SystemColors::InactiveCaptionText;
+			this->textBox5->BackColor = System::Drawing::SystemColors::ButtonShadow;
 			this->textBox5->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->textBox5->ForeColor = System::Drawing::SystemColors::Info;
 			this->textBox5->Location = System::Drawing::Point(207, 267);
 			this->textBox5->Name = L"textBox5";
-			this->textBox5->Size = System::Drawing::Size(239, 23);
+			this->textBox5->Size = System::Drawing::Size(239, 19);
 			this->textBox5->TabIndex = 16;
 			this->textBox5->TextChanged += gcnew System::EventHandler(this, &Client::textBox5_TextChanged);
 			// 
 			// textBox6
 			// 
-			this->textBox6->BackColor = System::Drawing::SystemColors::InactiveCaptionText;
+			this->textBox6->BackColor = System::Drawing::SystemColors::ButtonShadow;
 			this->textBox6->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->textBox6->ForeColor = System::Drawing::SystemColors::Info;
-			this->textBox6->Location = System::Drawing::Point(202, 154);
+			this->textBox6->Location = System::Drawing::Point(204, 154);
 			this->textBox6->Name = L"textBox6";
-			this->textBox6->Size = System::Drawing::Size(239, 23);
+			this->textBox6->Size = System::Drawing::Size(239, 19);
 			this->textBox6->TabIndex = 17;
 			this->textBox6->TextChanged += gcnew System::EventHandler(this, &Client::textBox6_TextChanged);
 			// 
@@ -384,23 +388,24 @@ namespace Interface1 {
 			// label7
 			// 
 			this->label7->AutoSize = true;
+			this->label7->BackColor = System::Drawing::Color::Transparent;
 			this->label7->Font = (gcnew System::Drawing::Font(L"Bahnschrift SemiBold", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label7->ForeColor = System::Drawing::SystemColors::Control;
+			this->label7->ForeColor = System::Drawing::Color::White;
 			this->label7->Location = System::Drawing::Point(12, 312);
 			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(230, 29);
+			this->label7->Size = System::Drawing::Size(180, 23);
 			this->label7->TabIndex = 20;
 			this->label7->Text = L"Date Premier Achat ";
 			// 
 			// textBox7
 			// 
-			this->textBox7->BackColor = System::Drawing::SystemColors::InactiveCaptionText;
+			this->textBox7->BackColor = System::Drawing::SystemColors::ButtonShadow;
 			this->textBox7->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->textBox7->ForeColor = System::Drawing::SystemColors::Info;
 			this->textBox7->Location = System::Drawing::Point(207, 312);
 			this->textBox7->Name = L"textBox7";
-			this->textBox7->Size = System::Drawing::Size(239, 23);
+			this->textBox7->Size = System::Drawing::Size(239, 19);
 			this->textBox7->TabIndex = 21;
 			this->textBox7->TextChanged += gcnew System::EventHandler(this, &Client::textBox7_TextChanged);
 			// 
@@ -416,8 +421,8 @@ namespace Interface1 {
 			// 
 			this->button6->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button6.BackgroundImage")));
 			this->button6->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
-			this->button6->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->button6->Location = System::Drawing::Point(653, 376);
+			this->button6->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button6->Location = System::Drawing::Point(751, 387);
 			this->button6->Name = L"button6";
 			this->button6->Size = System::Drawing::Size(80, 71);
 			this->button6->TabIndex = 23;
@@ -426,9 +431,9 @@ namespace Interface1 {
 			// 
 			// Client
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(12, 25);
+			this->AutoScaleDimensions = System::Drawing::SizeF(9, 20);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->BackColor = System::Drawing::Color::Black;
+			this->BackColor = System::Drawing::SystemColors::ButtonShadow;
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(895, 470);
 			this->Controls->Add(this->button6);
@@ -460,6 +465,7 @@ namespace Interface1 {
 			this->Controls->Add(this->button1);
 			this->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
+			this->ForeColor = System::Drawing::SystemColors::ButtonShadow;
 			this->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->Name = L"Client";
 			this->Text = L"Client";
@@ -515,6 +521,7 @@ private: System::Void textBox5_TextChanged(System::Object^ sender, System::Event
 		NS_SVC::gestion_client^ ajt = gcnew NS_SVC::gestion_client();
 		id = ajt->ajouter(nom, prenom, AddLiv, AddFac, DateAniv, Datepr);
 		textBox1->Text = Convert::ToString(id);
+		MessageBox::Show("la personne a etait ajouter", "Ajouter", MessageBoxButtons::OK, MessageBoxIcon::Information);
 	}
 private: System::Void textBox7_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 	
@@ -529,15 +536,19 @@ private: System::Void textBox7_TextChanged(System::Object^ sender, System::Event
 		int id = Int32::Parse(textBox1->Text);
 		NS_SVC::gestion_client^ mod = gcnew NS_SVC::gestion_client();
 		mod->modifier(id, nom, prenom, AddLiv, AddFac, DateAniv, Datepr);
+		MessageBox::Show("la personne a etait modifier", "modifier", MessageBoxButtons::OK, MessageBoxIcon::Information);
 	}
 private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
 	int id = Int32::Parse(textBox1->Text);
 	NS_SVC::gestion_client^ sup = gcnew NS_SVC::gestion_client();
 	sup->supprimer(id);
+	MessageBox::Show("la personne a etait supprimer", "supprimer", MessageBoxButtons::OK, MessageBoxIcon::Information);
 }
 private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->Hide();
 	Y->Show(); 
+}
+private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 

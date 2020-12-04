@@ -147,7 +147,7 @@ namespace Interface1 {
 			this->label1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Bahnschrift SemiBold", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->label1->ForeColor = System::Drawing::Color::White;
 			this->label1->Location = System::Drawing::Point(3, 18);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(32, 25);
@@ -157,7 +157,7 @@ namespace Interface1 {
 			// 
 			// dataGridView1
 			// 
-			this->dataGridView1->BackgroundColor = System::Drawing::Color::Khaki;
+			this->dataGridView1->BackgroundColor = System::Drawing::Color::White;
 			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
 			this->dataGridView1->Location = System::Drawing::Point(309, 12);
 			this->dataGridView1->Name = L"dataGridView1";
@@ -170,7 +170,7 @@ namespace Interface1 {
 			this->label4->BackColor = System::Drawing::Color::Transparent;
 			this->label4->Font = (gcnew System::Drawing::Font(L"Bahnschrift SemiBold", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label4->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->label4->ForeColor = System::Drawing::Color::White;
 			this->label4->Location = System::Drawing::Point(-1, 274);
 			this->label4->Name = L"label4";
 			this->label4->Size = System::Drawing::Size(186, 25);
@@ -183,7 +183,7 @@ namespace Interface1 {
 			this->label5->BackColor = System::Drawing::Color::Transparent;
 			this->label5->Font = (gcnew System::Drawing::Font(L"Bahnschrift SemiBold", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label5->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->label5->ForeColor = System::Drawing::Color::White;
 			this->label5->Location = System::Drawing::Point(-1, 211);
 			this->label5->Name = L"label5";
 			this->label5->Size = System::Drawing::Size(90, 25);
@@ -196,7 +196,7 @@ namespace Interface1 {
 			this->label8->BackColor = System::Drawing::Color::Transparent;
 			this->label8->Font = (gcnew System::Drawing::Font(L"Bahnschrift SemiBold", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label8->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->label8->ForeColor = System::Drawing::Color::White;
 			this->label8->Location = System::Drawing::Point(-1, 147);
 			this->label8->Name = L"label8";
 			this->label8->Size = System::Drawing::Size(85, 25);
@@ -209,7 +209,7 @@ namespace Interface1 {
 			this->label9->BackColor = System::Drawing::Color::Transparent;
 			this->label9->Font = (gcnew System::Drawing::Font(L"Bahnschrift SemiBold", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label9->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->label9->ForeColor = System::Drawing::Color::White;
 			this->label9->Location = System::Drawing::Point(3, 84);
 			this->label9->Name = L"label9";
 			this->label9->Size = System::Drawing::Size(56, 25);
@@ -222,7 +222,7 @@ namespace Interface1 {
 			this->label3->BackColor = System::Drawing::Color::Transparent;
 			this->label3->Font = (gcnew System::Drawing::Font(L"Bahnschrift SemiBold", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label3->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->label3->ForeColor = System::Drawing::Color::White;
 			this->label3->Location = System::Drawing::Point(685, 84);
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(233, 25);
@@ -236,10 +236,10 @@ namespace Interface1 {
 			this->button1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button1.BackgroundImage")));
 			this->button1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
 			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button1->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->button1->Location = System::Drawing::Point(52, 390);
+			this->button1->ForeColor = System::Drawing::SystemColors::ButtonShadow;
+			this->button1->Location = System::Drawing::Point(23, 387);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(102, 88);
+			this->button1->Size = System::Drawing::Size(104, 88);
 			this->button1->TabIndex = 29;
 			this->button1->Text = L" ";
 			this->button1->UseVisualStyleBackColor = false;
@@ -247,11 +247,12 @@ namespace Interface1 {
 			// 
 			// button2
 			// 
-			this->button2->BackColor = System::Drawing::Color::Black;
+			this->button2->BackColor = System::Drawing::SystemColors::ButtonShadow;
 			this->button2->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button2.BackgroundImage")));
 			this->button2->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
-			this->button2->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->button2->Location = System::Drawing::Point(197, 387);
+			this->button2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button2->ForeColor = System::Drawing::SystemColors::ButtonShadow;
+			this->button2->Location = System::Drawing::Point(156, 387);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(100, 88);
 			this->button2->TabIndex = 30;
@@ -259,32 +260,35 @@ namespace Interface1 {
 			// 
 			// button4
 			// 
-			this->button4->BackColor = System::Drawing::Color::Black;
+			this->button4->BackColor = System::Drawing::SystemColors::ButtonShadow;
 			this->button4->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button4.BackgroundImage")));
 			this->button4->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
-			this->button4->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->button4->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->button4->Location = System::Drawing::Point(537, 387);
+			this->button4->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button4->ForeColor = System::Drawing::SystemColors::ButtonShadow;
+			this->button4->Location = System::Drawing::Point(447, 386);
 			this->button4->Name = L"button4";
 			this->button4->Size = System::Drawing::Size(105, 91);
 			this->button4->TabIndex = 31;
 			this->button4->UseVisualStyleBackColor = false;
+			this->button4->Click += gcnew System::EventHandler(this, &Personnel::button4_Click);
 			// 
 			// button3
 			// 
-			this->button3->BackColor = System::Drawing::Color::Black;
+			this->button3->BackColor = System::Drawing::SystemColors::ButtonShadow;
 			this->button3->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button3.BackgroundImage")));
 			this->button3->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
-			this->button3->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->button3->Location = System::Drawing::Point(354, 388);
+			this->button3->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button3->ForeColor = System::Drawing::SystemColors::ButtonShadow;
+			this->button3->Location = System::Drawing::Point(285, 390);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(103, 88);
 			this->button3->TabIndex = 32;
 			this->button3->UseVisualStyleBackColor = false;
+			this->button3->Click += gcnew System::EventHandler(this, &Personnel::button3_Click);
 			// 
 			// textBox1
 			// 
-			this->textBox1->BackColor = System::Drawing::SystemColors::InactiveCaptionText;
+			this->textBox1->BackColor = System::Drawing::SystemColors::ButtonShadow;
 			this->textBox1->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->textBox1->ForeColor = System::Drawing::SystemColors::Info;
 			this->textBox1->Location = System::Drawing::Point(690, 122);
@@ -294,7 +298,7 @@ namespace Interface1 {
 			// 
 			// textBox2
 			// 
-			this->textBox2->BackColor = System::Drawing::SystemColors::InactiveCaptionText;
+			this->textBox2->BackColor = System::Drawing::SystemColors::ButtonShadow;
 			this->textBox2->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->textBox2->ForeColor = System::Drawing::SystemColors::Info;
 			this->textBox2->Location = System::Drawing::Point(690, 46);
@@ -304,7 +308,7 @@ namespace Interface1 {
 			// 
 			// textBox3
 			// 
-			this->textBox3->BackColor = System::Drawing::SystemColors::InactiveCaptionText;
+			this->textBox3->BackColor = System::Drawing::SystemColors::ButtonShadow;
 			this->textBox3->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->textBox3->ForeColor = System::Drawing::SystemColors::Info;
 			this->textBox3->Location = System::Drawing::Point(-1, 302);
@@ -314,7 +318,7 @@ namespace Interface1 {
 			// 
 			// textBox4
 			// 
-			this->textBox4->BackColor = System::Drawing::SystemColors::InactiveCaptionText;
+			this->textBox4->BackColor = System::Drawing::SystemColors::ButtonShadow;
 			this->textBox4->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->textBox4->ForeColor = System::Drawing::SystemColors::Info;
 			this->textBox4->Location = System::Drawing::Point(-1, 239);
@@ -324,7 +328,7 @@ namespace Interface1 {
 			// 
 			// textBox5
 			// 
-			this->textBox5->BackColor = System::Drawing::SystemColors::InactiveCaptionText;
+			this->textBox5->BackColor = System::Drawing::SystemColors::ButtonShadow;
 			this->textBox5->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->textBox5->ForeColor = System::Drawing::SystemColors::Info;
 			this->textBox5->Location = System::Drawing::Point(-1, 175);
@@ -334,7 +338,7 @@ namespace Interface1 {
 			// 
 			// textBox6
 			// 
-			this->textBox6->BackColor = System::Drawing::SystemColors::InactiveCaptionText;
+			this->textBox6->BackColor = System::Drawing::SystemColors::ButtonShadow;
 			this->textBox6->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->textBox6->ForeColor = System::Drawing::SystemColors::Info;
 			this->textBox6->Location = System::Drawing::Point(-1, 112);
@@ -344,7 +348,7 @@ namespace Interface1 {
 			// 
 			// textBox7
 			// 
-			this->textBox7->BackColor = System::Drawing::SystemColors::InactiveCaptionText;
+			this->textBox7->BackColor = System::Drawing::SystemColors::ButtonShadow;
 			this->textBox7->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->textBox7->ForeColor = System::Drawing::SystemColors::Info;
 			this->textBox7->Location = System::Drawing::Point(-1, 46);
@@ -412,8 +416,9 @@ namespace Interface1 {
 			// 
 			this->button6->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button6.BackgroundImage")));
 			this->button6->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
-			this->button6->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->button6->Location = System::Drawing::Point(738, 387);
+			this->button6->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button6->ForeColor = System::Drawing::SystemColors::ButtonShadow;
+			this->button6->Location = System::Drawing::Point(817, 390);
 			this->button6->Name = L"button6";
 			this->button6->Size = System::Drawing::Size(89, 73);
 			this->button6->TabIndex = 47;
@@ -426,7 +431,7 @@ namespace Interface1 {
 			this->label6->BackColor = System::Drawing::Color::Transparent;
 			this->label6->Font = (gcnew System::Drawing::Font(L"Bahnschrift SemiBold", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label6->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->label6->ForeColor = System::Drawing::Color::White;
 			this->label6->Location = System::Drawing::Point(684, 18);
 			this->label6->Name = L"label6";
 			this->label6->Size = System::Drawing::Size(195, 25);
@@ -438,7 +443,7 @@ namespace Interface1 {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(9, 20);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->BackColor = System::Drawing::Color::Black;
+			this->BackColor = System::Drawing::SystemColors::ButtonShadow;
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
 			this->ClientSize = System::Drawing::Size(964, 480);
 			this->Controls->Add(this->button6);
@@ -501,6 +506,12 @@ private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e
 }
 private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 	MessageBox::Show("la personne a etait ajouter", "Ajouter", MessageBoxButtons::OK, MessageBoxIcon::Information);
+}
+private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
+	MessageBox::Show("la personne a etait modifier", "Modifier", MessageBoxButtons::OK, MessageBoxIcon::Information);
+}
+private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
+	MessageBox::Show("la personne a etait supprimer", "Supprimer ", MessageBoxButtons::OK, MessageBoxIcon::Information);
 }
 };
 }

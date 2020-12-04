@@ -45,7 +45,8 @@ namespace Interface1 {
 	private: System::Windows::Forms::Button^ button3;
 	private: System::Windows::Forms::Button^ button4;
 	private: System::Windows::Forms::Button^ button5;
-	private: System::Windows::Forms::Label^ label1;
+	private: System::Windows::Forms::LinkLabel^ linkLabel1;
+
 
 
 
@@ -68,19 +69,19 @@ namespace Interface1 {
 			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->button4 = (gcnew System::Windows::Forms::Button());
 			this->button5 = (gcnew System::Windows::Forms::Button());
-			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->linkLabel1 = (gcnew System::Windows::Forms::LinkLabel());
 			this->SuspendLayout();
 			// 
 			// button1
 			// 
-			this->button1->BackColor = System::Drawing::Color::Black;
+			this->button1->BackColor = System::Drawing::Color::Violet;
 			this->button1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button1.BackgroundImage")));
 			this->button1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
 			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button1->Font = (gcnew System::Drawing::Font(L"Bahnschrift SemiLight", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->button1->Font = (gcnew System::Drawing::Font(L"Arial Rounded MT Bold", 18, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button1->ForeColor = System::Drawing::Color::MediumVioletRed;
-			this->button1->Location = System::Drawing::Point(54, 65);
+			this->button1->ForeColor = System::Drawing::Color::White;
+			this->button1->Location = System::Drawing::Point(130, 81);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(145, 370);
 			this->button1->TabIndex = 0;
@@ -91,14 +92,14 @@ namespace Interface1 {
 			// 
 			// button2
 			// 
-			this->button2->BackColor = System::Drawing::Color::Black;
+			this->button2->BackColor = System::Drawing::Color::Orange;
 			this->button2->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button2.BackgroundImage")));
 			this->button2->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->button2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button2->Font = (gcnew System::Drawing::Font(L"Bahnschrift SemiLight", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->button2->Font = (gcnew System::Drawing::Font(L"Arial Rounded MT Bold", 18, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button2->ForeColor = System::Drawing::Color::Orange;
-			this->button2->Location = System::Drawing::Point(205, 258);
+			this->button2->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->button2->Location = System::Drawing::Point(281, 274);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(166, 177);
 			this->button2->TabIndex = 1;
@@ -109,14 +110,14 @@ namespace Interface1 {
 			// 
 			// button3
 			// 
-			this->button3->BackColor = System::Drawing::Color::Black;
+			this->button3->BackColor = System::Drawing::Color::LightSalmon;
 			this->button3->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button3.BackgroundImage")));
 			this->button3->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->button3->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button3->Font = (gcnew System::Drawing::Font(L"Bahnschrift SemiLight", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->button3->Font = (gcnew System::Drawing::Font(L"Arial Rounded MT Bold", 18, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button3->ForeColor = System::Drawing::Color::Brown;
-			this->button3->Location = System::Drawing::Point(377, 65);
+			this->button3->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->button3->Location = System::Drawing::Point(453, 81);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(189, 169);
 			this->button3->TabIndex = 2;
@@ -127,14 +128,14 @@ namespace Interface1 {
 			// 
 			// button4
 			// 
-			this->button4->BackColor = System::Drawing::Color::Black;
+			this->button4->BackColor = System::Drawing::Color::LightGreen;
 			this->button4->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button4.BackgroundImage")));
 			this->button4->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->button4->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button4->Font = (gcnew System::Drawing::Font(L"Bahnschrift SemiLight", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->button4->Font = (gcnew System::Drawing::Font(L"Arial Rounded MT Bold", 18, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button4->ForeColor = System::Drawing::Color::Green;
-			this->button4->Location = System::Drawing::Point(377, 240);
+			this->button4->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->button4->Location = System::Drawing::Point(453, 256);
 			this->button4->Name = L"button4";
 			this->button4->Size = System::Drawing::Size(189, 195);
 			this->button4->TabIndex = 3;
@@ -145,14 +146,14 @@ namespace Interface1 {
 			// 
 			// button5
 			// 
-			this->button5->BackColor = System::Drawing::Color::Black;
+			this->button5->BackColor = System::Drawing::Color::DarkCyan;
 			this->button5->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button5.BackgroundImage")));
 			this->button5->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
 			this->button5->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button5->Font = (gcnew System::Drawing::Font(L"Bahnschrift SemiLight", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->button5->Font = (gcnew System::Drawing::Font(L"Arial Rounded MT Bold", 18, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button5->ForeColor = System::Drawing::Color::Blue;
-			this->button5->Location = System::Drawing::Point(205, 65);
+			this->button5->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->button5->Location = System::Drawing::Point(281, 81);
 			this->button5->Name = L"button5";
 			this->button5->Size = System::Drawing::Size(166, 187);
 			this->button5->TabIndex = 4;
@@ -161,27 +162,31 @@ namespace Interface1 {
 			this->button5->UseVisualStyleBackColor = false;
 			this->button5->Click += gcnew System::EventHandler(this, &MyForm::button5_Click);
 			// 
-			// label1
+			// linkLabel1
 			// 
-			this->label1->AutoSize = true;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Bahnschrift SemiBold", 24, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->linkLabel1->ActiveLinkColor = System::Drawing::Color::White;
+			this->linkLabel1->AutoSize = true;
+			this->linkLabel1->BackColor = System::Drawing::SystemColors::ButtonShadow;
+			this->linkLabel1->DisabledLinkColor = System::Drawing::Color::White;
+			this->linkLabel1->Font = (gcnew System::Drawing::Font(L"Arial Rounded MT Bold", 21.75F, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->ForeColor = System::Drawing::Color::White;
-			this->label1->Location = System::Drawing::Point(119, 9);
-			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(399, 39);
-			this->label1->TabIndex = 5;
-			this->label1->Text = L"Bienvenu chez Code Lyoko";
-			this->label1->Visible = false;
+			this->linkLabel1->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->linkLabel1->LinkColor = System::Drawing::Color::White;
+			this->linkLabel1->Location = System::Drawing::Point(275, 9);
+			this->linkLabel1->Name = L"linkLabel1";
+			this->linkLabel1->Size = System::Drawing::Size(197, 33);
+			this->linkLabel1->TabIndex = 5;
+			this->linkLabel1->TabStop = true;
+			this->linkLabel1->Text = L" Code Lyoko ";
 			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(9, 20);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->BackColor = System::Drawing::Color::Black;
+			this->BackColor = System::Drawing::SystemColors::ButtonShadow;
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->ClientSize = System::Drawing::Size(643, 448);
-			this->Controls->Add(this->label1);
+			this->ClientSize = System::Drawing::Size(722, 524);
+			this->Controls->Add(this->linkLabel1);
 			this->Controls->Add(this->button5);
 			this->Controls->Add(this->button4);
 			this->Controls->Add(this->button3);
@@ -190,6 +195,7 @@ namespace Interface1 {
 			this->DoubleBuffered = true;
 			this->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
+			this->ForeColor = System::Drawing::SystemColors::ActiveCaption;
 			this->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->Name = L"MyForm";
 			this->Text = L"MyForm";
