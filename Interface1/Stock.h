@@ -155,19 +155,6 @@ namespace Interface1 {
 			this->dataGridView2->TabIndex = 31;
 			this->dataGridView2->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &Stock::dataGridView2_CellContentClick);
 			// 
-			// button5
-			// 
-			this->button5->BackColor = System::Drawing::Color::Transparent;
-			this->button5->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button5.BackgroundImage")));
-			this->button5->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
-			this->button5->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button5->Location = System::Drawing::Point(769, 437);
-			this->button5->Margin = System::Windows::Forms::Padding(4);
-			this->button5->Name = L"button5";
-			this->button5->Size = System::Drawing::Size(140, 112);
-			this->button5->TabIndex = 34;
-			this->button5->UseVisualStyleBackColor = false;
-			// 
 			// button4
 			// 
 			this->button4->BackColor = System::Drawing::Color::Transparent;
@@ -208,6 +195,7 @@ namespace Interface1 {
 			this->button2->Size = System::Drawing::Size(133, 108);
 			this->button2->TabIndex = 37;
 			this->button2->UseVisualStyleBackColor = false;
+			this->button2->Click += gcnew System::EventHandler(this, &Stock::button2_Click);
 			// 
 			// button1
 			// 
@@ -411,7 +399,7 @@ namespace Interface1 {
 			this->label6->Location = System::Drawing::Point(16, 175);
 			this->label6->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(116, 33);
+			this->label6->Size = System::Drawing::Size(120, 33);
 			this->label6->TabIndex = 49;
 			this->label6->Text = L"Quantit�";
 			this->label6->Click += gcnew System::EventHandler(this, &Stock::label6_Click);
@@ -554,22 +542,17 @@ namespace Interface1 {
 			// 
 			// button6
 			// 
-			this->button6->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button6.BackgroundImage")));
-			this->button6->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
-			this->button6->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->button6->Location = System::Drawing::Point(628, 368);
+			this->button6->Location = System::Drawing::Point(0, 0);
 			this->button6->Name = L"button6";
-			this->button6->Size = System::Drawing::Size(78, 64);
-			this->button6->TabIndex = 61;
-			this->button6->UseVisualStyleBackColor = true;
-			this->button6->Click += gcnew System::EventHandler(this, &Stock::button6_Click);
+			this->button6->Size = System::Drawing::Size(75, 23);
+			this->button6->TabIndex = 0;
 			// 
 			// Stock
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->ClientSize = System::Drawing::Size(929, 440);
+			this->ClientSize = System::Drawing::Size(1208, 554);
 			this->Controls->Add(this->textBox9);
 			this->Controls->Add(this->textBox8);
 			this->Controls->Add(this->textBox7);
@@ -666,7 +649,7 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 	textBox3->Text = Convert::ToString(prixtva);
 	double prixttc = prixtva * 0.015;
 	textBox2->Text = Convert::ToString(prixttc);
-	String^ nature = textBox5->Text;
+
 	int quantitter = Int32::Parse(textBox7->Text);
 	String^ ref = textBox9->Text;
 	String^ nomAR = textBox8->Text;
@@ -683,7 +666,7 @@ private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e
 	textBox3->Text = Convert::ToString(prixtva);
 	double prixttc = prixtva * 0.015;
 	textBox2->Text = Convert::ToString(prixttc);
-	String^ nature = textBox5->Text;
+
 	int quantitter = Int32::Parse(textBox7->Text);
 	String^ ref = textBox9->Text;
 	String^ nomAR = textBox8->Text;
@@ -700,6 +683,8 @@ private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e
 	NS_SVC::gestion_stock^suup = gcnew NS_SVC::gestion_stock();
 	suup->supprimer(id);
 	delete(suup);
+}
+private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }

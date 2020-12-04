@@ -434,32 +434,9 @@ namespace Interface1 {
 			// 
 			// radioButton1
 			// 
-			this->radioButton1->AutoSize = true;
-			this->radioButton1->Font = (gcnew System::Drawing::Font(L"Bahnschrift SemiBold", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->radioButton1->ForeColor = System::Drawing::Color::White;
-			this->radioButton1->Location = System::Drawing::Point(713, 87);
-			this->radioButton1->Name = L"radioButton1";
-			this->radioButton1->Size = System::Drawing::Size(63, 28);
-			this->radioButton1->TabIndex = 44;
-			this->radioButton1->TabStop = true;
-			this->radioButton1->Text = L"OUI";
-			this->radioButton1->UseVisualStyleBackColor = true;
-			this->radioButton1->CheckedChanged += gcnew System::EventHandler(this, &Personnel::radioButton1_CheckedChanged);
-			// 
+			
 			// radioButton2
-			// 
-			this->radioButton2->AutoSize = true;
-			this->radioButton2->Font = (gcnew System::Drawing::Font(L"Bahnschrift SemiBold", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->radioButton2->ForeColor = System::Drawing::Color::White;
-			this->radioButton2->Location = System::Drawing::Point(808, 87);
-			this->radioButton2->Name = L"radioButton2";
-			this->radioButton2->Size = System::Drawing::Size(72, 28);
-			this->radioButton2->TabIndex = 45;
-			this->radioButton2->TabStop = true;
-			this->radioButton2->Text = L"NON";
-			this->radioButton2->UseVisualStyleBackColor = true;
+		
 			// 
 			// label6
 			// 
@@ -467,12 +444,7 @@ namespace Interface1 {
 			this->label6->BackColor = System::Drawing::Color::Transparent;
 			this->label6->Font = (gcnew System::Drawing::Font(L"Bahnschrift SemiBold", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label2->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->label2->Location = System::Drawing::Point(670, 49);
-			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(318, 33);
-			this->label2->TabIndex = 46;
-			this->label2->Text = L" Supperieur hierarchique";
+		
 			// 
 			// Personnel
 			// 
