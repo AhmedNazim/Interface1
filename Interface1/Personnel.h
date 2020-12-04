@@ -413,7 +413,7 @@ namespace Interface1 {
 			this->button6->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button6.BackgroundImage")));
 			this->button6->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
 			this->button6->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->button6->Location = System::Drawing::Point(729, 398);
+			this->button6->Location = System::Drawing::Point(738, 387);
 			this->button6->Name = L"button6";
 			this->button6->Size = System::Drawing::Size(89, 73);
 			this->button6->TabIndex = 47;
