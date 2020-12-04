@@ -32,6 +32,8 @@ public:
 	adresses de liv 
 
 	*/
+	void refCom(); 
+
 
 };
 }
