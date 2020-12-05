@@ -1,14 +1,15 @@
 #pragma once
+#include "gestion_commande.h"
+
+using namespace System::ComponentModel;
+using namespace System::Collections;
+using namespace System::Windows::Forms;
+using namespace System::Data;
+using namespace System::Drawing;
 
 namespace Interface1 {
 
-	using namespace System;
-	using namespace System::ComponentModel;
-	using namespace System::Collections;
-	using namespace System::Windows::Forms;
-	using namespace System::Data;
-	using namespace System::Drawing;
-
+	
 	/// <summary>
 	/// Description résumée de Commande
 	/// </summary>
@@ -116,8 +117,8 @@ namespace Interface1 {
 	private: System::Windows::Forms::TextBox^ textBox13;
 	private: System::Windows::Forms::Button^ button6;
 private: System::Windows::Forms::BindingSource^ bindingSource1;
-private: System::Windows::Forms::BindingSource^ bindingSource2;
-private: System::Windows::Forms::BindingSource^ bindingSource3;
+
+
 private: System::ComponentModel::IContainer^ components;
 
 	private:
@@ -178,12 +179,8 @@ private: System::ComponentModel::IContainer^ components;
 			this->textBox13 = (gcnew System::Windows::Forms::TextBox());
 			this->button6 = (gcnew System::Windows::Forms::Button());
 			this->bindingSource1 = (gcnew System::Windows::Forms::BindingSource(this->components));
-			this->bindingSource2 = (gcnew System::Windows::Forms::BindingSource(this->components));
-			this->bindingSource3 = (gcnew System::Windows::Forms::BindingSource(this->components));
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource1))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource2))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource3))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// label7
@@ -708,8 +705,6 @@ private: System::ComponentModel::IContainer^ components;
 			this->Load += gcnew System::EventHandler(this, &Commande::Commande_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource1))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource2))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource3))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -731,8 +726,8 @@ private: System::Void label2_Click(System::Object^ sender, System::EventArgs^ e)
 }
 private: System::Void dataGridView2_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
 	String^ ref = textBox1->Text;
-	String^ constring = "Data Source=(local);Initial Catalog=POO;Integrated Security=True";
 	String^ constring = "";
+
 	SqlConnection^ conDataBase = gcnew SqlConnection(constring);
 	conDataBase->Open();
 
