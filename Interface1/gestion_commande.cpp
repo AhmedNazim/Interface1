@@ -97,16 +97,18 @@ namespace NS_SVC {// ya rayan rak gaertna fl'adresse
             {
 
                    
-                    Console::WriteLine(L" votre facture est :", strNameOfFile);
-
-                    bnfichier->Write(datereglmet);
-                    bnfichier->Write(datepay);
-                    bnfichier->Write(dateemi);
-                    bnfichier->Write(dateliv);
-					bnfichier->Write(ref);
+				    bnfichier->Write("Code Lyoko Corp. \n ");
+					bnfichier->Write("votre facture est: \n ");
+                    bnfichier->Write("Reference de la commande :\n"+ref);
+					bnfichier->Write("l'identifiant du client" + cl);
+					bnfichier->Write("l'identifiant de l'article" + art);
+                    bnfichier->Write("Date reglement:\n"+datereglmet);
+                    bnfichier->Write("Date de Payement:\n"+datepay);
+                    bnfichier->Write("Date d'emission :\n"+dateemi);
+                    bnfichier->Write("Date de livraison: \n "+dateliv);
+					
 					//String^ getAdresse(void);
-					bnfichier->Write(cl);
-					bnfichier->Write(art);
+					
 					
 
 
