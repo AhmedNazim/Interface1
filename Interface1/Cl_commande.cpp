@@ -29,11 +29,11 @@ namespace NS_Composants
 	}
 	String^ Cl_commande::UPDATE(void)
 	{
-		return "UPDATE commande SET  DateLiv ='" + this->DateLiv + "', DateEmi ='" + this->DateEmi + "', DatePay='" + this->DatePay + "', DateReglement ='" + this->DateReglement + "', totalArticle ='" + this->totalArticle + "', totalHT ='" + this->totalHT + "', totalTVA ='" + this->totalTVA + "', totalTTC ='" + this->totalTTC + "', remise ='" + this->totalTTC + "', ID_client ='" + this->id_client + "', ID_article = '" + this->id_article + "' WHERE refCOM='" + this->refCOM + "' ";
+		return "UPDATE commande SET  DateLiv ='" + this->DateLiv + "', DateEmi ='" + this->DateEmi + "', DatePay='" + this->DatePay + "', DateReglement ='" + this->DateReglement + "', totalArticle ='" + this->totalArticle + "', totalHT ='" + this->totalHT + "', totalTVA ='" + this->totalTVA + "', totalTTC ='" + this->totalTTC + "', remise ='" + this->totalTTC + "' WHERE refCOM='" + this->refCOM + "' ";
 	}
 	String^ Cl_commande::DLT(void)
 	{
-		return "WHERE(  refCOM = '" + this->refCOM + "' );";
+		return "DELETE FROM commande WHERE(refCOM = '" + this->refCOM + "'); ";
 	}
 	void Cl_commande::setId_commande(int Id_commande)
 	{

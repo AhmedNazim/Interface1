@@ -720,12 +720,12 @@ private: System::ComponentModel::IContainer^ components;
 #pragma endregion
 	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
 		String^ ref = textBox1->Text;
-		String^ constring = "";
+		String^ constring = "Data Source=DESKTOP-PBVM5PL;Initial Catalog=Poo_Project;Integrated Security=True";
 
 		SqlConnection^ conDataBase = gcnew SqlConnection(constring);
 		conDataBase->Open();
 
-		SqlDataAdapter^ adapter = gcnew SqlDataAdapter("select SELECT * FROM article WHERE refAR = '" + ref + "'; ", conDataBase);
+		SqlDataAdapter^ adapter = gcnew SqlDataAdapter("SELECT * FROM commande WHERE refCOM = '" + ref + "'; ", conDataBase);
 		DataTable^ data = gcnew DataTable();
 		data->Clear();
 		adapter->Fill(data);
