@@ -371,9 +371,9 @@ private: System::ComponentModel::IContainer^ components;
 			this->label2->ForeColor = System::Drawing::Color::White;
 			this->label2->Location = System::Drawing::Point(528, 325);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(60, 33);
+			this->label2->Size = System::Drawing::Size(245, 33);
 			this->label2->TabIndex = 40;
-			this->label2->Text = L"TTC";
+			this->label2->Text = L"Date De Reglement";
 			this->label2->Click += gcnew System::EventHandler(this, &Commande::label2_Click);
 			// 
 			// label3
@@ -386,9 +386,9 @@ private: System::ComponentModel::IContainer^ components;
 			this->label3->ForeColor = System::Drawing::Color::White;
 			this->label3->Location = System::Drawing::Point(523, 142);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(185, 33);
+			this->label3->Size = System::Drawing::Size(153, 33);
 			this->label3->TabIndex = 41;
-			this->label3->Text = L"Nature Article";
+			this->label3->Text = L"Code Client";
 			this->label3->Click += gcnew System::EventHandler(this, &Commande::label3_Click);
 			// 
 			// label4
@@ -401,9 +401,10 @@ private: System::ComponentModel::IContainer^ components;
 			this->label4->ForeColor = System::Drawing::Color::White;
 			this->label4->Location = System::Drawing::Point(522, 211);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(286, 33);
+			this->label4->Size = System::Drawing::Size(104, 33);
 			this->label4->TabIndex = 42;
-			this->label4->Text = L"Date D\'enregistrement";
+			this->label4->Text = L"Remise";
+			this->label4->Click += gcnew System::EventHandler(this, &Commande::label4_Click);
 			// 
 			// label5
 			// 
@@ -415,9 +416,9 @@ private: System::ComponentModel::IContainer^ components;
 			this->label5->ForeColor = System::Drawing::Color::White;
 			this->label5->Location = System::Drawing::Point(523, 78);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(159, 33);
+			this->label5->Size = System::Drawing::Size(160, 33);
 			this->label5->TabIndex = 43;
-			this->label5->Text = L"Nom Article";
+			this->label5->Text = L"Total Article";
 			// 
 			// label6
 			// 
@@ -542,6 +543,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->textBox2->Name = L"textBox2";
 			this->textBox2->Size = System::Drawing::Size(239, 23);
 			this->textBox2->TabIndex = 52;
+			this->textBox2->TextChanged += gcnew System::EventHandler(this, &Commande::textBox2_TextChanged);
 			// 
 			// textBox3
 			// 
@@ -552,6 +554,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->textBox3->Name = L"textBox3";
 			this->textBox3->Size = System::Drawing::Size(239, 23);
 			this->textBox3->TabIndex = 53;
+			this->textBox3->TextChanged += gcnew System::EventHandler(this, &Commande::textBox3_TextChanged);
 			// 
 			// textBox4
 			// 
@@ -562,6 +565,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->textBox4->Name = L"textBox4";
 			this->textBox4->Size = System::Drawing::Size(239, 23);
 			this->textBox4->TabIndex = 54;
+			this->textBox4->TextChanged += gcnew System::EventHandler(this, &Commande::textBox4_TextChanged);
 			// 
 			// textBox5
 			// 
@@ -583,6 +587,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->textBox6->Name = L"textBox6";
 			this->textBox6->Size = System::Drawing::Size(239, 23);
 			this->textBox6->TabIndex = 56;
+			this->textBox6->TextChanged += gcnew System::EventHandler(this, &Commande::textBox6_TextChanged);
 			// 
 			// textBox7
 			// 
@@ -593,6 +598,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->textBox7->Name = L"textBox7";
 			this->textBox7->Size = System::Drawing::Size(239, 23);
 			this->textBox7->TabIndex = 57;
+			this->textBox7->TextChanged += gcnew System::EventHandler(this, &Commande::textBox7_TextChanged);
 			// 
 			// textBox8
 			// 
@@ -614,6 +620,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->textBox9->Name = L"textBox9";
 			this->textBox9->Size = System::Drawing::Size(211, 23);
 			this->textBox9->TabIndex = 59;
+			this->textBox9->TextChanged += gcnew System::EventHandler(this, &Commande::textBox9_TextChanged);
 			// 
 			// textBox10
 			// 
@@ -635,6 +642,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->textBox13->Name = L"textBox13";
 			this->textBox13->Size = System::Drawing::Size(211, 23);
 			this->textBox13->TabIndex = 61;
+			this->textBox13->TextChanged += gcnew System::EventHandler(this, &Commande::textBox13_TextChanged);
 			// 
 			// button6
 			// 
@@ -654,7 +662,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->AutoScaleDimensions = System::Drawing::SizeF(12, 25);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::ButtonShadow;
-			this->ClientSize = System::Drawing::Size(800, 484);
+			this->ClientSize = System::Drawing::Size(800, 511);
 			this->Controls->Add(this->button6);
 			this->Controls->Add(this->textBox13);
 			this->Controls->Add(this->textBox10);
@@ -740,10 +748,13 @@ private: System::Void dataGridView2_CellContentClick(System::Object^ sender, Sys
 	
 }
 private: System::Void textBox10_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+	String^ dateem = textBox10->Text;
 }
 private: System::Void textBox8_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+	String^ moyenpay = textBox8->Text;
 }
 private: System::Void textBox5_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+	int clien = Convert::ToInt32(textBox5->Text);
 }
 private: System::Void label9_Click(System::Object^ sender, System::EventArgs^ e) {
 }
@@ -752,16 +763,85 @@ private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e
 	O->Show();
 }
 private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+	String^ dateem = textBox10->Text;
+	String^ moyenpay = textBox8->Text;
+	String^ ref = textBox1->Text;
+	String^ Dateliv = textBox13->Text;
+	String^ Datepy = textBox9->Text;
+	int refart = Convert::ToInt32(textBox7->Text);
+	String^ totalart = textBox6->Text;
+	String^ remis = textBox1->Text;
+	String^ HT = textBox3->Text;
+	double ht = Convert::ToDouble(textBox3->Text);
+	double tva = ht * 0.19;
+	double ttc = tva * 0.015;
+	String^ TVA = Convert::ToString(tva);
+	String^ TTC = Convert::ToString(tva);
+	String^ datergl = textBox2->Text;
+	int clien = Convert::ToInt32(textBox5->Text);
+
+	NS_SVC::gestion_commande^ ajot = gcnew NS_SVC::gestion_commande();
+	ajot->ajouter(ref,remis,totalart,TTC,TVA,HT,datergl,Datepy,dateem,Dateliv,clien,refart);
+	delete(ajot);
 	MessageBox::Show("la personne a etait ajouter", "Ajouter", MessageBoxButtons::OK, MessageBoxIcon::Information);
 }
 private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
+	String^ dateem = textBox10->Text;
+	String^ moyenpay = textBox8->Text;
+	String^ ref = textBox1->Text;
+	String^ Dateliv = textBox13->Text;
+	String^ Datepy = textBox9->Text;
+	int refart = Convert::ToInt32(textBox7->Text);
+	String^ totalart = textBox6->Text;
+	String^ remis = textBox1->Text;
+	String^ HT = textBox3->Text;
+	double ht = Convert::ToDouble(textBox3->Text);
+	double tva = ht * 0.19;
+	double ttc = tva * 0.015;
+	String^ TVA = Convert::ToString(tva);
+	String^ TTC = Convert::ToString(tva);
+	String^ datergl = textBox2->Text;
+	int clien = Convert::ToInt32(textBox5->Text);
+
+	NS_SVC::gestion_commande^ modif= gcnew NS_SVC::gestion_commande();
+	modif->modifier(ref, remis, totalart, TTC, TVA, HT, datergl, Datepy, dateem, Dateliv, clien, refart);
+	delete(modif);
 	MessageBox::Show("la personne a etait modifier", "Modifier", MessageBoxButtons::OK, MessageBoxIcon::Information);
 }
 private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
+	NS_SVC::gestion_commande^ modif = gcnew NS_SVC::gestion_commande();
+	String^ ref = textBox1->Text;
+	modif->supprimer(ref);
+	delete(modif);
 	MessageBox::Show("la personne a etait supprimer", "Supprimer", MessageBoxButtons::OK, MessageBoxIcon::Information);
 }
 private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 	String^ ref = textBox1->Text;
+}
+private: System::Void textBox13_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+	String^ Dateliv = textBox13->Text;
+}
+private: System::Void textBox9_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+	String^ Datepy = textBox9->Text;
+}
+private: System::Void textBox7_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+	int refart = Convert::ToInt32( textBox7->Text);
+}
+private: System::Void textBox6_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+	String^ totalart = textBox6->Text;
+}
+private: System::Void textBox4_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+	String^ remis = textBox1->Text;
+}
+private: System::Void textBox3_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+	String^ HT = textBox3->Text;
+}
+private: System::Void label4_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void label5_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void textBox2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+	String^ datergl = textBox2->Text;
 }
 };
 }

@@ -24,36 +24,48 @@ namespace NS_SVC {// ya rayan rak gaertna fl'adresse
 		return this->ds;
 	}
 
-	void gestion_commande::ajouter(String^ DateReglement, String^ DatePay, String^ DateEmi, String^ DateLiv)
+	void gestion_commande::ajouter(String^ ref ,String^remise, String^toarti,String^totalttc, String^totaltva, String^ totalht,String^ DateReglement, String^ DatePay, String^ DateEmi, String^ DateLiv,int clien,int art)
 	{
+
 		int id;
 		//this->commande->setAdresse(adresse);
+		this->commande->setId_client(clien);
+		this->commande->setId_article(art);
+		this->commande->setremise(remise);
+		this->commande->settotalTTC(totalttc);
+		this->commande->settotalTVA(totaltva);
+		this->commande->setrefCOM(ref);
 		this->commande->setDateReglement(DateReglement);
-
+		this->commande->settotalArticle(toarti);
 		this->commande->setDatePay(DatePay);
-
+		this->commande->settotalHT(totalht);
 		this->commande->setDateEmi(DateEmi);
 		this->commande->setDateLiv(DateLiv);
 		//ref commande voir comme ajouter 
 		id = this->cad->actionRowsID(this->commande->INSERT());
 	}
 
-	void gestion_commande::modifier(int Id_commande, String^ DateReglement, String^ DatePay, String^ DateEmi, String^ DateLiv)
+	void gestion_commande::modifier( String^ ref, String^ remise, String^ toarti, String^ totalttc, String^ totaltva, String^ totalht, String^ DateReglement, String^ DatePay, String^ DateEmi, String^ DateLiv, int clien, int art)
 	{
 
-		this->commande->setId_commande(Id_commande);
-		//this->commande->setAdresse(adresse);
+		this->commande->setId_client(clien);
+		this->commande->setId_article(art);
+		this->commande->setremise(remise);
+		this->commande->settotalTTC(totalttc);
+		this->commande->settotalTVA(totaltva);
+		this->commande->setrefCOM(ref);
 		this->commande->setDateReglement(DateReglement);
+		this->commande->settotalArticle(toarti);
 		this->commande->setDatePay(DatePay);
+		this->commande->settotalHT(totalht);
 		this->commande->setDateEmi(DateEmi);
-		//ref commande voir comment rajouter 
 		this->commande->setDateLiv(DateLiv);
 		this->cad->actionRows(this->commande->UPDATE());
 	}
 
-	void gestion_commande::supprimer(int idCommande)
+	void gestion_commande::supprimer(String^ idCommande)
 	{
-		this->commande->setId_commande(idCommande);
+		this->commande->setrefCOM(idCommande);
 		this->cad->actionRows(this->commande->DLT());
 	}
 	

@@ -25,6 +25,13 @@ namespace NS_Composants {
 		String^ UPDATE(void);
 		String^ DLT(void);
 		void setId_commande(int);
+		void settotalTTC(String^);
+		void settotalTVA(String^);
+		void settotalHT(String^);
+		void settotalArticle(String^);
+		void setrefCOM(String^);
+		void setremise(String^);
+
 		void setDateReglement(String^);
 		//void setAdresse(String^);
 		void setDatePay(String^);
@@ -32,6 +39,7 @@ namespace NS_Composants {
 		void setDateLiv(String^);
 		void setId_client(int);
 		void setId_article(int);
+
 		int getId_commande(void);
 		String^ getDateReglement(void);
 		//String^ getAdresse(void);

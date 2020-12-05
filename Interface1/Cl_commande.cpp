@@ -29,15 +29,41 @@ namespace NS_Composants
 	}
 	String^ Cl_commande::UPDATE(void)
 	{
-		return "UPDATE commande SET refCOM='" + this->refCOM + "', DateLiv ='" + this->DateLiv + "', DateEmi ='" + this->DateEmi + "', DatePay='" + this->DatePay + "', DateReglement ='" + this->DateReglement + "', totalArticle ='" + this->totalArticle + "', totalHT ='" + this->totalHT + "', totalTVA ='" + this->totalTVA + "', totalTTC ='" + this->totalTTC + "', remise ='" + this->totalTTC + "', ID_client ='" + this->id_client + "', ID_article = '" + this->id_article + "' WHERE ID='" + this->id_commande + "' ";
+		return "UPDATE commande SET  DateLiv ='" + this->DateLiv + "', DateEmi ='" + this->DateEmi + "', DatePay='" + this->DatePay + "', DateReglement ='" + this->DateReglement + "', totalArticle ='" + this->totalArticle + "', totalHT ='" + this->totalHT + "', totalTVA ='" + this->totalTVA + "', totalTTC ='" + this->totalTTC + "', remise ='" + this->totalTTC + "', ID_client ='" + this->id_client + "', ID_article = '" + this->id_article + "' WHERE refCOM='" + this->refCOM + "' ";
 	}
 	String^ Cl_commande::DLT(void)
 	{
-		return "WHERE(  ID = '" + this->id_commande + "' );";
+		return "WHERE(  refCOM = '" + this->refCOM + "' );";
 	}
 	void Cl_commande::setId_commande(int Id_commande)
 	{
 		this->id_commande = Id_commande;
+	}
+	void Cl_commande::settotalTTC(String^ to)
+	{
+		this->totalTTC =to ;
+	}
+	void Cl_commande::settotalTVA(String^ta)
+	{
+		this->totalTVA = ta;
+	}
+	void Cl_commande::settotalHT(String^ht)
+	{
+		this->totalHT = ht;
+		
+	}
+	void Cl_commande::settotalArticle(String^ tpp)
+	{
+		this->totalArticle = tpp;
+	}
+	void Cl_commande::setrefCOM(String^com)
+	{
+		this->refCOM = com;
+
+	}
+	void Cl_commande::setremise(String^re)
+	{
+		this->remise = re;
 	}
 	//on va changer avec ref 
 	/*void Cl_commande::setAdresse(String^ Adresse)
