@@ -671,6 +671,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->button5->TabIndex = 63;
 			this->button5->Text = L"\r\n";
 			this->button5->UseVisualStyleBackColor = true;
+			this->button5->Click += gcnew System::EventHandler(this, &Commande::button5_Click);
 			// 
 			// Commande
 			// 
@@ -858,6 +859,10 @@ private: System::Void label5_Click(System::Object^ sender, System::EventArgs^ e)
 }
 private: System::Void textBox2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 	String^ datergl = textBox2->Text;
+}
+private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
+	NS_SVC::gestion_commande^ facture = gcnew NS_SVC::gestion_commande();
+	facture->facturation();
 }
 };
 }

@@ -80,11 +80,11 @@ namespace NS_SVC {// ya rayan rak gaertna fl'adresse
 	{
 
 		 String^ strNameOfFile;
+		 int c = 0;
 
-            Console::Write(L"Please enter your initials or the name "
-                L"we will use to remember your order: ");
-            strNameOfFile = Console::ReadLine();
-            strNameOfFile = strNameOfFile + L".icr";
+
+		    strNameOfFile = "facture" + c + "txt";
+           
 
             // Find out if the user entered a name of a file 
             // that is already in the machine
@@ -112,11 +112,10 @@ namespace NS_SVC {// ya rayan rak gaertna fl'adresse
 
                 }
                 
-               else
-                    Console::WriteLine(L"erreur ");
+               
 			     fichier->Close();
                 bnfichier->Close();
-                
+				c++;
            
           
             }
