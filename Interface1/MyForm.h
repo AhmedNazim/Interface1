@@ -116,7 +116,7 @@ namespace Interface1 {
 			this->button3->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
 			this->button3->Location = System::Drawing::Point(525, 12);
 			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(238, 256);
+			this->button3->Size = System::Drawing::Size(242, 256);
 			this->button3->TabIndex = 2;
 			this->button3->TextAlign = System::Drawing::ContentAlignment::BottomCenter;
 			this->button3->UseVisualStyleBackColor = false;
@@ -131,9 +131,9 @@ namespace Interface1 {
 			this->button4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button4->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->button4->Location = System::Drawing::Point(526, 274);
+			this->button4->Location = System::Drawing::Point(525, 274);
 			this->button4->Name = L"button4";
-			this->button4->Size = System::Drawing::Size(237, 238);
+			this->button4->Size = System::Drawing::Size(241, 238);
 			this->button4->TabIndex = 3;
 			this->button4->TextAlign = System::Drawing::ContentAlignment::BottomCenter;
 			this->button4->UseVisualStyleBackColor = false;
