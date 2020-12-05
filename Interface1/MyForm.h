@@ -128,7 +128,7 @@ namespace Interface1 {
 			// 
 			// button4
 			// 
-			this->button4->BackColor = System::Drawing::Color::LightGreen;
+			this->button4->BackColor = System::Drawing::Color::MediumSpringGreen;
 			this->button4->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button4.BackgroundImage")));
 			this->button4->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->button4->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
@@ -172,16 +172,16 @@ namespace Interface1 {
 				static_cast<System::Byte>(0)));
 			this->linkLabel1->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
 			this->linkLabel1->LinkColor = System::Drawing::Color::White;
-			this->linkLabel1->Location = System::Drawing::Point(275, 9);
+			this->linkLabel1->Location = System::Drawing::Point(122, 35);
 			this->linkLabel1->Name = L"linkLabel1";
-			this->linkLabel1->Size = System::Drawing::Size(197, 33);
+			this->linkLabel1->Size = System::Drawing::Size(247, 43);
 			this->linkLabel1->TabIndex = 5;
 			this->linkLabel1->TabStop = true;
 			this->linkLabel1->Text = L" Code Lyoko ";
 			// 
 			// MyForm
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(9, 20);
+			this->AutoScaleDimensions = System::Drawing::SizeF(12, 25);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::ButtonShadow;
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;

@@ -1,11 +1,14 @@
 #pragma once
-namespace NS_Composants {
-	using namespace System;
+
+using namespace System;
 
 	using namespace System::Data;
 
 	using namespace System::Data::SqlClient;
 	using namespace System::Xml;
+
+namespace NS_Composants {
+	
 	ref class Cl_stock
 	{
 	private:

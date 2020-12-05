@@ -4,10 +4,10 @@
 #include<sstream>
 #include<string>
 #include<string.h>
-#include <msclr\marshal.h>
+//#include <msclr\marshal.h>
 
 using namespace System;
-using namespace msclr::interop;
+//using namespace msclr::interop;
 using namespace std;
 namespace NS_SVC {// ya rayan rak gaertna fl'adresse
 	gestion_commande::gestion_commande()
@@ -57,7 +57,7 @@ namespace NS_SVC {// ya rayan rak gaertna fl'adresse
 		this->cad->actionRows(this->commande->DLT());
 	}
 	
-	void gestion_commande::facturation()
+	/*void gestion_commande::facturation()
 	{
 
 		int c = 0;
@@ -79,7 +79,7 @@ namespace NS_SVC {// ya rayan rak gaertna fl'adresse
 		else  // sinon
 			cerr << "Erreur à l'ouverture !" << endl;
 
-	}
+	}*/
 }
 		
 	
