@@ -11,7 +11,7 @@ namespace NS_Composants
 	}
 	String^ Cl_personnel::SELECTByIdPersonne(void)
 	{
-		return "SELCET * FROM personnel WHERE nomPER= '" + this->nomPER + "' and prenomPER='" + this->prenomPER + "'";
+		return "SELECT * FROM personnel WHERE nomPER= '" + this->nomPER + "' and prenomPER='" + this->prenomPER + "'";
 	};
 	String^ Cl_personnel::INSERT(void)
 	{
