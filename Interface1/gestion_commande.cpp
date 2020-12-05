@@ -92,11 +92,34 @@ namespace NS_SVC {// ya rayan rak gaertna fl'adresse
 				gcnew FileStream(strNameOfFile, FileMode::Create);
 			BinaryWriter^ bnfichier =
 				gcnew BinaryWriter(fichier);
+			String^ constring = "Data Source = DESKTOP - PBVM5PL; Initial Catalog = Poo_Project; Integrated Security = True";
+			SqlConnection^ conDataBase = gcnew SqlConnection(constring);
+			conDataBase->Open();
+			SqlCommand^ cmdDataBase = gcnew SqlCommand("SELECT nomCL,prenomCL FROM client WHERE ID="+cl+" ", conDataBase);
+			SqlDataReader^ myReader = cmdDataBase->ExecuteReader();
+			while (myReader->Read()) {
+				String^ nomCL= myReader->GetString(0);
+				String^ prenomCL = myReader->GetString(1);
+			}
+			conDataBase->Close();
+			conDataBase->Open();
+		SqlCommand^ cmd = gcnew SqlCommand("SELECT nomAR,couleurAR,natureAR,prixHTAR,prixTVA,prixTTC FROM article WHERE ID=" +art + " ", conDataBase);
+		myReader = cmd->ExecuteReader();
+		while (myReader->Read()) {
+			String^ nomAR = myReader->GetString(0);
+			String^ couleurAR = myReader->GetString(1);
+			String^ natureAR = myReader->GetString(2);
+			String^ prixHT = myReader->GetString(3);
+			String^ prixTVA = myReader->GetString(4);
+			String^ prixTTC = myReader->GetString(5);
 
-            if (File::Exists(strNameOfFile))
+		}
+		conDataBase->Close();
+		if (File::Exists(strNameOfFile))
             {
 
-                   
+				
+				myReader->Close();
 				    bnfichier->Write("Code Lyoko Corp. \n ");
 					bnfichier->Write("votre facture est: \n ");
                     bnfichier->Write("Reference de la commande :\n"+ref);
