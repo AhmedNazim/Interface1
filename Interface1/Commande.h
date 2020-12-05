@@ -862,7 +862,23 @@ private: System::Void textBox2_TextChanged(System::Object^ sender, System::Event
 }
 private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
 	NS_SVC::gestion_commande^ facture = gcnew NS_SVC::gestion_commande();
-	facture->facturation();
+	String^ dateem = textBox10->Text;
+	String^ moyenpay = textBox8->Text;
+	String^ ref = textBox1->Text;
+	String^ Dateliv = textBox13->Text;
+	String^ Datepy = textBox9->Text;
+	int refart = Convert::ToInt32(textBox7->Text);
+	String^ totalart = textBox6->Text;
+	String^ remis = textBox1->Text;
+	String^ HT = textBox3->Text;
+	double ht = Convert::ToDouble(textBox3->Text);
+	double tva = ht * 0.19;
+	double ttc = tva * 0.015;
+	String^ TVA = Convert::ToString(tva);
+	String^ TTC = Convert::ToString(tva);
+	String^ datergl = textBox2->Text;
+	int clien = Convert::ToInt32(textBox5->Text);
+	facture->facturation(datergl, Datepy, dateem, Dateliv, ref,clien,refart);
 }
 };
 }

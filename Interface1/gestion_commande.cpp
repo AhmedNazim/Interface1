@@ -76,7 +76,7 @@ namespace NS_SVC {// ya rayan rak gaertna fl'adresse
 		this->cad->actionRows(this->commande->DLT());
 	}
 	
-	void gestion_commande::facturation()
+	void gestion_commande::	facturation(String^ datereglmet,String^ datepay,String^dateemi,String^dateliv,String^ref,int cl,int art)
 	{
 
 		 String^ strNameOfFile;
@@ -99,14 +99,14 @@ namespace NS_SVC {// ya rayan rak gaertna fl'adresse
                    
                     Console::WriteLine(L" votre facture est :", strNameOfFile);
 
-                    bnfichier->Write(this->commande->getDateReglement());
-                    bnfichier->Write(this->commande->getDatePay());
-                    bnfichier->Write(this->commande->getDateEmi());
-                    bnfichier->Write(this->commande->getDateLiv());
-					bnfichier->Write(this->commande->getId_commande());
+                    bnfichier->Write(datereglmet);
+                    bnfichier->Write(datepay);
+                    bnfichier->Write(dateemi);
+                    bnfichier->Write(dateliv);
+					bnfichier->Write(ref);
 					//String^ getAdresse(void);
-					bnfichier->Write(this->commande->getId_client());
-					bnfichier->Write(this->commande->getId_article());
+					bnfichier->Write(cl);
+					bnfichier->Write(art);
 					
 
 
