@@ -80,9 +80,9 @@ namespace Interface1 {
 			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button1->ForeColor = System::Drawing::Color::White;
-			this->button1->Location = System::Drawing::Point(22, 42);
+			this->button1->Location = System::Drawing::Point(22, 12);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(237, 435);
+			this->button1->Size = System::Drawing::Size(237, 500);
 			this->button1->TabIndex = 0;
 			this->button1->TextAlign = System::Drawing::ContentAlignment::BottomCenter;
 			this->button1->UseVisualStyleBackColor = false;
@@ -90,16 +90,16 @@ namespace Interface1 {
 			// 
 			// button2
 			// 
-			this->button2->BackColor = System::Drawing::Color::Orange;
+			this->button2->BackColor = System::Drawing::Color::Transparent;
 			this->button2->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button2.BackgroundImage")));
-			this->button2->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->button2->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Center;
 			this->button2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button2->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->button2->Location = System::Drawing::Point(265, 274);
+			this->button2->Location = System::Drawing::Point(259, 274);
 			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(207, 203);
+			this->button2->Size = System::Drawing::Size(267, 238);
 			this->button2->TabIndex = 1;
 			this->button2->TextAlign = System::Drawing::ContentAlignment::BottomCenter;
 			this->button2->UseVisualStyleBackColor = false;
@@ -109,14 +109,14 @@ namespace Interface1 {
 			// 
 			this->button3->BackColor = System::Drawing::Color::Transparent;
 			this->button3->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button3.BackgroundImage")));
-			this->button3->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
+			this->button3->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Center;
 			this->button3->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button3->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
-			this->button3->Location = System::Drawing::Point(478, 32);
+			this->button3->Location = System::Drawing::Point(525, 12);
 			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(188, 216);
+			this->button3->Size = System::Drawing::Size(238, 256);
 			this->button3->TabIndex = 2;
 			this->button3->TextAlign = System::Drawing::ContentAlignment::BottomCenter;
 			this->button3->UseVisualStyleBackColor = false;
@@ -124,16 +124,16 @@ namespace Interface1 {
 			// 
 			// button4
 			// 
-			this->button4->BackColor = System::Drawing::Color::MediumSpringGreen;
+			this->button4->BackColor = System::Drawing::Color::Transparent;
 			this->button4->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button4.BackgroundImage")));
 			this->button4->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Center;
 			this->button4->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button4->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->button4->Location = System::Drawing::Point(478, 239);
+			this->button4->Location = System::Drawing::Point(526, 274);
 			this->button4->Name = L"button4";
-			this->button4->Size = System::Drawing::Size(240, 238);
+			this->button4->Size = System::Drawing::Size(237, 238);
 			this->button4->TabIndex = 3;
 			this->button4->TextAlign = System::Drawing::ContentAlignment::BottomCenter;
 			this->button4->UseVisualStyleBackColor = false;
@@ -143,14 +143,14 @@ namespace Interface1 {
 			// 
 			this->button5->BackColor = System::Drawing::Color::Transparent;
 			this->button5->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button5.BackgroundImage")));
-			this->button5->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
+			this->button5->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Center;
 			this->button5->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button5->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
-			this->button5->Location = System::Drawing::Point(265, 32);
+			this->button5->Location = System::Drawing::Point(259, 12);
 			this->button5->Name = L"button5";
-			this->button5->Size = System::Drawing::Size(207, 236);
+			this->button5->Size = System::Drawing::Size(261, 256);
 			this->button5->TabIndex = 4;
 			this->button5->Text = L" ";
 			this->button5->TextAlign = System::Drawing::ContentAlignment::BottomCenter;
@@ -163,7 +163,7 @@ namespace Interface1 {
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::White;
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->ClientSize = System::Drawing::Size(722, 524);
+			this->ClientSize = System::Drawing::Size(779, 524);
 			this->Controls->Add(this->button5);
 			this->Controls->Add(this->button4);
 			this->Controls->Add(this->button3);
