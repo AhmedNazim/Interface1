@@ -591,5 +591,5 @@ private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e
 	bindingSource1->DataSource = data;
 	dataGridView1->DataSource = bindingSource1;
 }
-}
+};
 }

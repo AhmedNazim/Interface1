@@ -53,7 +53,7 @@ namespace Interface1 {
 	private: System::Windows::Forms::Button^ button3;
 	private: System::Windows::Forms::Button^ button4;
 
-	private: System::Windows::Forms::DataGridView^ dataGridView1;
+
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::Label^ label2;
 	private: System::Windows::Forms::Label^ label3;
@@ -78,6 +78,7 @@ namespace Interface1 {
 	private: System::Windows::Forms::Panel^ panel2;
 	private: System::Windows::Forms::Button^ button6;
 	private: System::Windows::Forms::BindingSource^ bindingSource1;
+	private: System::Windows::Forms::DataGridView^ dataGridView1;
 	private: System::ComponentModel::IContainer^ components;
 
 	private:
@@ -99,7 +100,7 @@ namespace Interface1 {
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->button4 = (gcnew System::Windows::Forms::Button());
-			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
+			this->bindingSource1 = (gcnew System::Windows::Forms::BindingSource(this->components));
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label3 = (gcnew System::Windows::Forms::Label());
@@ -122,9 +123,9 @@ namespace Interface1 {
 			this->textBox7 = (gcnew System::Windows::Forms::TextBox());
 			this->panel2 = (gcnew System::Windows::Forms::Panel());
 			this->button6 = (gcnew System::Windows::Forms::Button());
-			this->bindingSource1 = (gcnew System::Windows::Forms::BindingSource(this->components));
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
+			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource1))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// button1
@@ -183,17 +184,6 @@ namespace Interface1 {
 			this->button4->TabIndex = 3;
 			this->button4->UseVisualStyleBackColor = false;
 			this->button4->Click += gcnew System::EventHandler(this, &Client::button4_Click);
-			// 
-			// dataGridView1
-			// 
-			this->dataGridView1->BackgroundColor = System::Drawing::Color::White;
-			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView1->Location = System::Drawing::Point(459, 9);
-			this->dataGridView1->Name = L"dataGridView1";
-			this->dataGridView1->RowHeadersWidth = 51;
-			this->dataGridView1->Size = System::Drawing::Size(424, 361);
-			this->dataGridView1->TabIndex = 5;
-			this->dataGridView1->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &Client::dataGridView1_CellContentClick);
 			// 
 			// label1
 			// 
@@ -434,9 +424,15 @@ namespace Interface1 {
 			this->button6->UseVisualStyleBackColor = true;
 			this->button6->Click += gcnew System::EventHandler(this, &Client::button6_Click);
 			// 
-			// bindingSource1
+			// dataGridView1
 			// 
-			this->bindingSource1->CurrentChanged += gcnew System::EventHandler(this, &Client::bindingSource1_CurrentChanged);
+			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dataGridView1->Location = System::Drawing::Point(481, 12);
+			this->dataGridView1->Name = L"dataGridView1";
+			this->dataGridView1->RowHeadersWidth = 51;
+			this->dataGridView1->RowTemplate->Height = 24;
+			this->dataGridView1->Size = System::Drawing::Size(402, 323);
+			this->dataGridView1->TabIndex = 24;
 			// 
 			// Client
 			// 
@@ -445,6 +441,7 @@ namespace Interface1 {
 			this->BackColor = System::Drawing::SystemColors::ButtonShadow;
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(895, 470);
+			this->Controls->Add(this->dataGridView1);
 			this->Controls->Add(this->button6);
 			this->Controls->Add(this->panel2);
 			this->Controls->Add(this->textBox7);
@@ -467,7 +464,6 @@ namespace Interface1 {
 			this->Controls->Add(this->label3);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
-			this->Controls->Add(this->dataGridView1);
 			this->Controls->Add(this->button4);
 			this->Controls->Add(this->button3);
 			this->Controls->Add(this->button2);
@@ -479,8 +475,8 @@ namespace Interface1 {
 			this->Name = L"Client";
 			this->Text = L"Client";
 			this->Load += gcnew System::EventHandler(this, &Client::Client_Load);
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource1))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -499,7 +495,7 @@ private: System::Void panel1_Paint(System::Object^ sender, System::Windows::Form
 private: System::Void label6_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-    int ID = Int32::Parse(textBox1->Text);
+   int ID = Int32::Parse(textBox1->Text);
 
 }
 private: System::Void textBox2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
@@ -562,19 +558,19 @@ private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e
 	Y->Show(); 
 }
 private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
-	String^ constring = "";
-	String^ nom = textBox2->Text; String^ prenom = textBox3->Text;
+	String^ constring = "Data Source=DESKTOP-PBVM5PL;Initial Catalog=Poo_Project;Integrated Security=True";
+	String^ nom = textBox2->Text; 
+	String^ prenom = textBox3->Text;
 	SqlConnection^ conDataBase = gcnew SqlConnection(constring);
-	conDataBase->Open();
-	SqlDataAdapter^ adapter = gcnew SqlDataAdapter(" select SELECT * FROM client WHERE nomCL = '" + nom + "'and prenonCL ='" + prenom + "' ; ", conDataBase);
+	
+	SqlDataAdapter^ adapter = gcnew SqlDataAdapter(" SELECT * FROM client WHERE nomCL = '" + nom + "'AND prenonCL ='" + prenom + "'  ", conDataBase);
 	DataTable^ data = gcnew DataTable();
-	data->Clear();
+	dataGridView1->Show();
 	adapter->Fill(data);
 	bindingSource1->DataSource = data;
 	dataGridView1->DataSource = bindingSource1;
 }
-private: System::Void bindingSource1_CurrentChanged(System::Object^ sender, System::EventArgs^ e) {
-}
+
 };
 
 }

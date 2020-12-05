@@ -20,13 +20,11 @@ namespace NS_Composants {
 	};
 	String^ Cl_stock::INSERT(void) {
 		
-			return "INSERT INTO article(nomAR,refAR,couleurAR,natureAR,prixHTAR,quantiterAR,prixTVA,prixTTC,sseul_de_reappro) " +
-			"VALUES('" + this->nomAR + "', '" + this->refAR + "', '" + this->couleurAR + "', " + this->natureAR + "," + this->prixHTAR+"," +this->qantiterAR  +"," +this->prixTVA +"," +this->prixTTC +"," +this->seul_de_reappro +",);";
-
+		return "INSERT INTO article(nomAR,refAR,couleurAR,natureAR,prixHTAR,quantiterAR,prixTVA,prixTTC,seuil_de_reappro) VALUES('" + this->getnomAR() + "', '" + this->getrefAR() + "', '" + this->getcouleurAR() + "', '" + this->getnatureAR() + "','" + this->getprixHTAR() + "','" + this->getqantiterAR() + "','" + this->getprixTVA() + "','" + this->getprixTTC() + "','" + this->getseul_de_reappro() + "');";
 	};
 	String^ Cl_stock::UPDATE(void) {
 		
-			return "UPDATE article SET nomAR ='" + this->nomAR + "',refAR ='" + this->refAR + "', couleurAR ='" + this->couleurAR + "' ,natureAR ='" + this->natureAR + "' , prixHTAR ='" + this->prixHTAR + "' , qantiterAR ='" + this->qantiterAR + "' , prixTVA ='" + this->prixTVA + "' , prixTTC ='" + this->prixTTC + "' , seul_de_reappro ='" + this->seul_de_reappro + "' WHERE(ID = " + this->ID + "); ";
+			return "UPDATE article SET nomAR ='" + this->nomAR + "',refAR ='" + this->refAR + "', couleurAR ='" + this->couleurAR + "' ,natureAR ='" + this->natureAR + "' , prixHTAR ='" + this->prixHTAR + "' , qantiterAR ='" + this->qantiterAR + "' , prixTVA ='" + this->prixTVA + "' , prixTTC ='" + this->prixTTC + "' , seuil_de_reappro ='" + this->seul_de_reappro + "' WHERE(ID = " + this->ID + "); ";
 
 	};
 	String^ Cl_stock::DELETE(void) {
@@ -87,7 +85,7 @@ namespace NS_Composants {
 	}
 	String^ Cl_stock::getrefAR()
 	{
-		return this->couleurAR;
+		return this->refAR;
 	}
 	String^ Cl_stock::getcouleurAR()
 	{

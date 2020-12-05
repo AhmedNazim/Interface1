@@ -169,7 +169,7 @@ namespace Interface1 {
 			this->dataGridView2->BackgroundColor = System::Drawing::Color::White;
 			this->dataGridView2->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
 			this->dataGridView2->Location = System::Drawing::Point(769, 6);
-			this->dataGridView2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->dataGridView2->Margin = System::Windows::Forms::Padding(4);
 			this->dataGridView2->Name = L"dataGridView2";
 			this->dataGridView2->RowHeadersWidth = 51;
 			this->dataGridView2->Size = System::Drawing::Size(453, 415);
@@ -184,7 +184,7 @@ namespace Interface1 {
 			this->button4->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button4->ForeColor = System::Drawing::SystemColors::ButtonShadow;
 			this->button4->Location = System::Drawing::Point(605, 462);
-			this->button4->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->button4->Margin = System::Windows::Forms::Padding(4);
 			this->button4->Name = L"button4";
 			this->button4->Size = System::Drawing::Size(140, 112);
 			this->button4->TabIndex = 35;
@@ -199,7 +199,7 @@ namespace Interface1 {
 			this->button3->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button3->ForeColor = System::Drawing::SystemColors::ButtonShadow;
 			this->button3->Location = System::Drawing::Point(403, 470);
-			this->button3->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->button3->Margin = System::Windows::Forms::Padding(4);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(137, 108);
 			this->button3->TabIndex = 36;
@@ -229,7 +229,7 @@ namespace Interface1 {
 			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button1->ForeColor = System::Drawing::SystemColors::ButtonShadow;
 			this->button1->Location = System::Drawing::Point(12, 470);
-			this->button1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->button1->Margin = System::Windows::Forms::Padding(4);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(136, 108);
 			this->button1->TabIndex = 38;
@@ -259,7 +259,7 @@ namespace Interface1 {
 			// 
 			this->panel3->BackColor = System::Drawing::Color::White;
 			this->panel3->Location = System::Drawing::Point(259, 4);
-			this->panel3->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->panel3->Margin = System::Windows::Forms::Padding(4);
 			this->panel3->Name = L"panel3";
 			this->panel3->Size = System::Drawing::Size(320, 4);
 			this->panel3->TabIndex = 42;
@@ -446,6 +446,7 @@ namespace Interface1 {
 			this->label8->Size = System::Drawing::Size(137, 33);
 			this->label8->TabIndex = 51;
 			this->label8->Text = L"Reference";
+			this->label8->Click += gcnew System::EventHandler(this, &Stock::label8_Click);
 			// 
 			// textBox1
 			// 
@@ -609,7 +610,7 @@ namespace Interface1 {
 			this->button5->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button5->ForeColor = System::Drawing::SystemColors::ButtonShadow;
 			this->button5->Location = System::Drawing::Point(1061, 470);
-			this->button5->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->button5->Margin = System::Windows::Forms::Padding(4);
 			this->button5->Name = L"button5";
 			this->button5->Size = System::Drawing::Size(132, 103);
 			this->button5->TabIndex = 61;
@@ -642,6 +643,7 @@ namespace Interface1 {
 			this->textBox11->Name = L"textBox11";
 			this->textBox11->Size = System::Drawing::Size(327, 23);
 			this->textBox11->TabIndex = 63;
+			this->textBox11->TextChanged += gcnew System::EventHandler(this, &Stock::textBox11_TextChanged);
 			// 
 			// panel12
 			// 
@@ -657,7 +659,7 @@ namespace Interface1 {
 			// 
 			this->panel13->BackColor = System::Drawing::Color::White;
 			this->panel13->Location = System::Drawing::Point(259, 4);
-			this->panel13->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->panel13->Margin = System::Windows::Forms::Padding(4);
 			this->panel13->Name = L"panel13";
 			this->panel13->Size = System::Drawing::Size(320, 4);
 			this->panel13->TabIndex = 42;
@@ -773,7 +775,7 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 	textBox2->Text = Convert::ToString(prixttc);
 
 	int quantitter = Int32::Parse(textBox7->Text);
-	String^ ref = textBox9->Text;
+	String^ ref = textBox11->Text;
 	String^ nomAR = textBox8->Text;
 	String^ couleur = textBox5->Text;
 	String^ nature = textBox6->Text;
@@ -808,12 +810,12 @@ private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e
 }
 
 private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
-	String^ ref = textBox9->Text;
-	String^ constring = "";
+	String^ ref = textBox11->Text;
+	String^ constring = "Data Source=DESKTOP-PBVM5PL;Initial Catalog=Poo_Project;Integrated Security=True";
 	SqlConnection^ conDataBase = gcnew SqlConnection(constring);
 	conDataBase->Open();
 
-	SqlDataAdapter^ adapter = gcnew SqlDataAdapter("select SELECT * FROM article WHERE refAR = '" + ref + "' ; ", conDataBase);
+	SqlDataAdapter^ adapter = gcnew SqlDataAdapter(" SELECT * FROM article WHERE refAR = '" + ref + "' ; ", conDataBase);
 	DataTable^ data = gcnew DataTable();
 	data->Clear();
 	adapter->Fill(data);
@@ -825,5 +827,9 @@ private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e
 	R->Show(); 
 }
 
+private: System::Void label8_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void textBox11_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
 };
 }
