@@ -790,21 +790,21 @@ private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e
 	textBox3->Text = Convert::ToString(prixtva);
 	double prixttc = prixtva * 0.015;
 	textBox2->Text = Convert::ToString(prixttc);
-
+	int id = Int32::Parse(textBox9->Text);
 	int quantitter = Int32::Parse(textBox7->Text);
-	String^ ref = textBox9->Text;
+	String^ ref = textBox11->Text;
 	String^ nomAR = textBox8->Text;
 	String^ couleur = textBox5->Text;
 	String^ nature = textBox6->Text;
-	int id;
+	
 	NS_SVC::gestion_stock^ mdff = gcnew NS_SVC::gestion_stock();
 
-	mdff->modifier(id,nomAR, ref, couleur, nature, prixHT, quantitter, prixtva, prixttc, seuil);
+	mdff->modifier(id, nomAR, ref, couleur, nature, prixHT, quantitter, prixtva, prixttc, seuil);
 	delete(mdff);
 }
 private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
-	int id;
-	NS_SVC::gestion_stock^suup = gcnew NS_SVC::gestion_stock();
+	int id = Int32::Parse(textBox9->Text);
+	NS_SVC::gestion_stock^ suup = gcnew NS_SVC::gestion_stock();
 	suup->supprimer(id);
 	delete(suup);
 }

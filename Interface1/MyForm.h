@@ -74,7 +74,7 @@ namespace Interface1 {
 			// 
 			// button1
 			// 
-			this->button1->BackColor = System::Drawing::Color::Violet;
+			this->button1->BackColor = System::Drawing::Color::DarkOrchid;
 			this->button1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button1.BackgroundImage")));
 			this->button1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
 			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;

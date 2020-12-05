@@ -581,10 +581,10 @@ private: System::Void dataGridView1_CellContentClick(System::Object^ sender, Sys
 private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
 	String^ nom = textBox6->Text;
 	String^ prenom = textBox5->Text;
-	String^ constring = "Data Source=(local);Initial Catalog=POO;Integrated Security=True";
+	String^ constring = "Data Source=DESKTOP-PBVM5PL;Initial Catalog=Poo_Project;Integrated Security=True";
 	SqlConnection^ conDataBase = gcnew SqlConnection(constring);
 	conDataBase->Open();
-	SqlDataAdapter^ adapter = gcnew SqlDataAdapter("SELCET * FROM personnel WHERE nomPER= '" + nom + "' and prenomPER='" + prenom + "'", conDataBase);
+	SqlDataAdapter^ adapter = gcnew SqlDataAdapter("SELECT * FROM personnel WHERE nomPER= '" + nom + "' and prenomPER='" + prenom + "'", conDataBase);
 	DataTable^ data = gcnew DataTable();
 	data->Clear();
 	adapter->Fill(data);

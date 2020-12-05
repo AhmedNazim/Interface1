@@ -16,11 +16,11 @@ namespace NS_Composants
 	String^ Cl_personnel::INSERT(void)
 	{
 		
-		return "INSERT INTO personne(nomPER, prenomPER, supH, DateAmb, ID_personnel) VALUES ('" + this->nomPER + "'," + this->prenomPER + "','" + this->supH + "'," + this->DateAmb + "ID_personnel=ID WHERE nom ='"+ this->supH + "')";
+		return "INSERT INTO personnel(nomPER, prenomPER, supH, DateAmb) VALUES ('" + this->nomPER + "','" + this->prenomPER + "','" + this->supH + "','" + this->DateAmb + "');";
 	};
 	String^ Cl_personnel::UPDATE(void)
 	{
-		return "UPDATE personneel SET nomPER='" + this->nomPER + "',prenomPER='" + this->prenomPER + "',supH='" + this->supH + "',DateAmb='" + this->DateAmb + "',ID_personnel=(SELECT ID FROM personel WHERE nom ='" + this->supH+"') WHERE ID= '"+ this->ID+"' ;";
+		return "UPDATE personnel SET nomPER='" + this->nomPER + "',prenomPER='" + this->prenomPER + "',supH='" + this->supH + "',DateAmb='" + this->DateAmb + "' WHERE ID= '" + this->ID + "' ;";
 	
 
 	};

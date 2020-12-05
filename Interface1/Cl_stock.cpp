@@ -24,7 +24,7 @@ namespace NS_Composants {
 	};
 	String^ Cl_stock::UPDATE(void) {
 		
-			return "UPDATE article SET nomAR ='" + this->nomAR + "',refAR ='" + this->refAR + "', couleurAR ='" + this->couleurAR + "' ,natureAR ='" + this->natureAR + "' , prixHTAR ='" + this->prixHTAR + "' , qantiterAR ='" + this->qantiterAR + "' , prixTVA ='" + this->prixTVA + "' , prixTTC ='" + this->prixTTC + "' , seuil_de_reappro ='" + this->seul_de_reappro + "' WHERE(ID = " + this->ID + "); ";
+			return "UPDATE article SET nomAR ='" + this->nomAR + "',refAR ='" + this->refAR + "', couleurAR ='" + this->couleurAR + "' ,natureAR ='" + this->natureAR + "' , prixHTAR ='" + this->prixHTAR + "' , quantiterAR ='" + this->qantiterAR + "' , prixTVA ='" + this->prixTVA + "' , prixTTC ='" + this->prixTTC + "' , seuil_de_reappro ='" + this->seul_de_reappro + "' WHERE(ID = " + this->ID + "); ";
 
 	};
 	String^ Cl_stock::DELETE(void) {
