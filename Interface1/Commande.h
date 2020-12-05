@@ -711,6 +711,18 @@ private: System::ComponentModel::IContainer^ components;
 		}
 #pragma endregion
 	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+		String^ ref = textBox1->Text;
+		String^ constring = "";
+
+		SqlConnection^ conDataBase = gcnew SqlConnection(constring);
+		conDataBase->Open();
+
+		SqlDataAdapter^ adapter = gcnew SqlDataAdapter("select SELECT * FROM article WHERE refAR = '" + ref + "'; ", conDataBase);
+		DataTable^ data = gcnew DataTable();
+		data->Clear();
+		adapter->Fill(data);
+		bindingSource1->DataSource = data;
+		dataGridView2->DataSource = bindingSource1;
 	}
 private: System::Void Commande_Load(System::Object^ sender, System::EventArgs^ e) {
 }
@@ -725,18 +737,7 @@ private: System::Void label3_Click(System::Object^ sender, System::EventArgs^ e)
 private: System::Void label2_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void dataGridView2_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
-	String^ ref = textBox1->Text;
-	String^ constring = "";
-
-	SqlConnection^ conDataBase = gcnew SqlConnection(constring);
-	conDataBase->Open();
-
-	SqlDataAdapter^ adapter = gcnew SqlDataAdapter("select SELECT * FROM article WHERE refAR = '" + ref + "'; ", conDataBase);
-	DataTable^ data = gcnew DataTable();
-	data->Clear();
-	adapter->Fill(data);
-	bindingSource1->DataSource = data;
-	dataGridView2->DataSource = bindingSource1;
+	
 }
 private: System::Void textBox10_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }

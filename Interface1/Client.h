@@ -487,16 +487,7 @@ namespace Interface1 {
 		}
 #pragma endregion
 	private: System::Void dataGridView1_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
-		String^ constring = "";
-		String^ nom = textBox2->Text; String^ prenom = textBox3->Text;
-        SqlConnection^ conDataBase = gcnew SqlConnection(constring);
-        conDataBase->Open();
-        SqlDataAdapter^ adapter = gcnew SqlDataAdapter(" select SELECT * FROM client WHERE nomCL = '" + nom + "'and prenonCL ='" + prenom + "' ; " , conDataBase);
-        DataTable^ data = gcnew DataTable();
-        data->Clear();
-        adapter->Fill(data);
-		bindingSource1->DataSource = data;
-        dataGridView1->DataSource = bindingSource1;
+		
 	}
 private: System::Void Client_Load(System::Object^ sender, System::EventArgs^ e) {
 }
@@ -571,6 +562,16 @@ private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e
 	Y->Show(); 
 }
 private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+	String^ constring = "";
+	String^ nom = textBox2->Text; String^ prenom = textBox3->Text;
+	SqlConnection^ conDataBase = gcnew SqlConnection(constring);
+	conDataBase->Open();
+	SqlDataAdapter^ adapter = gcnew SqlDataAdapter(" select SELECT * FROM client WHERE nomCL = '" + nom + "'and prenonCL ='" + prenom + "' ; ", conDataBase);
+	DataTable^ data = gcnew DataTable();
+	data->Clear();
+	adapter->Fill(data);
+	bindingSource1->DataSource = data;
+	dataGridView1->DataSource = bindingSource1;
 }
 private: System::Void bindingSource1_CurrentChanged(System::Object^ sender, System::EventArgs^ e) {
 }
