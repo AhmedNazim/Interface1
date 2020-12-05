@@ -156,7 +156,7 @@ namespace Interface1 {
 			this->label1->ForeColor = System::Drawing::Color::White;
 			this->label1->Location = System::Drawing::Point(3, 18);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(40, 33);
+			this->label1->Size = System::Drawing::Size(32, 25);
 			this->label1->TabIndex = 20;
 			this->label1->Text = L"ID";
 			this->label1->Click += gcnew System::EventHandler(this, &Personnel::label1_Click);
@@ -181,7 +181,7 @@ namespace Interface1 {
 			this->label4->ForeColor = System::Drawing::Color::White;
 			this->label4->Location = System::Drawing::Point(-1, 274);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(237, 33);
+			this->label4->Size = System::Drawing::Size(186, 25);
 			this->label4->TabIndex = 22;
 			this->label4->Text = L"Date de Naissance";
 			// 
@@ -194,7 +194,7 @@ namespace Interface1 {
 			this->label5->ForeColor = System::Drawing::Color::White;
 			this->label5->Location = System::Drawing::Point(-1, 211);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(115, 33);
+			this->label5->Size = System::Drawing::Size(90, 25);
 			this->label5->TabIndex = 23;
 			this->label5->Text = L"Adresse";
 			// 
@@ -207,7 +207,7 @@ namespace Interface1 {
 			this->label8->ForeColor = System::Drawing::Color::White;
 			this->label8->Location = System::Drawing::Point(-1, 147);
 			this->label8->Name = L"label8";
-			this->label8->Size = System::Drawing::Size(110, 33);
+			this->label8->Size = System::Drawing::Size(85, 25);
 			this->label8->TabIndex = 24;
 			this->label8->Text = L"Prenom";
 			// 
@@ -220,7 +220,7 @@ namespace Interface1 {
 			this->label9->ForeColor = System::Drawing::Color::White;
 			this->label9->Location = System::Drawing::Point(3, 84);
 			this->label9->Name = L"label9";
-			this->label9->Size = System::Drawing::Size(72, 33);
+			this->label9->Size = System::Drawing::Size(56, 25);
 			this->label9->TabIndex = 25;
 			this->label9->Text = L"Nom";
 			// 
@@ -233,7 +233,7 @@ namespace Interface1 {
 			this->label3->ForeColor = System::Drawing::Color::White;
 			this->label3->Location = System::Drawing::Point(685, 84);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(300, 33);
+			this->label3->Size = System::Drawing::Size(233, 25);
 			this->label3->TabIndex = 27;
 			this->label3->Text = L"Prenom Du Supperieur ";
 			this->label3->Click += gcnew System::EventHandler(this, &Personnel::label3_Click);
@@ -302,7 +302,7 @@ namespace Interface1 {
 			this->textBox1->ForeColor = System::Drawing::SystemColors::Info;
 			this->textBox1->Location = System::Drawing::Point(690, 122);
 			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(239, 23);
+			this->textBox1->Size = System::Drawing::Size(239, 19);
 			this->textBox1->TabIndex = 34;
 			this->textBox1->TextChanged += gcnew System::EventHandler(this, &Personnel::textBox1_TextChanged);
 			// 
@@ -313,7 +313,7 @@ namespace Interface1 {
 			this->textBox2->ForeColor = System::Drawing::SystemColors::Info;
 			this->textBox2->Location = System::Drawing::Point(690, 46);
 			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(239, 23);
+			this->textBox2->Size = System::Drawing::Size(239, 19);
 			this->textBox2->TabIndex = 35;
 			this->textBox2->TextChanged += gcnew System::EventHandler(this, &Personnel::textBox2_TextChanged);
 			// 
@@ -324,7 +324,7 @@ namespace Interface1 {
 			this->textBox3->ForeColor = System::Drawing::SystemColors::Info;
 			this->textBox3->Location = System::Drawing::Point(-1, 302);
 			this->textBox3->Name = L"textBox3";
-			this->textBox3->Size = System::Drawing::Size(239, 23);
+			this->textBox3->Size = System::Drawing::Size(239, 19);
 			this->textBox3->TabIndex = 36;
 			this->textBox3->TextChanged += gcnew System::EventHandler(this, &Personnel::textBox3_TextChanged);
 			// 
@@ -335,7 +335,7 @@ namespace Interface1 {
 			this->textBox4->ForeColor = System::Drawing::SystemColors::Info;
 			this->textBox4->Location = System::Drawing::Point(-1, 239);
 			this->textBox4->Name = L"textBox4";
-			this->textBox4->Size = System::Drawing::Size(239, 23);
+			this->textBox4->Size = System::Drawing::Size(239, 19);
 			this->textBox4->TabIndex = 37;
 			this->textBox4->TextChanged += gcnew System::EventHandler(this, &Personnel::textBox4_TextChanged_1);
 			// 
@@ -346,7 +346,7 @@ namespace Interface1 {
 			this->textBox5->ForeColor = System::Drawing::SystemColors::Info;
 			this->textBox5->Location = System::Drawing::Point(-1, 175);
 			this->textBox5->Name = L"textBox5";
-			this->textBox5->Size = System::Drawing::Size(239, 23);
+			this->textBox5->Size = System::Drawing::Size(239, 19);
 			this->textBox5->TabIndex = 38;
 			this->textBox5->TextChanged += gcnew System::EventHandler(this, &Personnel::textBox5_TextChanged);
 			// 
@@ -357,7 +357,7 @@ namespace Interface1 {
 			this->textBox6->ForeColor = System::Drawing::SystemColors::Info;
 			this->textBox6->Location = System::Drawing::Point(-1, 112);
 			this->textBox6->Name = L"textBox6";
-			this->textBox6->Size = System::Drawing::Size(239, 23);
+			this->textBox6->Size = System::Drawing::Size(239, 19);
 			this->textBox6->TabIndex = 39;
 			this->textBox6->TextChanged += gcnew System::EventHandler(this, &Personnel::textBox6_TextChanged);
 			// 
@@ -368,7 +368,7 @@ namespace Interface1 {
 			this->textBox7->ForeColor = System::Drawing::SystemColors::Info;
 			this->textBox7->Location = System::Drawing::Point(-1, 46);
 			this->textBox7->Name = L"textBox7";
-			this->textBox7->Size = System::Drawing::Size(239, 23);
+			this->textBox7->Size = System::Drawing::Size(239, 19);
 			this->textBox7->TabIndex = 40;
 			this->textBox7->TextChanged += gcnew System::EventHandler(this, &Personnel::textBox7_TextChanged);
 			// 
@@ -437,7 +437,7 @@ namespace Interface1 {
 			this->label6->ForeColor = System::Drawing::SystemColors::ButtonFace;
 			this->label6->Location = System::Drawing::Point(684, 18);
 			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(252, 33);
+			this->label6->Size = System::Drawing::Size(195, 25);
 			this->label6->TabIndex = 28;
 			this->label6->Text = L"Nom du Supperieur";
 			this->label6->Click += gcnew System::EventHandler(this, &Personnel::label6_Click);
@@ -453,10 +453,11 @@ namespace Interface1 {
 			this->button5->Size = System::Drawing::Size(91, 76);
 			this->button5->TabIndex = 44;
 			this->button5->UseVisualStyleBackColor = true;
+			this->button5->Click += gcnew System::EventHandler(this, &Personnel::button5_Click_1);
 			// 
 			// Personnel
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(12, 25);
+			this->AutoScaleDimensions = System::Drawing::SizeF(9, 20);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::ButtonShadow;
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
@@ -590,6 +591,10 @@ private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e
 	adapter->Fill(data);
 	bindingSource1->DataSource = data;
 	dataGridView1->DataSource = bindingSource1;
+}
+private: System::Void button5_Click_1(System::Object^ sender, System::EventArgs^ e) {
+	this->Hide();
+	obj->Show();
 }
 };
 }
