@@ -80,7 +80,7 @@ namespace Interface1 {
 			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button1->ForeColor = System::Drawing::Color::White;
-			this->button1->Location = System::Drawing::Point(16, 12);
+			this->button1->Location = System::Drawing::Point(22, 12);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(237, 500);
 			this->button1->TabIndex = 0;
@@ -99,7 +99,7 @@ namespace Interface1 {
 			this->button2->ForeColor = System::Drawing::SystemColors::ButtonFace;
 			this->button2->Location = System::Drawing::Point(259, 274);
 			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(255, 238);
+			this->button2->Size = System::Drawing::Size(267, 238);
 			this->button2->TabIndex = 1;
 			this->button2->TextAlign = System::Drawing::ContentAlignment::BottomCenter;
 			this->button2->UseVisualStyleBackColor = false;
@@ -131,7 +131,7 @@ namespace Interface1 {
 			this->button4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button4->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->button4->Location = System::Drawing::Point(526, 274);
+			this->button4->Location = System::Drawing::Point(525, 274);
 			this->button4->Name = L"button4";
 			this->button4->Size = System::Drawing::Size(241, 238);
 			this->button4->TabIndex = 3;
@@ -148,7 +148,7 @@ namespace Interface1 {
 			this->button5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button5->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
-			this->button5->Location = System::Drawing::Point(259, 12);
+			this->button5->Location = System::Drawing::Point(265, 12);
 			this->button5->Name = L"button5";
 			this->button5->Size = System::Drawing::Size(255, 256);
 			this->button5->TabIndex = 4;
@@ -183,14 +183,13 @@ namespace Interface1 {
 #pragma endregion
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->Hide();
-		Stock^ S = gcnew Stock(this);
-		
+		Personnel^ P = gcnew Personnel(this);
 
 		P->Show();
 	}
 private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->Hide();
-	Statistique^ STT = gcnew Statistique(this);
+	Client^ C = gcnew Client(this);
 	C->Show(); 
 }
 private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -200,13 +199,12 @@ private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e
 }
 private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->Hide();
-	Personnel^ P = gcnew Personnel(this);
+	Stock^ S = gcnew Stock(this); 
 	S->Show();
 }
 private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->Hide();
-	Client^ C = gcnew Client(this);
-	
+	Statistique^ STT = gcnew Statistique(this); 
 	STT->Show(); 
 }
 private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) {
