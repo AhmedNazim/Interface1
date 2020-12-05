@@ -148,9 +148,9 @@ namespace Interface1 {
 			this->button5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button5->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
-			this->button5->Location = System::Drawing::Point(259, 12);
+			this->button5->Location = System::Drawing::Point(265, 12);
 			this->button5->Name = L"button5";
-			this->button5->Size = System::Drawing::Size(261, 256);
+			this->button5->Size = System::Drawing::Size(255, 256);
 			this->button5->TabIndex = 4;
 			this->button5->Text = L" ";
 			this->button5->TextAlign = System::Drawing::ContentAlignment::BottomCenter;
