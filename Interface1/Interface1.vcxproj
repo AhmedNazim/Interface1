@@ -164,7 +164,7 @@
     <ClInclude Include="Personnel.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="Simulation .h">
+    <ClInclude Include="Simulation.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Statistique.h">
@@ -187,8 +187,8 @@
     <EmbeddedResource Include="Personnel.resx">
       <DependentUpon>Personnel.h</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Simulation .resx">
-      <DependentUpon>Simulation .h</DependentUpon>
+    <EmbeddedResource Include="Simulation.resx">
+      <DependentUpon>Simulation.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Statistique.resx">
       <DependentUpon>Statistique.h</DependentUpon>

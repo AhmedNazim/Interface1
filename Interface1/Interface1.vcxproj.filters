@@ -60,9 +60,6 @@
     <ClCompile Include="gestion_stock.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="gestion_stat.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
     <ClCompile Include="Simulation .cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
@@ -113,10 +110,7 @@
     <ClInclude Include="gestion_stock.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="gestion_stat.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="Simulation .h">
+    <ClInclude Include="Simulation.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>

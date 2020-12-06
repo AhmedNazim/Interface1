@@ -1,14 +1,15 @@
 #pragma once
 
 namespace Interface1 {
-
 	using namespace System;
 	using namespace System::ComponentModel;
 	using namespace System::Collections;
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
+	using namespace System::Data::SqlClient;
 
+	
 	/// <summary>
 	/// Description résumée de Simulation
 	/// </summary>
@@ -101,7 +102,7 @@ namespace Interface1 {
 			// comboBox1
 			// 
 			this->comboBox1->FormattingEnabled = true;
-			this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"0.05", L"0.1", L"0.15" });
+			this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"5", L"10", L"15" });
 			this->comboBox1->Location = System::Drawing::Point(70, 288);
 			this->comboBox1->Name = L"comboBox1";
 			this->comboBox1->Size = System::Drawing::Size(67, 33);
@@ -111,7 +112,7 @@ namespace Interface1 {
 			// comboBox2
 			// 
 			this->comboBox2->FormattingEnabled = true;
-			this->comboBox2->Items->AddRange(gcnew cli::array< System::Object^  >(2) { L"0.05", L"0.06" });
+			this->comboBox2->Items->AddRange(gcnew cli::array< System::Object^  >(2) { L"5", L"6" });
 			this->comboBox2->Location = System::Drawing::Point(199, 288);
 			this->comboBox2->Name = L"comboBox2";
 			this->comboBox2->Size = System::Drawing::Size(67, 33);
@@ -121,7 +122,7 @@ namespace Interface1 {
 			// comboBox3
 			// 
 			this->comboBox3->FormattingEnabled = true;
-			this->comboBox3->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"0.02", L"0.03", L"0.05" });
+			this->comboBox3->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"2", L"3", L"5" });
 			this->comboBox3->Location = System::Drawing::Point(353, 288);
 			this->comboBox3->Name = L"comboBox3";
 			this->comboBox3->Size = System::Drawing::Size(67, 33);
@@ -131,7 +132,7 @@ namespace Interface1 {
 			// comboBox4
 			// 
 			this->comboBox4->FormattingEnabled = true;
-			this->comboBox4->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"0.17", L"0.185", L"0.2" });
+			this->comboBox4->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"17", L"18", L"2" });
 			this->comboBox4->Location = System::Drawing::Point(498, 288);
 			this->comboBox4->Name = L"comboBox4";
 			this->comboBox4->Size = System::Drawing::Size(67, 33);
@@ -230,17 +231,18 @@ namespace Interface1 {
 		X->Show();
 	}
 private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
-	int mC = Convert::ToInt32(comboBox1->Text);
-	int rC = Convert::ToInt32(comboBox2->Text);
-	int dI = Convert::ToInt32(comboBox3->Text);
-	int TVA = Convert::ToInt32(comboBox4->Text);
+	String^ mC =comboBox1->Text;
+	String^ rC = comboBox2->Text;
+	String^ dI = comboBox3->Text;
+	String^ TVA = comboBox4->Text;
 	String^ constring = "Data Source=DESKTOP-PBVM5PL;Initial Catalog=Poo_Project;Integrated Security=True";
 	SqlConnection^ conDataBase = gcnew SqlConnection(constring);
 	conDataBase->Open();
-	SqlDataAdapter^ adapter = gcnew SqlDataAdapter(" SELECT SUM(quantiterAR*((prixHTAR+prixHTAR*'" + TVA + "'))-((prixHTAR+prixHTAR*'" + TVA + "')*'" + mC + "')-((prixHTAR+prixHTAR*'" + TVA + "')*'" + rC + "')-((prixHTAR+prixHTAR*'" + TVA + "')*'" + dI + "')) AS Simulation  FROM article ", conDataBase);
+	SqlDataAdapter^ adapter = gcnew SqlDataAdapter(" SELECT SUM(quantiterAR*((prixHTAR+prixHTAR*" + TVA + "))-((prixHTAR+prixHTAR*" + TVA + ")*" + mC + ")-((prixHTAR+prixHTAR*" + TVA + ")*" + rC + ")-((prixHTAR+prixHTAR*" + TVA + ")*" + dI + ")) AS Simulation  FROM article ", conDataBase);
 	DataTable^ data = gcnew DataTable();
 	data->Clear();
 	adapter->Fill(data);
+
 	bindingSource1->DataSource = data;
 	dataGridView1->DataSource = bindingSource1;
 }
