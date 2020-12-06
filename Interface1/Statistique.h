@@ -1,4 +1,5 @@
 #pragma once
+#include "Simulation .h"
 
 namespace Interface1 {
 
@@ -45,34 +46,38 @@ namespace Interface1 {
 		}
 	private: System::Windows::Forms::DataGridView^ dataGridView1;
 	private: System::Windows::Forms::Button^ button1;
-	private: System::Windows::Forms::Label^ label1;
-	private: System::Windows::Forms::Label^ label2;
-	private: System::Windows::Forms::Label^ label3;
-	private: System::Windows::Forms::Label^ label4;
-	private: System::Windows::Forms::Label^ label5;
-	private: System::Windows::Forms::Label^ label6;
-	private: System::Windows::Forms::TextBox^ textBox1;
-	private: System::Windows::Forms::TextBox^ textBox2;
-	private: System::Windows::Forms::TextBox^ textBox3;
-	private: System::Windows::Forms::TextBox^ textBox4;
-	private: System::Windows::Forms::TextBox^ textBox5;
+
+
+
+
+
+
+
+
+
+
+
 	private: System::Windows::Forms::Button^ button2;
 	private: System::Windows::Forms::Button^ button3;
 	private: System::Windows::Forms::Button^ button4;
-	private: System::Windows::Forms::Panel^ panel1;
-	private: System::Windows::Forms::Panel^ panel5;
-	private: System::Windows::Forms::Panel^ panel6;
-	private: System::Windows::Forms::Panel^ panel7;
-	private: System::Windows::Forms::Panel^ panel2;
-	private: System::Windows::Forms::Panel^ panel3;
-	private: System::Windows::Forms::Panel^ panel4;
-	private: System::Windows::Forms::Panel^ panel8;
-	private: System::Windows::Forms::Panel^ panel9;
-	private: System::Windows::Forms::Panel^ panel10;
+
+
+
+
+
+
+
+
+
+
 	private: System::Windows::Forms::Button^ button5;
 	private: System::Windows::Forms::Button^ button6;
 	private: System::Windows::Forms::Button^ button7;
 	private: System::Windows::Forms::Button^ button8;
+	private: System::Windows::Forms::Button^ button9;
+	private: System::Windows::Forms::Button^ button10;
+	private: System::Windows::Forms::Button^ button11;
+	private: System::Windows::Forms::Button^ button12;
 	protected:
 
 	private:
@@ -91,48 +96,27 @@ namespace Interface1 {
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(Statistique::typeid));
 			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
 			this->button1 = (gcnew System::Windows::Forms::Button());
-			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->label2 = (gcnew System::Windows::Forms::Label());
-			this->label3 = (gcnew System::Windows::Forms::Label());
-			this->label4 = (gcnew System::Windows::Forms::Label());
-			this->label5 = (gcnew System::Windows::Forms::Label());
-			this->label6 = (gcnew System::Windows::Forms::Label());
-			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->button4 = (gcnew System::Windows::Forms::Button());
-			this->panel1 = (gcnew System::Windows::Forms::Panel());
-			this->panel2 = (gcnew System::Windows::Forms::Panel());
-			this->panel3 = (gcnew System::Windows::Forms::Panel());
-			this->panel4 = (gcnew System::Windows::Forms::Panel());
-			this->panel5 = (gcnew System::Windows::Forms::Panel());
-			this->panel6 = (gcnew System::Windows::Forms::Panel());
-			this->panel7 = (gcnew System::Windows::Forms::Panel());
-			this->panel8 = (gcnew System::Windows::Forms::Panel());
-			this->panel9 = (gcnew System::Windows::Forms::Panel());
-			this->panel10 = (gcnew System::Windows::Forms::Panel());
 			this->button5 = (gcnew System::Windows::Forms::Button());
 			this->button6 = (gcnew System::Windows::Forms::Button());
 			this->button7 = (gcnew System::Windows::Forms::Button());
 			this->button8 = (gcnew System::Windows::Forms::Button());
+			this->button9 = (gcnew System::Windows::Forms::Button());
+			this->button10 = (gcnew System::Windows::Forms::Button());
+			this->button11 = (gcnew System::Windows::Forms::Button());
+			this->button12 = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
-			this->panel1->SuspendLayout();
-			this->panel2->SuspendLayout();
-			this->panel5->SuspendLayout();
-			this->panel6->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// dataGridView1
 			// 
 			this->dataGridView1->BackgroundColor = System::Drawing::Color::White;
 			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView1->Location = System::Drawing::Point(235, 12);
+			this->dataGridView1->Location = System::Drawing::Point(242, 12);
 			this->dataGridView1->Name = L"dataGridView1";
-			this->dataGridView1->Size = System::Drawing::Size(411, 353);
+			this->dataGridView1->Size = System::Drawing::Size(571, 299);
 			this->dataGridView1->TabIndex = 0;
 			// 
 			// button1
@@ -148,109 +132,10 @@ namespace Interface1 {
 			this->button1->UseVisualStyleBackColor = true;
 			this->button1->Click += gcnew System::EventHandler(this, &Statistique::button1_Click);
 			// 
-			// label1
-			// 
-			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(45, 9);
-			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(72, 20);
-			this->label1->TabIndex = 2;
-			this->label1->Text = L"Calculs : ";
-			// 
-			// label2
-			// 
-			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(9, 61);
-			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(104, 20);
-			this->label2->TabIndex = 3;
-			this->label2->Text = L"panier moyen";
-			// 
-			// label3
-			// 
-			this->label3->AutoSize = true;
-			this->label3->Location = System::Drawing::Point(6, 119);
-			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(203, 20);
-			this->label3->TabIndex = 4;
-			this->label3->Text = L"chiffre d\'affaire sur un mois ";
-			// 
-			// label4
-			// 
-			this->label4->AutoSize = true;
-			this->label4->Location = System::Drawing::Point(6, 171);
-			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(190, 20);
-			this->label4->TabIndex = 5;
-			this->label4->Text = L"valeur comercial du stock ";
-			// 
-			// label5
-			// 
-			this->label5->AutoSize = true;
-			this->label5->Location = System::Drawing::Point(12, 228);
-			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(175, 20);
-			this->label5->TabIndex = 6;
-			this->label5->Text = L"valeur d\'achat du stock ";
-			// 
-			// label6
-			// 
-			this->label6->AutoSize = true;
-			this->label6->Location = System::Drawing::Point(10, 287);
-			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(189, 20);
-			this->label6->TabIndex = 7;
-			this->label6->Text = L"montant total des achats ";
-			// 
-			// textBox1
-			// 
-			this->textBox1->BackColor = System::Drawing::SystemColors::ButtonShadow;
-			this->textBox1->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->textBox1->Location = System::Drawing::Point(10, 84);
-			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(219, 19);
-			this->textBox1->TabIndex = 8;
-			// 
-			// textBox2
-			// 
-			this->textBox2->BackColor = System::Drawing::SystemColors::ButtonShadow;
-			this->textBox2->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->textBox2->Location = System::Drawing::Point(10, 142);
-			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(219, 19);
-			this->textBox2->TabIndex = 9;
-			// 
-			// textBox3
-			// 
-			this->textBox3->BackColor = System::Drawing::SystemColors::ButtonShadow;
-			this->textBox3->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->textBox3->Location = System::Drawing::Point(10, 193);
-			this->textBox3->Name = L"textBox3";
-			this->textBox3->Size = System::Drawing::Size(219, 19);
-			this->textBox3->TabIndex = 10;
-			// 
-			// textBox4
-			// 
-			this->textBox4->BackColor = System::Drawing::SystemColors::ButtonShadow;
-			this->textBox4->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->textBox4->Location = System::Drawing::Point(10, 256);
-			this->textBox4->Name = L"textBox4";
-			this->textBox4->Size = System::Drawing::Size(219, 19);
-			this->textBox4->TabIndex = 11;
-			// 
-			// textBox5
-			// 
-			this->textBox5->BackColor = System::Drawing::SystemColors::ButtonShadow;
-			this->textBox5->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->textBox5->Location = System::Drawing::Point(10, 311);
-			this->textBox5->Name = L"textBox5";
-			this->textBox5->Size = System::Drawing::Size(219, 19);
-			this->textBox5->TabIndex = 12;
-			// 
 			// button2
 			// 
 			this->button2->BackColor = System::Drawing::Color::White;
-			this->button2->Location = System::Drawing::Point(652, 55);
+			this->button2->Location = System::Drawing::Point(11, 132);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(176, 48);
 			this->button2->TabIndex = 13;
@@ -260,7 +145,7 @@ namespace Interface1 {
 			// button3
 			// 
 			this->button3->BackColor = System::Drawing::Color::White;
-			this->button3->Location = System::Drawing::Point(652, 157);
+			this->button3->Location = System::Drawing::Point(13, 12);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(176, 48);
 			this->button3->TabIndex = 14;
@@ -270,97 +155,12 @@ namespace Interface1 {
 			// button4
 			// 
 			this->button4->BackColor = System::Drawing::Color::White;
-			this->button4->Location = System::Drawing::Point(663, 273);
+			this->button4->Location = System::Drawing::Point(11, 66);
 			this->button4->Name = L"button4";
 			this->button4->Size = System::Drawing::Size(176, 48);
 			this->button4->TabIndex = 15;
 			this->button4->Text = L"10 articles les moins vendu ";
 			this->button4->UseVisualStyleBackColor = false;
-			// 
-			// panel1
-			// 
-			this->panel1->BackColor = System::Drawing::Color::White;
-			this->panel1->Controls->Add(this->panel5);
-			this->panel1->Controls->Add(this->panel2);
-			this->panel1->Location = System::Drawing::Point(13, 109);
-			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(216, 3);
-			this->panel1->TabIndex = 16;
-			// 
-			// panel2
-			// 
-			this->panel2->BackColor = System::Drawing::Color::White;
-			this->panel2->Controls->Add(this->panel3);
-			this->panel2->Location = System::Drawing::Point(0, 0);
-			this->panel2->Name = L"panel2";
-			this->panel2->Size = System::Drawing::Size(216, 3);
-			this->panel2->TabIndex = 17;
-			// 
-			// panel3
-			// 
-			this->panel3->BackColor = System::Drawing::Color::White;
-			this->panel3->Location = System::Drawing::Point(0, 0);
-			this->panel3->Name = L"panel3";
-			this->panel3->Size = System::Drawing::Size(216, 3);
-			this->panel3->TabIndex = 17;
-			// 
-			// panel4
-			// 
-			this->panel4->BackColor = System::Drawing::Color::White;
-			this->panel4->Location = System::Drawing::Point(13, 171);
-			this->panel4->Name = L"panel4";
-			this->panel4->Size = System::Drawing::Size(216, 3);
-			this->panel4->TabIndex = 17;
-			// 
-			// panel5
-			// 
-			this->panel5->BackColor = System::Drawing::Color::White;
-			this->panel5->Controls->Add(this->panel6);
-			this->panel5->Location = System::Drawing::Point(0, 0);
-			this->panel5->Name = L"panel5";
-			this->panel5->Size = System::Drawing::Size(216, 3);
-			this->panel5->TabIndex = 18;
-			// 
-			// panel6
-			// 
-			this->panel6->BackColor = System::Drawing::Color::White;
-			this->panel6->Controls->Add(this->panel7);
-			this->panel6->Location = System::Drawing::Point(0, 0);
-			this->panel6->Name = L"panel6";
-			this->panel6->Size = System::Drawing::Size(216, 3);
-			this->panel6->TabIndex = 17;
-			// 
-			// panel7
-			// 
-			this->panel7->BackColor = System::Drawing::Color::White;
-			this->panel7->Location = System::Drawing::Point(0, 0);
-			this->panel7->Name = L"panel7";
-			this->panel7->Size = System::Drawing::Size(216, 3);
-			this->panel7->TabIndex = 17;
-			// 
-			// panel8
-			// 
-			this->panel8->BackColor = System::Drawing::Color::White;
-			this->panel8->Location = System::Drawing::Point(13, 222);
-			this->panel8->Name = L"panel8";
-			this->panel8->Size = System::Drawing::Size(216, 3);
-			this->panel8->TabIndex = 17;
-			// 
-			// panel9
-			// 
-			this->panel9->BackColor = System::Drawing::Color::White;
-			this->panel9->Location = System::Drawing::Point(10, 281);
-			this->panel9->Name = L"panel9";
-			this->panel9->Size = System::Drawing::Size(216, 3);
-			this->panel9->TabIndex = 19;
-			// 
-			// panel10
-			// 
-			this->panel10->BackColor = System::Drawing::Color::White;
-			this->panel10->Location = System::Drawing::Point(13, 336);
-			this->panel10->Name = L"panel10";
-			this->panel10->Size = System::Drawing::Size(216, 3);
-			this->panel10->TabIndex = 17;
 			// 
 			// button5
 			// 
@@ -416,35 +216,64 @@ namespace Interface1 {
 			this->button8->TabIndex = 42;
 			this->button8->UseVisualStyleBackColor = false;
 			// 
+			// button9
+			// 
+			this->button9->BackColor = System::Drawing::Color::White;
+			this->button9->Location = System::Drawing::Point(13, 196);
+			this->button9->Name = L"button9";
+			this->button9->Size = System::Drawing::Size(175, 47);
+			this->button9->TabIndex = 43;
+			this->button9->Text = L"Total Achat";
+			this->button9->UseVisualStyleBackColor = false;
+			// 
+			// button10
+			// 
+			this->button10->BackColor = System::Drawing::Color::White;
+			this->button10->Location = System::Drawing::Point(14, 249);
+			this->button10->Name = L"button10";
+			this->button10->Size = System::Drawing::Size(175, 53);
+			this->button10->TabIndex = 44;
+			this->button10->Text = L"Valeur Stock";
+			this->button10->UseVisualStyleBackColor = false;
+			// 
+			// button11
+			// 
+			this->button11->BackColor = System::Drawing::Color::White;
+			this->button11->Location = System::Drawing::Point(14, 317);
+			this->button11->Name = L"button11";
+			this->button11->Size = System::Drawing::Size(175, 47);
+			this->button11->TabIndex = 45;
+			this->button11->Text = L"Chiffre Affaire";
+			this->button11->UseVisualStyleBackColor = false;
+			// 
+			// button12
+			// 
+			this->button12->BackColor = System::Drawing::Color::White;
+			this->button12->Location = System::Drawing::Point(415, 337);
+			this->button12->Name = L"button12";
+			this->button12->Size = System::Drawing::Size(141, 39);
+			this->button12->TabIndex = 46;
+			this->button12->Text = L"Simulation ";
+			this->button12->UseVisualStyleBackColor = false;
+			this->button12->Click += gcnew System::EventHandler(this, &Statistique::button12_Click);
+			// 
 			// Statistique
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(9, 20);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::ButtonShadow;
 			this->ClientSize = System::Drawing::Size(840, 479);
+			this->Controls->Add(this->button12);
+			this->Controls->Add(this->button11);
+			this->Controls->Add(this->button10);
+			this->Controls->Add(this->button9);
 			this->Controls->Add(this->button8);
 			this->Controls->Add(this->button7);
 			this->Controls->Add(this->button6);
 			this->Controls->Add(this->button5);
-			this->Controls->Add(this->panel10);
-			this->Controls->Add(this->panel9);
-			this->Controls->Add(this->panel8);
-			this->Controls->Add(this->panel4);
-			this->Controls->Add(this->panel1);
 			this->Controls->Add(this->button4);
 			this->Controls->Add(this->button3);
 			this->Controls->Add(this->button2);
-			this->Controls->Add(this->textBox5);
-			this->Controls->Add(this->textBox4);
-			this->Controls->Add(this->textBox3);
-			this->Controls->Add(this->textBox2);
-			this->Controls->Add(this->textBox1);
-			this->Controls->Add(this->label6);
-			this->Controls->Add(this->label5);
-			this->Controls->Add(this->label4);
-			this->Controls->Add(this->label3);
-			this->Controls->Add(this->label2);
-			this->Controls->Add(this->label1);
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->dataGridView1);
 			this->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
@@ -454,12 +283,7 @@ namespace Interface1 {
 			this->Text = L"Statistique";
 			this->Load += gcnew System::EventHandler(this, &Statistique::Statistique_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
-			this->panel1->ResumeLayout(false);
-			this->panel2->ResumeLayout(false);
-			this->panel5->ResumeLayout(false);
-			this->panel6->ResumeLayout(false);
 			this->ResumeLayout(false);
-			this->PerformLayout();
 
 		}
 #pragma endregion
@@ -469,5 +293,10 @@ namespace Interface1 {
 	}
 	private: System::Void Statistique_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
+private: System::Void button12_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->Hide();
+	Simulation^ K = gcnew Simulation(this);
+	K->Show();
+}
 };
 }

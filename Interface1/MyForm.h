@@ -90,7 +90,7 @@ namespace Interface1 {
 			// 
 			// button2
 			// 
-			this->button2->BackColor = System::Drawing::Color::Transparent;
+			this->button2->BackColor = System::Drawing::Color::LightSalmon;
 			this->button2->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button2.BackgroundImage")));
 			this->button2->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Center;
 			this->button2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
@@ -124,14 +124,14 @@ namespace Interface1 {
 			// 
 			// button4
 			// 
-			this->button4->BackColor = System::Drawing::Color::Transparent;
+			this->button4->BackColor = System::Drawing::Color::Silver;
 			this->button4->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button4.BackgroundImage")));
 			this->button4->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Center;
 			this->button4->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button4->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->button4->Location = System::Drawing::Point(525, 274);
+			this->button4->Location = System::Drawing::Point(526, 274);
 			this->button4->Name = L"button4";
 			this->button4->Size = System::Drawing::Size(241, 238);
 			this->button4->TabIndex = 3;
@@ -141,7 +141,7 @@ namespace Interface1 {
 			// 
 			// button5
 			// 
-			this->button5->BackColor = System::Drawing::Color::Transparent;
+			this->button5->BackColor = System::Drawing::Color::Khaki;
 			this->button5->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button5.BackgroundImage")));
 			this->button5->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Center;
 			this->button5->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
@@ -163,7 +163,7 @@ namespace Interface1 {
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::White;
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->ClientSize = System::Drawing::Size(779, 524);
+			this->ClientSize = System::Drawing::Size(804, 524);
 			this->Controls->Add(this->button5);
 			this->Controls->Add(this->button4);
 			this->Controls->Add(this->button3);
