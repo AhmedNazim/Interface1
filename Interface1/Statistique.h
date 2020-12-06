@@ -75,7 +75,7 @@ namespace Interface1 {
 	private: System::Windows::Forms::Button^ button7;
 	private: System::Windows::Forms::Button^ button8;
 	private: System::Windows::Forms::Button^ button9;
-	private: System::Windows::Forms::Button^ button10;
+
 	private: System::Windows::Forms::Button^ button11;
 	private: System::Windows::Forms::Button^ button12;
 	protected:
@@ -104,7 +104,6 @@ namespace Interface1 {
 			this->button7 = (gcnew System::Windows::Forms::Button());
 			this->button8 = (gcnew System::Windows::Forms::Button());
 			this->button9 = (gcnew System::Windows::Forms::Button());
-			this->button10 = (gcnew System::Windows::Forms::Button());
 			this->button11 = (gcnew System::Windows::Forms::Button());
 			this->button12 = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
@@ -116,6 +115,7 @@ namespace Interface1 {
 			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
 			this->dataGridView1->Location = System::Drawing::Point(242, 12);
 			this->dataGridView1->Name = L"dataGridView1";
+			this->dataGridView1->RowHeadersWidth = 51;
 			this->dataGridView1->Size = System::Drawing::Size(571, 299);
 			this->dataGridView1->TabIndex = 0;
 			// 
@@ -135,7 +135,7 @@ namespace Interface1 {
 			// button2
 			// 
 			this->button2->BackColor = System::Drawing::Color::White;
-			this->button2->Location = System::Drawing::Point(11, 132);
+			this->button2->Location = System::Drawing::Point(11, 148);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(176, 48);
 			this->button2->TabIndex = 13;
@@ -145,7 +145,7 @@ namespace Interface1 {
 			// button3
 			// 
 			this->button3->BackColor = System::Drawing::Color::White;
-			this->button3->Location = System::Drawing::Point(13, 12);
+			this->button3->Location = System::Drawing::Point(13, 40);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(176, 48);
 			this->button3->TabIndex = 14;
@@ -155,7 +155,7 @@ namespace Interface1 {
 			// button4
 			// 
 			this->button4->BackColor = System::Drawing::Color::White;
-			this->button4->Location = System::Drawing::Point(11, 66);
+			this->button4->Location = System::Drawing::Point(10, 94);
 			this->button4->Name = L"button4";
 			this->button4->Size = System::Drawing::Size(176, 48);
 			this->button4->TabIndex = 15;
@@ -219,27 +219,17 @@ namespace Interface1 {
 			// button9
 			// 
 			this->button9->BackColor = System::Drawing::Color::White;
-			this->button9->Location = System::Drawing::Point(13, 196);
+			this->button9->Location = System::Drawing::Point(10, 202);
 			this->button9->Name = L"button9";
 			this->button9->Size = System::Drawing::Size(175, 47);
 			this->button9->TabIndex = 43;
 			this->button9->Text = L"Total Achat";
 			this->button9->UseVisualStyleBackColor = false;
 			// 
-			// button10
-			// 
-			this->button10->BackColor = System::Drawing::Color::White;
-			this->button10->Location = System::Drawing::Point(14, 249);
-			this->button10->Name = L"button10";
-			this->button10->Size = System::Drawing::Size(175, 53);
-			this->button10->TabIndex = 44;
-			this->button10->Text = L"Valeur Stock";
-			this->button10->UseVisualStyleBackColor = false;
-			// 
 			// button11
 			// 
 			this->button11->BackColor = System::Drawing::Color::White;
-			this->button11->Location = System::Drawing::Point(14, 317);
+			this->button11->Location = System::Drawing::Point(11, 255);
 			this->button11->Name = L"button11";
 			this->button11->Size = System::Drawing::Size(175, 47);
 			this->button11->TabIndex = 45;
@@ -259,13 +249,12 @@ namespace Interface1 {
 			// 
 			// Statistique
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(9, 20);
+			this->AutoScaleDimensions = System::Drawing::SizeF(12, 25);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::ButtonShadow;
 			this->ClientSize = System::Drawing::Size(840, 479);
 			this->Controls->Add(this->button12);
 			this->Controls->Add(this->button11);
-			this->Controls->Add(this->button10);
 			this->Controls->Add(this->button9);
 			this->Controls->Add(this->button8);
 			this->Controls->Add(this->button7);
