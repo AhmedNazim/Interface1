@@ -92,10 +92,10 @@ namespace NS_SVC {// ya rayan rak gaertna fl'adresse
 				gcnew FileStream(strNameOfFile, FileMode::Create);
 			BinaryWriter^ bnfichier =
 				gcnew BinaryWriter(fichier);
-			String^ constring = "Data Source = DESKTOP - PBVM5PL; Initial Catalog = Poo_Project; Integrated Security = True";
+			String^ constring = "Data Source=DESKTOP-PBVM5PL;Initial Catalog=Poo_Project;Integrated Security=True";
 			SqlConnection^ conDataBase = gcnew SqlConnection(constring);
-			
-			SqlCommand^ cmdDataBase = gcnew SqlCommand("SELECT nomCL,prenomCL FROM client WHERE ID="+cl+" ", conDataBase);
+			conDataBase->Open();
+			SqlCommand^ cmdDataBase = gcnew SqlCommand("SELECT nomCL,prenonCL FROM client WHERE ID="+cl+" ", conDataBase);
 			SqlDataReader^ myReader = cmdDataBase->ExecuteReader();
 			String^ nomCL;
 			String^ prenomCL;
@@ -104,8 +104,9 @@ namespace NS_SVC {// ya rayan rak gaertna fl'adresse
 				nomCL= myReader->GetString(0);
 				prenomCL = myReader->GetString(1);
 			}
-			
-			
+			conDataBase->Close();
+
+			conDataBase->Open();
 		SqlCommand^ cmd = gcnew SqlCommand("SELECT nomAR,couleurAR,natureAR,prixHTAR,prixTVA,prixTTC FROM article WHERE ID=" +art + " ", conDataBase);
 		myReader = cmd->ExecuteReader();
 		
@@ -124,7 +125,7 @@ namespace NS_SVC {// ya rayan rak gaertna fl'adresse
 			prixTTC = myReader->GetString(5);
 
 		}
-		
+		conDataBase->Close();
 		if (File::Exists(strNameOfFile))
             {
 
@@ -132,21 +133,21 @@ namespace NS_SVC {// ya rayan rak gaertna fl'adresse
 				myReader->Close();
 				    bnfichier->Write("Code Lyoko Corp. \n ");
 					bnfichier->Write("votre facture  \n ");
-					bnfichier->Write("Reference de la commande :\n" + ref);
-					bnfichier->Write("l'identifiant du client" + cl);
-					bnfichier->Write("Nom du Client:\n" + nomCL);
-					bnfichier->Write("Prenom du Client:\n" + prenomCL);
-					bnfichier->Write("Article:\n" + nomAR);
-					bnfichier->Write("l'identifiant de l'article" + art);
-					bnfichier->Write("Couleur de l'article:\n" + couleurAR);
-					bnfichier->Write("Nature de l'article:\n" + natureAR);
-					bnfichier->Write("Prix HT:\n" + prixHT);
-					bnfichier->Write("Prix TVA:\n" + prixTVA);
-					bnfichier->Write("Prix TTC:\n" + prixTTC);
-                    bnfichier->Write("Date reglement:\n"+datereglmet);
-                    bnfichier->Write("Date de Payement:\n"+datepay);
-                    bnfichier->Write("Date d'emission :\n"+dateemi);
-                    bnfichier->Write("Date de livraison: \n "+dateliv);
+					bnfichier->Write("Reference de la commande :\n" + ref +"\n");
+					bnfichier->Write("l'identifiant du client" + cl +"\n");
+					bnfichier->Write("Nom du Client:\n" + nomCL+"\n");
+					bnfichier->Write("Prenom du Client:\n" + prenomCL+"\n");
+					bnfichier->Write("Article:\n" + nomAR +"\n");
+					bnfichier->Write("l'identifiant de l'article" + art+"\n");
+					bnfichier->Write("Couleur de l'article:\n" + couleurAR+"\n");
+					bnfichier->Write("Nature de l'article:\n" + natureAR+"\n");
+					bnfichier->Write("Prix HT:\n" + prixHT + "\n");
+					bnfichier->Write("Prix TVA:\n" + prixTVA + "\n");
+					bnfichier->Write("Prix TTC:\n" + prixTTC + "\n");
+                    bnfichier->Write("Date reglement:\n"+datereglmet + "\n");
+                    bnfichier->Write("Date de Payement:\n"+datepay + "\n");
+                    bnfichier->Write("Date d'emission :\n"+dateemi + "\n");
+                    bnfichier->Write("Date de livraison: \n "+dateliv + "\n");
 					
 				
 					
