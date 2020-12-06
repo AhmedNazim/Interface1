@@ -54,12 +54,15 @@ namespace Interface1 {
 	private: System::Windows::Forms::Label^ label3;
 	private: System::Windows::Forms::Label^ label4;
 	private: System::Windows::Forms::Button^ button1;
+	private: System::Windows::Forms::Button^ button2;
+	private: System::Windows::Forms::BindingSource^ bindingSource1;
+	private: System::ComponentModel::IContainer^ components;
 
 	private:
 		/// <summary>
 		/// Variable nécessaire au concepteur.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -68,6 +71,7 @@ namespace Interface1 {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			this->components = (gcnew System::ComponentModel::Container());
 			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
 			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
 			this->comboBox2 = (gcnew System::Windows::Forms::ComboBox());
@@ -78,7 +82,10 @@ namespace Interface1 {
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->button2 = (gcnew System::Windows::Forms::Button());
+			this->bindingSource1 = (gcnew System::Windows::Forms::BindingSource(this->components));
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource1))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// dataGridView1
@@ -94,30 +101,37 @@ namespace Interface1 {
 			// comboBox1
 			// 
 			this->comboBox1->FormattingEnabled = true;
+			this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"0.05", L"0.1", L"0.15" });
 			this->comboBox1->Location = System::Drawing::Point(70, 288);
 			this->comboBox1->Name = L"comboBox1";
 			this->comboBox1->Size = System::Drawing::Size(67, 33);
 			this->comboBox1->TabIndex = 1;
+			this->comboBox1->SelectedIndexChanged += gcnew System::EventHandler(this, &Simulation::comboBox1_SelectedIndexChanged);
 			// 
 			// comboBox2
 			// 
 			this->comboBox2->FormattingEnabled = true;
+			this->comboBox2->Items->AddRange(gcnew cli::array< System::Object^  >(2) { L"0.05", L"0.06" });
 			this->comboBox2->Location = System::Drawing::Point(199, 288);
 			this->comboBox2->Name = L"comboBox2";
 			this->comboBox2->Size = System::Drawing::Size(67, 33);
 			this->comboBox2->TabIndex = 2;
+			this->comboBox2->SelectedIndexChanged += gcnew System::EventHandler(this, &Simulation::comboBox2_SelectedIndexChanged);
 			// 
 			// comboBox3
 			// 
 			this->comboBox3->FormattingEnabled = true;
+			this->comboBox3->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"0.02", L"0.03", L"0.05" });
 			this->comboBox3->Location = System::Drawing::Point(353, 288);
 			this->comboBox3->Name = L"comboBox3";
 			this->comboBox3->Size = System::Drawing::Size(67, 33);
 			this->comboBox3->TabIndex = 3;
+			this->comboBox3->SelectedIndexChanged += gcnew System::EventHandler(this, &Simulation::comboBox3_SelectedIndexChanged);
 			// 
 			// comboBox4
 			// 
 			this->comboBox4->FormattingEnabled = true;
+			this->comboBox4->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"0.17", L"0.185", L"0.2" });
 			this->comboBox4->Location = System::Drawing::Point(498, 288);
 			this->comboBox4->Name = L"comboBox4";
 			this->comboBox4->Size = System::Drawing::Size(67, 33);
@@ -172,12 +186,23 @@ namespace Interface1 {
 			this->button1->UseVisualStyleBackColor = true;
 			this->button1->Click += gcnew System::EventHandler(this, &Simulation::button1_Click);
 			// 
+			// button2
+			// 
+			this->button2->Location = System::Drawing::Point(240, 336);
+			this->button2->Name = L"button2";
+			this->button2->Size = System::Drawing::Size(129, 31);
+			this->button2->TabIndex = 10;
+			this->button2->Text = L"Commencer";
+			this->button2->UseVisualStyleBackColor = true;
+			this->button2->Click += gcnew System::EventHandler(this, &Simulation::button2_Click);
+			// 
 			// Simulation
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(12, 25);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::ButtonShadow;
 			this->ClientSize = System::Drawing::Size(673, 402);
+			this->Controls->Add(this->button2);
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->label4);
 			this->Controls->Add(this->label3);
@@ -194,6 +219,7 @@ namespace Interface1 {
 			this->Name = L"Simulation";
 			this->Text = L"Simulation";
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource1))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -203,5 +229,27 @@ namespace Interface1 {
 		this->Hide();
 		X->Show();
 	}
+private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+	int mC = Convert::ToInt32(comboBox1->Text);
+	int rC = Convert::ToInt32(comboBox2->Text);
+	int dI = Convert::ToInt32(comboBox3->Text);
+	int TVA = Convert::ToInt32(comboBox4->Text);
+	String^ constring = "Data Source=DESKTOP-PBVM5PL;Initial Catalog=Poo_Project;Integrated Security=True";
+	SqlConnection^ conDataBase = gcnew SqlConnection(constring);
+	conDataBase->Open();
+	SqlDataAdapter^ adapter = gcnew SqlDataAdapter(" SELECT SUM(quantiterAR*((prixHTAR+prixHTAR*'" + TVA + "'))-((prixHTAR+prixHTAR*'" + TVA + "')*'" + mC + "')-((prixHTAR+prixHTAR*'" + TVA + "')*'" + rC + "')-((prixHTAR+prixHTAR*'" + TVA + "')*'" + dI + "')) AS Simulation  FROM article ", conDataBase);
+	DataTable^ data = gcnew DataTable();
+	data->Clear();
+	adapter->Fill(data);
+	bindingSource1->DataSource = data;
+	dataGridView1->DataSource = bindingSource1;
+}
+private: System::Void comboBox1_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void comboBox2_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
+
+}
+private: System::Void comboBox3_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
+}
 };
 }

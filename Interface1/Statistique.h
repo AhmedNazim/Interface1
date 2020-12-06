@@ -78,13 +78,15 @@ namespace Interface1 {
 
 	private: System::Windows::Forms::Button^ button11;
 	private: System::Windows::Forms::Button^ button12;
+	private: System::Windows::Forms::BindingSource^ bindingSource1;
+	private: System::ComponentModel::IContainer^ components;
 	protected:
 
 	private:
 		/// <summary>
 		/// Variable nécessaire au concepteur.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -93,6 +95,7 @@ namespace Interface1 {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			this->components = (gcnew System::ComponentModel::Container());
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(Statistique::typeid));
 			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
 			this->button1 = (gcnew System::Windows::Forms::Button());
@@ -106,7 +109,9 @@ namespace Interface1 {
 			this->button9 = (gcnew System::Windows::Forms::Button());
 			this->button11 = (gcnew System::Windows::Forms::Button());
 			this->button12 = (gcnew System::Windows::Forms::Button());
+			this->bindingSource1 = (gcnew System::Windows::Forms::BindingSource(this->components));
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource1))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// dataGridView1
@@ -118,6 +123,7 @@ namespace Interface1 {
 			this->dataGridView1->RowHeadersWidth = 51;
 			this->dataGridView1->Size = System::Drawing::Size(571, 299);
 			this->dataGridView1->TabIndex = 0;
+			this->dataGridView1->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &Statistique::dataGridView1_CellContentClick);
 			// 
 			// button1
 			// 
@@ -141,6 +147,7 @@ namespace Interface1 {
 			this->button2->TabIndex = 13;
 			this->button2->Text = L"Produit sous seuil de réaprovisionnement ";
 			this->button2->UseVisualStyleBackColor = false;
+			this->button2->Click += gcnew System::EventHandler(this, &Statistique::button2_Click);
 			// 
 			// button3
 			// 
@@ -151,6 +158,7 @@ namespace Interface1 {
 			this->button3->TabIndex = 14;
 			this->button3->Text = L"10 articles les plus vendu ";
 			this->button3->UseVisualStyleBackColor = false;
+			this->button3->Click += gcnew System::EventHandler(this, &Statistique::button3_Click);
 			// 
 			// button4
 			// 
@@ -161,6 +169,7 @@ namespace Interface1 {
 			this->button4->TabIndex = 15;
 			this->button4->Text = L"10 articles les moins vendu ";
 			this->button4->UseVisualStyleBackColor = false;
+			this->button4->Click += gcnew System::EventHandler(this, &Statistique::button4_Click);
 			// 
 			// button5
 			// 
@@ -225,6 +234,7 @@ namespace Interface1 {
 			this->button9->TabIndex = 43;
 			this->button9->Text = L"Total Achat";
 			this->button9->UseVisualStyleBackColor = false;
+			this->button9->Click += gcnew System::EventHandler(this, &Statistique::button9_Click);
 			// 
 			// button11
 			// 
@@ -235,6 +245,7 @@ namespace Interface1 {
 			this->button11->TabIndex = 45;
 			this->button11->Text = L"Chiffre Affaire";
 			this->button11->UseVisualStyleBackColor = false;
+			this->button11->Click += gcnew System::EventHandler(this, &Statistique::button11_Click);
 			// 
 			// button12
 			// 
@@ -246,6 +257,10 @@ namespace Interface1 {
 			this->button12->Text = L"Simulation ";
 			this->button12->UseVisualStyleBackColor = false;
 			this->button12->Click += gcnew System::EventHandler(this, &Statistique::button12_Click);
+			// 
+			// bindingSource1
+			// 
+			this->bindingSource1->CurrentChanged += gcnew System::EventHandler(this, &Statistique::bindingSource1_CurrentChanged);
 			// 
 			// Statistique
 			// 
@@ -272,6 +287,7 @@ namespace Interface1 {
 			this->Text = L"Statistique";
 			this->Load += gcnew System::EventHandler(this, &Statistique::Statistique_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource1))->EndInit();
 			this->ResumeLayout(false);
 
 		}
@@ -286,6 +302,69 @@ private: System::Void button12_Click(System::Object^ sender, System::EventArgs^ 
 	this->Hide();
 	Simulation^ K = gcnew Simulation(this);
 	K->Show();
+}
+private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
+	String^ constring = "Data Source=DESKTOP-PBVM5PL;Initial Catalog=Poo_Project;Integrated Security=True";
+	SqlConnection^ conDataBase = gcnew SqlConnection(constring);
+	conDataBase->Open();
+	SqlDataAdapter^ adapter = gcnew SqlDataAdapter("SELECT article.nomAR, sum(commande.quantite) AS quantite FROM commande, article WHERE commande.ID_article = article.ID ORDER BY quantite LIMIT 10", conDataBase);
+	DataTable^ data = gcnew DataTable();
+	data->Clear();
+	adapter->Fill(data);
+	bindingSource1->DataSource = data;
+	dataGridView1->DataSource = bindingSource1;
+}
+private: System::Void bindingSource1_CurrentChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void dataGridView1_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
+}
+private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
+	String^ constring = "Data Source=DESKTOP-PBVM5PL;Initial Catalog=Poo_Project;Integrated Security=True";
+	SqlConnection^ conDataBase = gcnew SqlConnection(constring);
+	conDataBase->Open();
+	SqlDataAdapter^ adapter = gcnew SqlDataAdapter("SELECT article.nomAR, sum(commande.quantite) AS quantite FROM commande, article WHERE commande.ID_article = article.ID ORDER BY quantite DESC LIMIT 10", conDataBase);
+	DataTable^ data = gcnew DataTable();
+	data->Clear();
+	adapter->Fill(data);
+	bindingSource1->DataSource = data;
+	dataGridView1->DataSource = bindingSource1;
+}
+private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+	String^ constring = "Data Source=DESKTOP-PBVM5PL;Initial Catalog=Poo_Project;Integrated Security=True";
+	SqlConnection^ conDataBase = gcnew SqlConnection(constring);
+	conDataBase->Open();
+	SqlDataAdapter^ adapter = gcnew SqlDataAdapter("SELECT refAR,nomAR FROM article WHERE quantiterAR < seuil_de_reappro ", conDataBase);
+	DataTable^ data = gcnew DataTable();
+	data->Clear();
+	adapter->Fill(data);
+	bindingSource1->DataSource = data;
+	dataGridView1->DataSource = bindingSource1;
+
+}
+private: System::Void button9_Click(System::Object^ sender, System::EventArgs^ e) {
+	String^ constring = "Data Source=DESKTOP-PBVM5PL;Initial Catalog=Poo_Project;Integrated Security=True";
+	SqlConnection^ conDataBase = gcnew SqlConnection(constring);
+	conDataBase->Open();
+	SqlDataAdapter^ adapter = gcnew SqlDataAdapter("SELECT ID_client, SUM(quantite) AS articleTotal FROM commande GROUP BY ID_client", conDataBase);
+	DataTable^ data = gcnew DataTable();
+	data->Clear();
+	adapter->Fill(data);
+	bindingSource1->DataSource = data;
+	dataGridView1->DataSource = bindingSource1;
+
+}
+private: System::Void button11_Click(System::Object^ sender, System::EventArgs^ e) {
+	String^ constring = "Data Source=DESKTOP-PBVM5PL;Initial Catalog=Poo_Project;Integrated Security=True";
+	SqlConnection^ conDataBase = gcnew SqlConnection(constring);
+	conDataBase->Open();
+	SqlDataAdapter^ adapter = gcnew SqlDataAdapter(" SELECT SUM(cast(totalHT as int)) AS Chiffre_Affaire FROM commande", conDataBase);
+	DataTable^ data = gcnew DataTable();
+	data->Clear();
+	adapter->Fill(data);
+	bindingSource1->DataSource = data;
+	dataGridView1->DataSource = bindingSource1;
+
+
 }
 };
 }

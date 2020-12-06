@@ -504,7 +504,7 @@ private: System::Void panel1_Paint(System::Object^ sender, System::Windows::Form
 }
 private: System::Void label6_Click(System::Object^ sender, System::EventArgs^ e) {
 }
-private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {  
    int ID = Int32::Parse(textBox1->Text);
 
 }
