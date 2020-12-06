@@ -234,6 +234,9 @@ private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e
 	adapter->Fill(data);
 	bindingSource1->DataSource = data;
 	dataGridView1->DataSource = bindingSource1;
+	delete(conDataBase);
+	delete(adapter);
+	delete(data);
 
 }
 private: System::Void button9_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -246,6 +249,9 @@ private: System::Void button9_Click(System::Object^ sender, System::EventArgs^ e
 	adapter->Fill(data);
 	bindingSource1->DataSource = data;
 	dataGridView1->DataSource = bindingSource1;
+	delete(conDataBase);
+	delete(adapter);
+	delete(data);
 
 }
 private: System::Void button11_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -258,6 +264,9 @@ private: System::Void button11_Click(System::Object^ sender, System::EventArgs^ 
 	adapter->Fill(data);
 	bindingSource1->DataSource = data;
 	dataGridView1->DataSource = bindingSource1;
+	delete(conDataBase);
+	delete(adapter);
+	delete(data);
 
 
 }

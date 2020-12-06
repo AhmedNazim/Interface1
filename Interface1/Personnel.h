@@ -592,6 +592,9 @@ private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e
 	adapter->Fill(data);
 	bindingSource1->DataSource = data;
 	dataGridView1->DataSource = bindingSource1;
+	delete(conDataBase);
+	delete(adapter);
+	delete(data);
 }
 private: System::Void button5_Click_1(System::Object^ sender, System::EventArgs^ e) {
 	this->Hide();

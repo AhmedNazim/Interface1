@@ -538,6 +538,7 @@ private: System::Void textBox5_TextChanged(System::Object^ sender, System::Event
 		NS_SVC::gestion_client^ ajt = gcnew NS_SVC::gestion_client();
 		id = ajt->ajouter(nom, prenom, AddLiv, AddFac, DateAniv, Datepr);
 		textBox1->Text = Convert::ToString(id);
+		delete(ajt);
 		MessageBox::Show("la personne a etait ajouter", "Ajouter", MessageBoxButtons::OK, MessageBoxIcon::Information);
 	}
 private: System::Void textBox7_TextChanged(System::Object^ sender, System::EventArgs^ e) {
@@ -579,6 +580,9 @@ private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e
 	adapter->Fill(data);
 	bindingSource1->DataSource = data;
 	dataGridView1->DataSource = bindingSource1;
+	delete(conDataBase);
+	delete(adapter);
+	delete(data);
 }
 
 private: System::Void label2_Click(System::Object^ sender, System::EventArgs^ e) {

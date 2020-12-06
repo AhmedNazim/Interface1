@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 #include "gestion_commande.h"
 
 using namespace System::ComponentModel;
@@ -11,7 +11,7 @@ namespace Interface1 {
 
 	
 	/// <summary>
-	/// Description résumée de Commande
+	/// Description rï¿½sumï¿½e de Commande
 	/// </summary>
 	public ref class Commande : public System::Windows::Forms::Form
 	{
@@ -35,7 +35,7 @@ namespace Interface1 {
 
 	protected:
 		/// <summary>
-		/// Nettoyage des ressources utilisées.
+		/// Nettoyage des ressources utilisï¿½es.
 		/// </summary>
 		~Commande()
 		{
@@ -124,14 +124,14 @@ private: System::ComponentModel::IContainer^ components;
 
 	private:
 		/// <summary>
-		/// Variable nécessaire au concepteur.
+		/// Variable nï¿½cessaire au concepteur.
 		/// </summary>
 
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
-		/// Méthode requise pour la prise en charge du concepteur - ne modifiez pas
-		/// le contenu de cette méthode avec l'éditeur de code.
+		/// Mï¿½thode requise pour la prise en charge du concepteur - ne modifiez pas
+		/// le contenu de cette mï¿½thode avec l'ï¿½diteur de code.
 		/// </summary>
 		void InitializeComponent(void)
 		{
@@ -748,6 +748,9 @@ private: System::ComponentModel::IContainer^ components;
 		adapter->Fill(data);
 		bindingSource1->DataSource = data;
 		dataGridView2->DataSource = bindingSource1;
+		delete(conDataBase);
+		delete(adapter);
+		delete(data);
 	}
 private: System::Void Commande_Load(System::Object^ sender, System::EventArgs^ e) {
 }
@@ -879,7 +882,8 @@ private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e
 	String^ datergl = textBox2->Text;
 	int clien = Convert::ToInt32(textBox5->Text);
 	facture->facturation(datergl, Datepy, dateem, Dateliv, ref,clien,refart);
-	MessageBox::Show("La facture a etait enregistré", "facture", MessageBoxButtons::OK, MessageBoxIcon::Information);
+	MessageBox::Show("La facture a etait enregistrÃ©", "facture", MessageBoxButtons::OK, MessageBoxIcon::Information);
+	delete (facture);
 }
 };
 }
