@@ -530,6 +530,7 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 	ID = ajjt->ajouter(nom,prenom,nomsup,date);
 	textBox7->Text = Convert::ToString(ID);
 	delete(ajjt);
+	MessageBox::Show("la personne a etait ajouter", "Ajouter", MessageBoxButtons::OK, MessageBoxIcon::Information);
 }
 private: System::Void textBox7_TextChanged(System::Object^ sender, System::EventArgs^ e) {
  int ID = Int32::Parse(textBox7->Text);

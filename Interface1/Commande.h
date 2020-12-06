@@ -800,7 +800,7 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 	NS_SVC::gestion_commande^ ajot = gcnew NS_SVC::gestion_commande();
 	ajot->ajouter(ref,remis,totalart,TTC,TVA,HT,datergl,Datepy,dateem,Dateliv,clien,refart);
 	delete(ajot);
-	MessageBox::Show("la personne a etait ajouter", "Ajouter", MessageBoxButtons::OK, MessageBoxIcon::Information);
+	MessageBox::Show("la commande a etait ajouter", "Ajouter", MessageBoxButtons::OK, MessageBoxIcon::Information);
 }
 private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
 	String^ dateem = textBox10->Text;
@@ -823,14 +823,14 @@ private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e
 	NS_SVC::gestion_commande^ modif= gcnew NS_SVC::gestion_commande();
 	modif->modifier(ref, remis, totalart, TTC, TVA, HT, datergl, Datepy, dateem, Dateliv, clien, refart);
 	delete(modif);
-	MessageBox::Show("la personne a etait modifier", "Modifier", MessageBoxButtons::OK, MessageBoxIcon::Information);
+	MessageBox::Show("la commande a etait modifier", "Modifier", MessageBoxButtons::OK, MessageBoxIcon::Information);
 }
 private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
 	NS_SVC::gestion_commande^ modif = gcnew NS_SVC::gestion_commande();
 	String^ ref = textBox1->Text;
 	modif->supprimer(ref);
 	delete(modif);
-	MessageBox::Show("la personne a etait supprimer", "Supprimer", MessageBoxButtons::OK, MessageBoxIcon::Information);
+	MessageBox::Show("la commande a etait supprimer", "Supprimer", MessageBoxButtons::OK, MessageBoxIcon::Information);
 }
 private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 	String^ ref = textBox1->Text;
@@ -879,6 +879,7 @@ private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e
 	String^ datergl = textBox2->Text;
 	int clien = Convert::ToInt32(textBox5->Text);
 	facture->facturation(datergl, Datepy, dateem, Dateliv, ref,clien,refart);
+	MessageBox::Show("La facture a etait enregistré", "facture", MessageBoxButtons::OK, MessageBoxIcon::Information);
 }
 };
 }

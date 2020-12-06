@@ -782,6 +782,7 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 	NS_SVC::gestion_stock^ ajtt = gcnew NS_SVC::gestion_stock();
 	ajtt->ajouter(nomAR, ref, couleur, nature, prixHT, quantitter,prixtva,prixttc,seuil);
 	delete(ajtt);
+	MessageBox::Show("l'article a etait ajouter", "Ajouter", MessageBoxButtons::OK, MessageBoxIcon::Information);
 }
 private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
 	String^ seuil = textBox4->Text;
@@ -801,12 +802,14 @@ private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e
 
 	mdff->modifier(id, nomAR, ref, couleur, nature, prixHT, quantitter, prixtva, prixttc, seuil);
 	delete(mdff);
+	MessageBox::Show("l'article a etait modifier", "Modifier", MessageBoxButtons::OK, MessageBoxIcon::Information);
 }
 private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
 	int id = Int32::Parse(textBox9->Text);
 	NS_SVC::gestion_stock^ suup = gcnew NS_SVC::gestion_stock();
 	suup->supprimer(id);
 	delete(suup);
+	MessageBox::Show("l'article a etait supprimer", "Supprimer", MessageBoxButtons::OK, MessageBoxIcon::Information);
 }
 
 private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
