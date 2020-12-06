@@ -7,6 +7,7 @@ namespace NS_SVC
 		this->cad = gcnew NS_Composants::Connection();
 		
 		this->client = gcnew NS_Composants::Cl_client();
+		
 	}
 	DataSet^ gestion_client::listeClients(String^ dataTableName)
 	{
@@ -14,20 +15,7 @@ namespace NS_SVC
 		this->ds = this->cad->getRows(this->client->SELECT(), dataTableName);
 		return this->ds;
 	}
-	//rak gaertna hna tan fl'adresse
-	/*DataSet^ gestion_client::adressesClient(int id_client, String^ dataTableName)
-	{
-		this->ds = gcnew DataSet();
-		this->client->setID(id_client);
-		this->ds = this->cad->getRows(this->client->getAdresseCL(), dataTableName);
-		return this->ds;
-		/*
-		this->ds = gcnew DataSet();
-		this->adresse->setID(id_personne);
-		this->ds = this->cad->getRows(this->adresse->SELECTByIdPersonne(), dataTableName);
-		return this->ds;
-	     
-}*/
+
 	
 	
 	int gestion_client::ajouter(String^ nomCL, String^ pronon, String^ adresseCL, String^ adresseFAC, String^ DateAnivCL, String^ DatePremierAchat)

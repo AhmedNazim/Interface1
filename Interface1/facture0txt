@@ -1,30 +1,30 @@
 Code Lyoko Corp. 
  votre facture  
  !Reference de la commande :
-ret66
-l'identifiant du client14
-Nom du Client:
-adel
-Prenom du Client:
-mena
-Article:
-stan smith
-l'identifiant de l'article6
-Couleur de l'article:
-blanche
-Nature de l'article:
-chaussure
-Prix HT:
-8900
+ref20
+l'identifiant du client16
+Nom du Client:
+elkamal
+Prenom du Client:
+abderahmane
+Article:
+article2
+l'identifiant de l'article4
+Couleur de l'article:
+rouge
+Nature de l'article:
+noir
+Prix HT:
+4
 Prix TVA:
-9000
-Prix TTC:
-9100
+0,76
+Prix TTC:
+0,0114
 Date reglement:
-06/10/2020
+07/10/2020
 Date de Payement:
-06/10/2020
+07/10/2020
 Date d'emission :
-05/10/2020
+07/10/2020
  Date de livraison: 
  10/10/2020
