@@ -748,6 +748,9 @@ private: System::ComponentModel::IContainer^ components;
 		adapter->Fill(data);
 		bindingSource1->DataSource = data;
 		dataGridView2->DataSource = bindingSource1;
+		delete(conDataBase);
+		delete(adapter);
+		delete(data);
 	}
 private: System::Void Commande_Load(System::Object^ sender, System::EventArgs^ e) {
 }
@@ -879,6 +882,7 @@ private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e
 	String^ datergl = textBox2->Text;
 	int clien = Convert::ToInt32(textBox5->Text);
 	facture->facturation(datergl, Datepy, dateem, Dateliv, ref,clien,refart);
+	delete (facture);
 }
 };
 }
