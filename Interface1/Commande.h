@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 #include "gestion_commande.h"
 
 using namespace System::ComponentModel;
@@ -11,7 +11,7 @@ namespace Interface1 {
 
 	
 	/// <summary>
-	/// Description résumée de Commande
+	/// Description rï¿½sumï¿½e de Commande
 	/// </summary>
 	public ref class Commande : public System::Windows::Forms::Form
 	{
@@ -35,7 +35,7 @@ namespace Interface1 {
 
 	protected:
 		/// <summary>
-		/// Nettoyage des ressources utilisées.
+		/// Nettoyage des ressources utilisï¿½es.
 		/// </summary>
 		~Commande()
 		{
@@ -124,14 +124,14 @@ private: System::ComponentModel::IContainer^ components;
 
 	private:
 		/// <summary>
-		/// Variable nécessaire au concepteur.
+		/// Variable nï¿½cessaire au concepteur.
 		/// </summary>
 
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
-		/// Méthode requise pour la prise en charge du concepteur - ne modifiez pas
-		/// le contenu de cette méthode avec l'éditeur de code.
+		/// Mï¿½thode requise pour la prise en charge du concepteur - ne modifiez pas
+		/// le contenu de cette mï¿½thode avec l'ï¿½diteur de code.
 		/// </summary>
 		void InitializeComponent(void)
 		{
@@ -803,7 +803,7 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 	NS_SVC::gestion_commande^ ajot = gcnew NS_SVC::gestion_commande();
 	ajot->ajouter(ref,remis,totalart,TTC,TVA,HT,datergl,Datepy,dateem,Dateliv,clien,refart);
 	delete(ajot);
-	MessageBox::Show("la personne a etait ajouter", "Ajouter", MessageBoxButtons::OK, MessageBoxIcon::Information);
+	MessageBox::Show("la commande a etait ajouter", "Ajouter", MessageBoxButtons::OK, MessageBoxIcon::Information);
 }
 private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
 	String^ dateem = textBox10->Text;
@@ -826,14 +826,14 @@ private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e
 	NS_SVC::gestion_commande^ modif= gcnew NS_SVC::gestion_commande();
 	modif->modifier(ref, remis, totalart, TTC, TVA, HT, datergl, Datepy, dateem, Dateliv, clien, refart);
 	delete(modif);
-	MessageBox::Show("la personne a etait modifier", "Modifier", MessageBoxButtons::OK, MessageBoxIcon::Information);
+	MessageBox::Show("la commande a etait modifier", "Modifier", MessageBoxButtons::OK, MessageBoxIcon::Information);
 }
 private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
 	NS_SVC::gestion_commande^ modif = gcnew NS_SVC::gestion_commande();
 	String^ ref = textBox1->Text;
 	modif->supprimer(ref);
 	delete(modif);
-	MessageBox::Show("la personne a etait supprimer", "Supprimer", MessageBoxButtons::OK, MessageBoxIcon::Information);
+	MessageBox::Show("la commande a etait supprimer", "Supprimer", MessageBoxButtons::OK, MessageBoxIcon::Information);
 }
 private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 	String^ ref = textBox1->Text;
@@ -882,6 +882,7 @@ private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e
 	String^ datergl = textBox2->Text;
 	int clien = Convert::ToInt32(textBox5->Text);
 	facture->facturation(datergl, Datepy, dateem, Dateliv, ref,clien,refart);
+	MessageBox::Show("La facture a etait enregistrÃ©", "facture", MessageBoxButtons::OK, MessageBoxIcon::Information);
 	delete (facture);
 }
 };
