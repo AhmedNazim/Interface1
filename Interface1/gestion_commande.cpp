@@ -94,43 +94,61 @@ namespace NS_SVC {// ya rayan rak gaertna fl'adresse
 				gcnew BinaryWriter(fichier);
 			String^ constring = "Data Source = DESKTOP - PBVM5PL; Initial Catalog = Poo_Project; Integrated Security = True";
 			SqlConnection^ conDataBase = gcnew SqlConnection(constring);
-			conDataBase->Open();
+			
 			SqlCommand^ cmdDataBase = gcnew SqlCommand("SELECT nomCL,prenomCL FROM client WHERE ID="+cl+" ", conDataBase);
 			SqlDataReader^ myReader = cmdDataBase->ExecuteReader();
+			String^ nomCL;
+			String^ prenomCL;
+			
 			while (myReader->Read()) {
-				String^ nomCL= myReader->GetString(0);
-				String^ prenomCL = myReader->GetString(1);
+				nomCL= myReader->GetString(0);
+				prenomCL = myReader->GetString(1);
 			}
-			conDataBase->Close();
-			conDataBase->Open();
+			
+			
 		SqlCommand^ cmd = gcnew SqlCommand("SELECT nomAR,couleurAR,natureAR,prixHTAR,prixTVA,prixTTC FROM article WHERE ID=" +art + " ", conDataBase);
 		myReader = cmd->ExecuteReader();
+		
+		String^ nomAR;
+		String^ couleurAR;
+		String^ natureAR;
+		String^ prixHT;
+		String^ prixTVA;
+		String^ prixTTC;
 		while (myReader->Read()) {
-			String^ nomAR = myReader->GetString(0);
-			String^ couleurAR = myReader->GetString(1);
-			String^ natureAR = myReader->GetString(2);
-			String^ prixHT = myReader->GetString(3);
-			String^ prixTVA = myReader->GetString(4);
-			String^ prixTTC = myReader->GetString(5);
+			nomAR = myReader->GetString(0);
+			couleurAR = myReader->GetString(1);
+			natureAR = myReader->GetString(2);
+			prixHT = myReader->GetString(3);
+			prixTVA = myReader->GetString(4);
+			prixTTC = myReader->GetString(5);
 
 		}
-		conDataBase->Close();
+		
 		if (File::Exists(strNameOfFile))
             {
 
 				
 				myReader->Close();
 				    bnfichier->Write("Code Lyoko Corp. \n ");
-					bnfichier->Write("votre facture est: \n ");
-                    bnfichier->Write("Reference de la commande :\n"+ref);
+					bnfichier->Write("votre facture  \n ");
+					bnfichier->Write("Reference de la commande :\n" + ref);
 					bnfichier->Write("l'identifiant du client" + cl);
+					bnfichier->Write("Nom du Client:\n" + nomCL);
+					bnfichier->Write("Prenom du Client:\n" + prenomCL);
+					bnfichier->Write("Article:\n" + nomAR);
 					bnfichier->Write("l'identifiant de l'article" + art);
+					bnfichier->Write("Couleur de l'article:\n" + couleurAR);
+					bnfichier->Write("Nature de l'article:\n" + natureAR);
+					bnfichier->Write("Prix HT:\n" + prixHT);
+					bnfichier->Write("Prix TVA:\n" + prixTVA);
+					bnfichier->Write("Prix TTC:\n" + prixTTC);
                     bnfichier->Write("Date reglement:\n"+datereglmet);
                     bnfichier->Write("Date de Payement:\n"+datepay);
                     bnfichier->Write("Date d'emission :\n"+dateemi);
                     bnfichier->Write("Date de livraison: \n "+dateliv);
 					
-					//String^ getAdresse(void);
+				
 					
 					
 
